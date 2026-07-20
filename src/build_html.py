@@ -110,6 +110,10 @@ def main():
         dates = job.get("importantDates", {})
         if not dates:
             dates = {"Notification": "See Official PDF"}
+            
+        last_date_short = dates.get("Last Date to Apply") or dates.get("Last Date") or "TBD"
+        html = html.replace("{{LAST_DATE_SHORT}}", str(last_date_short)[:30])
+        
         dates_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in dates.items()])
         html = html.replace("{{IMPORTANT_DATES_ROWS}}", dates_html)
         
