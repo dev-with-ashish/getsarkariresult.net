@@ -82,21 +82,29 @@ jobs:
           echo "Running HTML Generator..."
           python3 src/build_html.py
       
-      - name: 💾 Commit and push data
+      - name: 💾 Commit and push data + HTML
         run: |
           git config user.name "Sarkari Scraper Bot"
           git config user.email "bot@getsarkariresult.net"
-          git add data/
+          git add data/ *.html **/*.html index.html vacancy.html
           
           # Only commit if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             TOTAL=$(python3 -c "import json; print(json.load(open('data/meta.json'))['totalJobs'])" 2>/dev/null || echo "?")
-            git commit -m "📋 Update job data — ${TOTAL} jobs ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+            git commit -m "📋 Update job data + HTML — ${TOTAL} jobs ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
             git push
             echo "Changes committed and pushed!"
           fi
+      
+      - name: 🚀 Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npm install -g wrangler
+          wrangler pages deploy . --project-name getsarkariresult-net --branch main --commit-dirty=true
       
       - name: 📁 Upload data as artifact (backup)
         uses: actions/upload-artifact@v4
