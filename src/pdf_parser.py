@@ -18,10 +18,16 @@ def setup_gemini():
 def download_pdf(url):
     """Downloads a PDF to a temporary file and returns the file path."""
     try:
+        import urllib.parse
+        # Safely encode paths that contain spaces or special chars
+        parsed = urllib.parse.urlsplit(url)
+        safe_path = urllib.parse.quote(parsed.path)
+        safe_url = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, safe_path, parsed.query, parsed.fragment))
+
         fd, path = tempfile.mkstemp(suffix=".pdf")
         os.close(fd)
         
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        req = urllib.request.Request(safe_url, headers={"User-Agent": "Mozilla/5.0"})
         import ssl
         ctx = ssl.create_default_context()
         ctx.check_hostname = False
@@ -74,7 +80,7 @@ def parse_pdf_with_ai(pdf_url):
     
     Required JSON structure:
     {
-        "documentCategory": "Categorize the document strictly as one of: 'vacancy', 'admit_card', 'answer_key', 'result', or 'other'.",
+        "documentCategory": "Categorize the document strictly as one of: 'vacancy', 'admit_card', 'answer_key', 'result', or 'other'. CRITICAL INSTRUCTION: If the document announces a RESULT, PROVISIONAL PANEL, or SHORTLIST of selected candidates, you MUST use 'result'. If it is an ADMIT CARD, use 'admit_card'. ONLY use 'vacancy' if the document is an INITIAL recruitment notification actively inviting NEW applications with an open application window. If it is none of these (e.g. a generic notice, date extension, syllabus, or an amendment), strictly fallback to 'other'. Do NOT default to 'vacancy'.",
         "categorySubtitle": "A short 3-6 word subtitle describing the specific posts or department. E.g. 'Paramedical Categories' or 'Group D Posts'",
         
         "applicationFee": "Extract a short fee summary (e.g. '₹500')",
