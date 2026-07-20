@@ -15,6 +15,66 @@ def setup_gemini():
     genai.configure(api_key=api_key)
     return True
 
+def download_pdf_with_playwright(url, path):
+    """Uses Playwright to download a PDF, bypassing simple ASP.NET bot blocks."""
+    from playwright.sync_api import sync_playwright
+    logger.info(f"Fallback: Attempting to download {url} with Playwright...")
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            context = browser.new_context(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                accept_downloads=True
+            )
+            page = context.new_page()
+            
+            import urllib.parse
+            parsed_url = urllib.parse.urlsplit(url)
+            base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
+            
+            # Wait for download event
+            try:
+                with page.expect_download(timeout=15000) as download_info:
+                    try:
+                        # Sometimes setting the referer to the homepage bypasses the block
+                        page.goto(url, referer=base_url)
+                    except Exception as e:
+                        if "Download is starting" not in str(e):
+                            raise e
+                download = download_info.value
+                download.save_as(path)
+                browser.close()
+                return path
+            except Exception as e:
+                # If no download triggered (timeout), maybe it loaded inline
+                try:
+                    response = page.goto(url, referer=base_url, wait_until="domcontentloaded")
+                    if response:
+                        content = response.body()
+                        if b"%PDF-" in content[:1024]:
+                            with open(path, 'wb') as f:
+                                f.write(content)
+                            browser.close()
+                            return path
+                except Exception as e2:
+                    logger.warning(f"Playwright inline load failed: {e2}")
+            
+            logger.warning(f"Playwright: No PDF content found at {url}")
+            browser.close()
+            return None
+    except Exception as e:
+        logger.error(f"Playwright fallback failed for {url}: {e}")
+        return None
+
+def is_html(path):
+    """Checks if a file is an HTML document instead of a PDF."""
+    try:
+        with open(path, 'rb') as f:
+            header = f.read(512).decode('utf-8', errors='ignore').lower()
+            return "<html" in header or "<!doctype" in header
+    except Exception:
+        return False
+
 def download_pdf(url):
     """Downloads a PDF to a temporary file and returns the file path."""
     try:
@@ -27,7 +87,7 @@ def download_pdf(url):
         fd, path = tempfile.mkstemp(suffix=".pdf")
         os.close(fd)
         
-        req = urllib.request.Request(safe_url, headers={"User-Agent": "Mozilla/5.0"})
+        req = urllib.request.Request(safe_url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
         import ssl
         ctx = ssl.create_default_context()
         ctx.check_hostname = False
@@ -36,9 +96,22 @@ def download_pdf(url):
         with urllib.request.urlopen(req, context=ctx, timeout=30) as response, open(path, 'wb') as out_file:
             out_file.write(response.read())
             
+        # Check if the site returned an HTML page (bot block) instead of a PDF
+        if is_html(path):
+            logger.warning(f"Site returned HTML instead of PDF for {url}. Triggering fallback.")
+            playwright_path = download_pdf_with_playwright(safe_url, path)
+            if playwright_path and not is_html(playwright_path):
+                return playwright_path
+            return None
+            
         return path
     except Exception as e:
-        logger.error(f"Failed to download PDF from {url}: {e}")
+        logger.warning(f"Standard download failed for {url}: {e}. Triggering fallback.")
+        fd, path = tempfile.mkstemp(suffix=".pdf")
+        os.close(fd)
+        playwright_path = download_pdf_with_playwright(url, path)
+        if playwright_path and not is_html(playwright_path):
+            return playwright_path
         return None
 
 def extract_text_from_pdf(pdf_path):
