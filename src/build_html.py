@@ -113,20 +113,21 @@ def main():
           </div>
         </a>''')
         
-        # Vacancy feed
-        vacancy_cards.append(f'''
-        <a class="vacancy-card" href="{page_url}" data-category="central" data-state="all-india" data-qualification="{slugify(qual)}" data-vacancies="{vacancies}" data-days-left="30" data-fee="0">
-          <div class="vacancy-main">
-            <div class="vacancy-title">{title}</div>
-            <div class="vacancy-tags">
-              <span class="vacancy-tag">{org_short}</span>
-            </div>
-          </div>
-          <div class="vacancy-stats">
-            <div class="vacancy-stat"><div class="vacancy-stat-num">{vacancies}</div><div class="vacancy-stat-label">Posts</div></div>
-            <div class="vacancy-stat"><div class="vacancy-stat-num">TBD</div><div class="vacancy-stat-label">Left to apply</div></div>
-          </div>
-        </a>''')
+        # Vacancy feed (only show actual vacancies)
+        if doc_cat == "vacancy":
+            vacancy_cards.append(f'''
+            <a class="vacancy-card" href="{page_url}" data-category="central" data-state="all-india" data-qualification="{slugify(qual)}" data-vacancies="{vacancies}" data-days-left="30" data-fee="0">
+              <div class="vacancy-main">
+                <div class="vacancy-title">{title}</div>
+                <div class="vacancy-tags">
+                  <span class="vacancy-tag">{org_short}</span>
+                </div>
+              </div>
+              <div class="vacancy-stats">
+                <div class="vacancy-stat"><div class="vacancy-stat-num">{vacancies}</div><div class="vacancy-stat-label">Posts</div></div>
+                <div class="vacancy-stat"><div class="vacancy-stat-num">TBD</div><div class="vacancy-stat-label">Left to apply</div></div>
+              </div>
+            </a>''')
         
         # Org feed
         if org_slug not in org_feeds:
