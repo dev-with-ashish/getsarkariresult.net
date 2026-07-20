@@ -38,9 +38,11 @@ def main():
         
     try:
         with open("job-details.html", "r", encoding="utf-8") as f:
-            template = f.read()
+            template_vacancy = f.read()
+        with open("template-generic.html", "r", encoding="utf-8") as f:
+            template_generic = f.read()
     except FileNotFoundError:
-        print("job-details.html template not found")
+        print("Templates not found")
         return
 
     feed_items = []
@@ -74,7 +76,18 @@ def main():
         apply_url = job.get("links", {}).get("officialWebsite") or "#"
         notice_ref = job.get("id")
         
-        html = template
+        # Determine Category and Template
+        doc_cat = job.get("documentCategory", "other").lower()
+        if doc_cat not in ["vacancy", "admit_card", "answer_key", "result"]:
+            notif_type = str(job.get("notificationType", "")).lower()
+            if notif_type in ["recruitment", "vacancy", "admit_card", "answer_key", "result"]:
+                doc_cat = "vacancy"
+            else:
+                doc_cat = "other"
+                
+        is_vacancy = doc_cat in ["vacancy", "admit_card", "answer_key", "result"]
+        html = template_vacancy if is_vacancy else template_generic
+        
         html = html.replace("{{JOB_TITLE}}", title)
         html = html.replace("{{TOTAL_VACANCIES}}", str(vacancies))
         html = html.replace("{{FEE_SHORT}}", str(fee)[:30])

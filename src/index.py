@@ -115,6 +115,8 @@ def run_scrapers(sources=None):
                         enriched_data = parse_pdf_with_ai(pdf_url)
                         if enriched_data:
                             # Merge AI data into job
+                            if enriched_data.get('documentCategory'):
+                                job['documentCategory'] = enriched_data['documentCategory']
                             job['applicationFee'] = enriched_data.get('applicationFee')
                             job['ageLimit'] = enriched_data.get('ageLimit')
                             if enriched_data.get('totalVacancies'):

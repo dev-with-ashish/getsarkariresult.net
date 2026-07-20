@@ -77,6 +77,7 @@ def parse_pdf_with_ai(pdf_url):
     
     Required JSON structure:
     {
+        "documentCategory": "Categorize the document strictly as one of: 'vacancy', 'admit_card', 'answer_key', 'result', or 'other'. Use 'other' for generic notices, statistical reports, rules, etc.",
         "applicationFee": "Extract the fee details. E.g. 'General/OBC: ₹100, SC/ST: Nil'",
         "ageLimit": "Extract the minimum and maximum age limit and the cutoff date. E.g. '18-27 Years as on 01/08/2026'",
         "totalVacancies": "Extract the total number of vacancies. Return an integer, or null if not found.",

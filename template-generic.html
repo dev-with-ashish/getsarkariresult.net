@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Indian Railways | getsarkariresult.net</title>
-<meta name="description" content="Official update for About Indian Railways by Railway Recruitment Board (RRB).">
+<title>{{JOB_TITLE}} | getsarkariresult.net</title>
+<meta name="description" content="Official update for {{JOB_TITLE}} by {{ORG_NAME}}.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <!-- SHARED IDENTITY NOTE: same as every other page — extract shared CSS to
@@ -17,8 +17,8 @@
      one hand-built file per recruitment. Every field below maps directly
      to a field schema doc column; see inline comments at each section.
 
-     CONSISTENCY REQUIREMENT: every number on this page (Various posts, TBD
-     last date, Check Notification fee, 18-33 age) MUST match exactly what's shown for
+     CONSISTENCY REQUIREMENT: every number on this page ({{TOTAL_VACANCIES}} posts, {{LAST_DATE_SHORT}}
+     last date, {{FEE_SHORT}} fee, 18-33 age) MUST match exactly what's shown for
      this same notification on vacancy.html, the homepage feed, and the
      organization-rrb.html page — those pages already reference this exact
      recruitment. A mismatch here is the trust-critical bug flagged
@@ -175,26 +175,26 @@
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a><span class="sep">/</span>
     <a href="/vacancy.html">Vacancies</a><span class="sep">/</span>
-    <span>About Indian Railways</span>
+    <span>{{JOB_TITLE}}</span>
   </nav>
 
   <!-- ===== ABOVE THE FOLD — per page spec Section 1 ===== -->
   <span class="status-badge">Active — accepting applications</span>
-  <h1 class="page-h1">About Indian Railways</h1>
-  <p class="page-sub">Non-Technical Popular Categories &middot; 53f0aaa7b209 &middot; <a class="org-link" href="/organization-rrb.html">Railway Recruitment Board (RRB)</a></p>
+  <h1 class="page-h1">{{JOB_TITLE}}</h1>
+  <p class="page-sub">Non-Technical Popular Categories &middot; {{NOTICE_REF}} &middot; <a class="org-link" href="/organization-{{ORG_SLUG}}.html">{{ORG_NAME}}</a></p>
 
   <!-- The 4 stat cells = the fields people scan for first. Values here must
        match vacancy.html's card for this exact notification_id. -->
-  <div class="stat-value">Various</div></div>
-    <div class="stat-cell"><div class="stat-label">Last date</div><div class="stat-value urgent">TBD</div></div>
+  <div class="stat-value">{{TOTAL_VACANCIES}}</div></div>
+    <div class="stat-cell"><div class="stat-label">Last date</div><div class="stat-value urgent">{{LAST_DATE_SHORT}}</div></div>
     <div class="stat-cell"><div class="stat-label">Age limit</div><div class="stat-value">18&ndash;33</div></div>
-    <div class="stat-cell"><div class="stat-label">Qualification</div><div class="stat-value">Check Notification</div></div>
+    <div class="stat-cell"><div class="stat-label">Qualification</div><div class="stat-value">{{QUAL_SHORT}}</div></div>
   </div>
 
   <!-- Real official application URL, never a redirect through our own
        tracking/interstitial page — trust requirement flagged in the page
        spec's design language notes. -->
-  <a class="apply-btn" href="https://www.rrbcdg.gov.in" target="_blank" rel="noopener">View Official Document &#8599;</a>
+  <a class="apply-btn" href="{{APPLY_URL}}" target="_blank" rel="noopener">View Official Document &#8599;</a>
 
   
   <div class="eligibility-summary" style="margin-top: 30px;">
@@ -220,7 +220,7 @@
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getsarkariresult.net/" },
     { "@type": "ListItem", "position": 2, "name": "Vacancies", "item": "https://getsarkariresult.net/vacancy/" },
-    { "@type": "ListItem", "position": 3, "name": "About Indian Railways", "item": "https://getsarkariresult.net/rrb/2026/53f0aaa7b209" }
+    { "@type": "ListItem", "position": 3, "name": "{{JOB_TITLE}}", "item": "https://getsarkariresult.net/{{ORG_SLUG}}/2026/{{NOTICE_REF}}" }
   ]
 }
 </script>
