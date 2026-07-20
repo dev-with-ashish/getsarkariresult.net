@@ -103,6 +103,7 @@ def main():
     active_jobs = [j for j in jobs if j.get("status") == "active"]
     
     for job in active_jobs:
+
         title = job.get("title", "Job Update")
         # Clean up junk suffixes that scrapers sometimes add
         for junk in ["Click to know Update", "-- ", "  "]:
@@ -123,7 +124,10 @@ def main():
         os.makedirs(silo_dir, exist_ok=True)
         
         page_path = f"{silo_dir}/{slug}.html"
-        page_url = f"/{page_path}"
+        is_ai_enriched = "documentCategory" in job
+        apply_url = job.get("links", {}).get("officialWebsite") or "#"
+        pdf_url = job.get("links", {}).get("notification") or apply_url
+        page_url = f"/{page_path}" if is_ai_enriched else (pdf_url or apply_url or "#")
         notice_ref = job.get("id", "")
         
         # ── Determine document category ──────────────────────────────────
@@ -157,8 +161,6 @@ def main():
         age          = job.get("ageLimit") or None
         qual_list    = job.get("qualifications", [])
         qual         = ", ".join(qual_list) if qual_list else None
-        apply_url    = job.get("links", {}).get("officialWebsite") or "#"
-        pdf_url      = job.get("links", {}).get("notification") or apply_url
         category_sub = job.get("categorySubtitle") or "Official notification"
 
         # ── Stat row — varies by category ───────────────────────────────
@@ -169,124 +171,125 @@ def main():
                          or "TBD")
         last_date_short = str(last_date_val)[:25]
 
-        if doc_cat == "vacancy":
-            stat_row = f"""
-    <div class="stat-cell"><div class="stat-label">Vacancies</div><div class="stat-value">{vacancies}</div></div>
-    <div class="stat-cell"><div class="stat-label">Last date</div><div class="stat-value urgent">{last_date_short}</div></div>
-    <div class="stat-cell"><div class="stat-label">Age limit</div><div class="stat-value">{age or 'See notification'}</div></div>
-    <div class="stat-cell"><div class="stat-label">Qualification</div><div class="stat-value">{(qual or 'Check notification')[:20]}</div></div>"""
-        elif doc_cat == "admit_card":
-            stat_row = f"""
-    <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
-    <div class="stat-cell"><div class="stat-label">Exam date</div><div class="stat-value">{dates.get('Exam Date') or 'See notification'}</div></div>
-    <div class="stat-cell"><div class="stat-label">Available</div><div class="stat-value is-active">{dates.get('Admit Card Available') or 'Now'}</div></div>
-    <div class="stat-cell"><div class="stat-label">Hall ticket</div><div class="stat-value">Download</div></div>"""
-        elif doc_cat == "answer_key":
-            stat_row = f"""
-    <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
-    <div class="stat-cell"><div class="stat-label">Objection deadline</div><div class="stat-value urgent">{dates.get('Last Date to Object') or dates.get('Objection Deadline') or 'See notification'}</div></div>
-    <div class="stat-cell"><div class="stat-label">Exam held on</div><div class="stat-value">{dates.get('Exam Date') or 'See notification'}</div></div>
-    <div class="stat-cell"><div class="stat-label">Status</div><div class="stat-value">Available</div></div>"""
-        elif doc_cat == "result":
-            stat_row = f"""
-    <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
-    <div class="stat-cell"><div class="stat-label">Result date</div><div class="stat-value">{dates.get('Result Date') or dates.get('Declaration Date') or last_date_short}</div></div>
-    <div class="stat-cell"><div class="stat-label">Candidates</div><div class="stat-value">{vacancies if str(vacancies) != 'N/A' else 'See result'}</div></div>
-    <div class="stat-cell"><div class="stat-label">Status</div><div class="stat-value">Declared</div></div>"""
-        else:  # other
-            stat_row = f"""
-    <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
-    <div class="stat-cell"><div class="stat-label">Published</div><div class="stat-value">{dates.get('Notification Released') or dates.get('notificationDate') or 'See document'}</div></div>
-    <div class="stat-cell"><div class="stat-label">Type</div><div class="stat-value">Notice</div></div>
-    <div class="stat-cell"><div class="stat-label">Source</div><div class="stat-value">{org_short}</div></div>"""
+        if is_ai_enriched:
+            if doc_cat == "vacancy":
+                stat_row = f"""
+        <div class="stat-cell"><div class="stat-label">Vacancies</div><div class="stat-value">{vacancies}</div></div>
+        <div class="stat-cell"><div class="stat-label">Last date</div><div class="stat-value urgent">{last_date_short}</div></div>
+        <div class="stat-cell"><div class="stat-label">Age limit</div><div class="stat-value">{age or 'See notification'}</div></div>
+        <div class="stat-cell"><div class="stat-label">Qualification</div><div class="stat-value">{(qual or 'Check notification')[:20]}</div></div>"""
+            elif doc_cat == "admit_card":
+                stat_row = f"""
+        <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
+        <div class="stat-cell"><div class="stat-label">Exam date</div><div class="stat-value">{dates.get('Exam Date') or 'See notification'}</div></div>
+        <div class="stat-cell"><div class="stat-label">Available</div><div class="stat-value is-active">{dates.get('Admit Card Available') or 'Now'}</div></div>
+        <div class="stat-cell"><div class="stat-label">Hall ticket</div><div class="stat-value">Download</div></div>"""
+            elif doc_cat == "answer_key":
+                stat_row = f"""
+        <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
+        <div class="stat-cell"><div class="stat-label">Objection deadline</div><div class="stat-value urgent">{dates.get('Last Date to Object') or dates.get('Objection Deadline') or 'See notification'}</div></div>
+        <div class="stat-cell"><div class="stat-label">Exam held on</div><div class="stat-value">{dates.get('Exam Date') or 'See notification'}</div></div>
+        <div class="stat-cell"><div class="stat-label">Status</div><div class="stat-value">Available</div></div>"""
+            elif doc_cat == "result":
+                stat_row = f"""
+        <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
+        <div class="stat-cell"><div class="stat-label">Result date</div><div class="stat-value">{dates.get('Result Date') or dates.get('Declaration Date') or last_date_short}</div></div>
+        <div class="stat-cell"><div class="stat-label">Candidates</div><div class="stat-value">{vacancies if str(vacancies) != 'N/A' else 'See result'}</div></div>
+        <div class="stat-cell"><div class="stat-label">Status</div><div class="stat-value">Declared</div></div>"""
+            else:  # other
+                stat_row = f"""
+        <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
+        <div class="stat-cell"><div class="stat-label">Published</div><div class="stat-value">{dates.get('Notification Released') or dates.get('notificationDate') or 'See document'}</div></div>
+        <div class="stat-cell"><div class="stat-label">Type</div><div class="stat-value">Notice</div></div>
+        <div class="stat-cell"><div class="stat-label">Source</div><div class="stat-value">{org_short}</div></div>"""
 
-        # ── Build HTML ───────────────────────────────────────────────────
-        html = template
+            # ── Build HTML ───────────────────────────────────────────────────
+            html = template
 
-        # Simple replacements
-        html = html.replace("{{JOB_TITLE}}",               title)
-        html = html.replace("{{NOTICE_REF}}",              str(notice_ref)[:12])
-        html = html.replace("{{ORG_NAME}}",                org_name)
-        html = html.replace("{{ORG_SLUG}}",                org_slug)
-        html = html.replace("{{APPLY_URL}}",               apply_url)
-        html = html.replace("{{NOTIFICATION_PDF_URL}}",    pdf_url)
-        html = html.replace("{{CATEGORY_SUBTITLE}}",       category_sub)
-        html = html.replace("{{STATUS_BADGE_CLASS}}",      badge_class)
-        html = html.replace("{{STATUS_BADGE_TEXT}}",       badge_text)
-        html = html.replace("{{ACTION_BTN_LABEL}}",        btn_label)
-        html = html.replace("{{BREADCRUMB_SECTION_URL}}",  bc_url)
-        html = html.replace("{{BREADCRUMB_SECTION_LABEL}}",bc_label)
-        html = html.replace("{{STAT_ROW_HTML}}",           stat_row)
-        html = html.replace("{{META_DESCRIPTION}}",        f"{badge_text}: {title} — {org_name}. {category_sub}.")
+            # Simple replacements
+            html = html.replace("{{JOB_TITLE}}",               title)
+            html = html.replace("{{NOTICE_REF}}",              str(notice_ref)[:12])
+            html = html.replace("{{ORG_NAME}}",                org_name)
+            html = html.replace("{{ORG_SLUG}}",                org_slug)
+            html = html.replace("{{APPLY_URL}}",               apply_url)
+            html = html.replace("{{NOTIFICATION_PDF_URL}}",    pdf_url)
+            html = html.replace("{{CATEGORY_SUBTITLE}}",       category_sub)
+            html = html.replace("{{STATUS_BADGE_CLASS}}",      badge_class)
+            html = html.replace("{{STATUS_BADGE_TEXT}}",       badge_text)
+            html = html.replace("{{ACTION_BTN_LABEL}}",        btn_label)
+            html = html.replace("{{BREADCRUMB_SECTION_URL}}",  bc_url)
+            html = html.replace("{{BREADCRUMB_SECTION_LABEL}}",bc_label)
+            html = html.replace("{{STAT_ROW_HTML}}",           stat_row)
+            html = html.replace("{{META_DESCRIPTION}}",        f"{badge_text}: {title} — {org_name}. {category_sub}.")
         
-        # Important dates table
-        dates_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in dates.items() if v and v != "None"])
-        html = conditional_section(html, "IMPORTANT_DATES_SECTION", dates_html, bool(dates_html))
-        html = html.replace("{{IMPORTANT_DATES_ROWS}}", dates_html)
+            # Important dates table
+            dates_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in dates.items() if v and v != "None"])
+            html = conditional_section(html, "IMPORTANT_DATES_SECTION", dates_html, bool(dates_html))
+            html = html.replace("{{IMPORTANT_DATES_ROWS}}", dates_html)
         
-        # Application fee — only for vacancy/admit_card
-        fee_details = job.get("applicationFeeDetails") or {}
-        if not fee_details and fee:
-            fee_details = {"General": fee}
-        fee_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in fee_details.items()])
-        show_fee = doc_cat in ["vacancy", "admit_card"] and bool(fee_html)
-        html = conditional_section(html, "FEE_SECTION", fee_html, show_fee)
-        html = html.replace("{{APPLICATION_FEE_ROWS}}", fee_html)
-        fee_note = job.get("feeNote") or ""
-        html = conditional_section(html, "FEE_NOTE_HTML", fee_note, bool(fee_note))
-        html = html.replace("{{FEE_NOTE}}", fee_note)
+            # Application fee — only for vacancy/admit_card
+            fee_details = job.get("applicationFeeDetails") or {}
+            if not fee_details and fee:
+                fee_details = {"General": fee}
+            fee_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in fee_details.items()])
+            show_fee = doc_cat in ["vacancy", "admit_card"] and bool(fee_html)
+            html = conditional_section(html, "FEE_SECTION", fee_html, show_fee)
+            html = html.replace("{{APPLICATION_FEE_ROWS}}", fee_html)
+            fee_note = job.get("feeNote") or ""
+            html = conditional_section(html, "FEE_NOTE_HTML", fee_note, bool(fee_note))
+            html = html.replace("{{FEE_NOTE}}", fee_note)
 
-        # Age limit — only for vacancy
-        age_details = job.get("ageLimitDetails") or {}
-        if not age_details and age:
-            age_details = {"Age Limit": age}
-        age_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in age_details.items()])
-        show_age = doc_cat == "vacancy" and bool(age_html)
-        html = conditional_section(html, "AGE_SECTION", age_html, show_age)
-        html = html.replace("{{AGE_LIMIT_ROWS}}", age_html)
+            # Age limit — only for vacancy
+            age_details = job.get("ageLimitDetails") or {}
+            if not age_details and age:
+                age_details = {"Age Limit": age}
+            age_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in age_details.items()])
+            show_age = doc_cat == "vacancy" and bool(age_html)
+            html = conditional_section(html, "AGE_SECTION", age_html, show_age)
+            html = html.replace("{{AGE_LIMIT_ROWS}}", age_html)
 
-        # Vacancy breakdown — only for vacancy
-        vac_details = job.get("vacancyBreakdown") or {}
-        vac_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in vac_details.items()])
-        show_vac = doc_cat == "vacancy" and bool(vac_html)
-        html = conditional_section(html, "VACANCY_SECTION", vac_html, show_vac)
-        html = html.replace("{{VACANCY_BREAKDOWN_ROWS}}", vac_html)
+            # Vacancy breakdown — only for vacancy
+            vac_details = job.get("vacancyBreakdown") or {}
+            vac_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in vac_details.items()])
+            show_vac = doc_cat == "vacancy" and bool(vac_html)
+            html = conditional_section(html, "VACANCY_SECTION", vac_html, show_vac)
+            html = html.replace("{{VACANCY_BREAKDOWN_ROWS}}", vac_html)
 
-        # Eligibility — only for vacancy
-        elig_details = job.get("eligibilityDetails") or {}
-        elig_summary = job.get("eligibilitySummary") or ""
-        if not elig_details and qual:
-            elig_details = {"Educational Qualification": qual}
-        elig_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in elig_details.items()])
-        show_elig = doc_cat == "vacancy" and (bool(elig_html) or bool(elig_summary))
-        html = conditional_section(html, "ELIGIBILITY_SECTION", elig_html or elig_summary, show_elig)
-        html = html.replace("{{ELIGIBILITY_SUMMARY}}", elig_summary or "Please refer to official notification.")
-        html = html.replace("{{ELIGIBILITY_ROWS}}", elig_html)
+            # Eligibility — only for vacancy
+            elig_details = job.get("eligibilityDetails") or {}
+            elig_summary = job.get("eligibilitySummary") or ""
+            if not elig_details and qual:
+                elig_details = {"Educational Qualification": qual}
+            elig_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in elig_details.items()])
+            show_elig = doc_cat == "vacancy" and (bool(elig_html) or bool(elig_summary))
+            html = conditional_section(html, "ELIGIBILITY_SECTION", elig_html or elig_summary, show_elig)
+            html = html.replace("{{ELIGIBILITY_SUMMARY}}", elig_summary or "Please refer to official notification.")
+            html = html.replace("{{ELIGIBILITY_ROWS}}", elig_html)
 
-        # Selection process — only for vacancy
-        steps = job.get("selectionProcess") or []
-        if isinstance(steps, str):
-            steps = [steps]
-        step_html = "".join([f"<li>{s}</li>" for s in steps])
-        show_sel = doc_cat == "vacancy" and bool(step_html)
-        html = conditional_section(html, "SELECTION_SECTION", step_html, show_sel)
-        html = html.replace("{{SELECTION_PROCESS_ROWS}}", step_html)
+            # Selection process — only for vacancy
+            steps = job.get("selectionProcess") or []
+            if isinstance(steps, str):
+                steps = [steps]
+            step_html = "".join([f"<li>{s}</li>" for s in steps])
+            show_sel = doc_cat == "vacancy" and bool(step_html)
+            html = conditional_section(html, "SELECTION_SECTION", step_html, show_sel)
+            html = html.replace("{{SELECTION_PROCESS_ROWS}}", step_html)
 
-        # How to apply — only for vacancy (populated by AI extraction if available)
-        how_to_apply = job.get("howToApply") or []
-        if isinstance(how_to_apply, str):
-            how_to_apply = [how_to_apply]
-        hta_html = "".join([f"<li>{s}</li>" for s in how_to_apply])
-        show_hta = doc_cat == "vacancy" and bool(hta_html)
-        html = conditional_section(html, "HOW_TO_APPLY_SECTION", hta_html, show_hta)
-        html = html.replace("{{HOW_TO_APPLY_ROWS}}", hta_html)
+            # How to apply — only for vacancy (populated by AI extraction if available)
+            how_to_apply = job.get("howToApply") or []
+            if isinstance(how_to_apply, str):
+                how_to_apply = [how_to_apply]
+            hta_html = "".join([f"<li>{s}</li>" for s in how_to_apply])
+            show_hta = doc_cat == "vacancy" and bool(hta_html)
+            html = conditional_section(html, "HOW_TO_APPLY_SECTION", hta_html, show_hta)
+            html = html.replace("{{HOW_TO_APPLY_ROWS}}", hta_html)
 
-        # JSON-LD
-        json_ld = build_json_ld(doc_cat, title, org_name, org_url, notice_ref, vacancies, apply_url, org_slug)
-        html = html.replace("{{JSON_LD_SCHEMA}}", json_ld)
+            # JSON-LD
+            json_ld = build_json_ld(doc_cat, title, org_name, org_url, notice_ref, vacancies, apply_url, org_slug)
+            html = html.replace("{{JSON_LD_SCHEMA}}", json_ld)
 
-        with open(page_path, "w", encoding="utf-8") as f:
-            f.write(html)
+            with open(page_path, "w", encoding="utf-8") as f:
+                f.write(html)
             
         # ── Index feed (all active docs) ─────────────────────────────────
         feed_items.append(f'''
@@ -323,6 +326,7 @@ def main():
           <span class="org-row-meta">{bc_label[:-1] if bc_label.endswith('s') else bc_label}</span>
         </a>''')
 
+    print(f"Generated {len(feed_items)} feed items.")
     # Update global feeds
     update_html_feed("index.html", "<!-- LATEST_FEED_START -->", "<!-- LATEST_FEED_END -->", "".join(feed_items))
     update_html_feed("vacancy.html", "<!-- VACANCY_FEED_START -->", "<!-- VACANCY_FEED_END -->", "".join(vacancy_cards))

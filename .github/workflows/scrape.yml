@@ -43,6 +43,8 @@ jobs:
           python -m playwright install chromium --with-deps
       
       - name: 🔍 Run scraper pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           if [ -n "${{ github.event.inputs.source }}" ]; then
             python3 src/index.py --source "${{ github.event.inputs.source }}"
