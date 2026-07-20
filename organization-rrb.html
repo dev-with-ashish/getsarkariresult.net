@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RRB (Railway Recruitment Board) — jobs, results &amp; admit cards 2026 | getsarkariresult.net</title>
+<meta name="description" content="All RRB recruitment notifications, vacancies, admit cards, results, and answer keys in one place — updated as they're released.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- SHARED IDENTITY NOTE: same as every other page — extract shared CSS to
+     one stylesheet in the real build. button/select/input need explicit
+     color set (see the dim-text bug fixed on notifications.html).
+
+     ROUTE PATTERN: this file represents /rrb/ specifically. In production
+     this is ONE template rendering per-org from recruiting_org data, not
+     N hand-built files — /ssc/, /ibps/, /upsc/ etc. all use this same
+     template with different org_id bound in.
+
+     KNOWN GAP TO RESOLVE BEFORE BACKEND BUILD: the "View all" links below
+     point to gateway pages with an ?org= query param (e.g.
+     /vacancy/?org=rrb) that notifications.html / vacancy.html /
+     admit-card.html / result.html / answer-key.html do NOT currently
+     support filtering by — those pages only filter by category, state,
+     qualification/type/stage. Add an org-level filter to each gateway
+     page's filter engine (same pattern as the existing filters) before
+     these cross-links are fully functional, not just visually present. -->
+<style>
+  :root {
+    --ink: #1B2A3D; --paper: #F7F5EF; --paper-raised: #FFFFFF;
+    --seal: #A23B2E; --marigold: #C98A2C; --ledger-green: #3F6B4A;
+    --slate: #5B6470; --line: #DCD8CC;
+    --font-display: 'Newsreader', serif; --font-body: 'IBM Plex Sans', sans-serif; --font-mono: 'IBM Plex Mono', monospace;
+  }
+  html[data-theme="dark"] {
+    --ink: #EDEAE0; --paper: #14181F; --paper-raised: #1D232C;
+    --seal: #E08674; --marigold: #E4B15C; --ledger-green: #6FAE81;
+    --slate: #8B93A0; --line: #2B323C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.5; transition: background 0.2s, color 0.2s; }
+  a { color: inherit; text-decoration: none; }
+  button, select, input { color: var(--ink); font-family: var(--font-body); }
+
+  header { background: #1B2A3D; color: #F7F5EF; padding: 14px 20px; }
+  .header-row { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { font-family: var(--font-display); font-size: 22px; font-weight: 600; }
+  .brand span { color: var(--marigold); }
+  .updated-tag { font-family: var(--font-mono); font-size: 11px; color: #B9C2CE; display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ledger-green); display: inline-block; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  #themeToggle { background: transparent; border: 1px solid #3A4658; color: #F7F5EF; border-radius: 6px; width: 30px; height: 30px; cursor: pointer; font-size: 15px; line-height: 1; flex-shrink: 0; }
+
+  .search-band { background: #1B2A3D; padding: 0 20px 20px; }
+  .search-wrap { max-width: 960px; margin: 0 auto; position: relative; }
+  .search-wrap input { width: 100%; padding: 13px 16px 13px 44px; border-radius: 6px; border: none; font-size: 15px; background: var(--paper-raised); }
+  .search-wrap input:focus { outline: 2px solid var(--marigold); }
+  .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--slate); font-size: 16px; }
+
+  main { max-width: 960px; margin: 0 auto; padding: 20px 20px 60px; }
+
+  .breadcrumb { font-size: 12px; color: var(--slate); margin-bottom: 16px; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { margin: 0 6px; }
+
+  /* ORG HEADER BLOCK */
+  .org-header {
+    display: flex; gap: 16px; align-items: flex-start; padding: 20px;
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: 10px;
+    margin-bottom: 28px;
+  }
+  .org-logo {
+    flex-shrink: 0; width: 56px; height: 56px; border-radius: 8px; background: var(--ink);
+    color: var(--paper); display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 20px; font-weight: 600;
+  }
+  html[data-theme="dark"] .org-logo { color: #14181F; }
+  .org-info { flex: 1; min-width: 0; }
+  .org-name { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin-bottom: 2px; }
+  .org-fullname { font-size: 13px; color: var(--slate); margin-bottom: 8px; }
+  .org-desc { font-size: 13px; color: var(--ink); margin-bottom: 10px; max-width: 60ch; }
+  .org-links { display: flex; gap: 14px; flex-wrap: wrap; }
+  .org-link { font-size: 12px; color: var(--seal); font-weight: 500; }
+
+  .org-stats { display: flex; gap: 20px; flex-shrink: 0; text-align: right; }
+  .org-stat-num { font-family: var(--font-display); font-size: 20px; font-weight: 600; }
+  .org-stat-label { font-size: 10px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.4px; }
+
+  /* TYPE SECTIONS */
+  .type-section { margin-bottom: 32px; }
+  .type-section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;
+  }
+  .type-section-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .type-count-badge {
+    font-family: var(--font-mono); font-size: 11px; color: var(--slate); background: var(--paper);
+    border: 1px solid var(--line); border-radius: 10px; padding: 1px 8px;
+  }
+  .type-section-link { font-size: 12px; color: var(--seal); font-weight: 500; flex-shrink: 0; }
+
+  .org-row {
+    display: flex; align-items: center; gap: 14px; padding: 12px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .org-row:hover { background: rgba(0,0,0,0.02); }
+  .org-row-title { flex: 1; min-width: 0; font-size: 14px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .org-row-meta { flex-shrink: 0; font-family: var(--font-mono); font-size: 11px; color: var(--slate); text-align: right; }
+  .org-row-meta.urgent { color: var(--seal); }
+
+  .empty-section { font-size: 13px; color: var(--slate); padding: 16px 4px; font-style: italic; }
+
+  footer { border-top: 1px solid var(--line); padding: 24px 20px; text-align: center; font-size: 12px; color: var(--slate); }
+
+  @media (max-width: 600px) {
+    .org-header { flex-wrap: wrap; }
+    .org-stats { width: 100%; justify-content: flex-start; padding-top: 12px; border-top: 1px solid var(--line); gap: 24px; }
+    .org-stats { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a href="/" class="brand">getsarkariresult<span>.net</span></a>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div class="updated-tag"><span class="dot"></span>Updated 4 minutes ago</div>
+      <button id="themeToggle" aria-label="Toggle dark mode">&#9788;</button>
+    </div>
+  </div>
+</header>
+
+<div class="search-band">
+  <div class="search-wrap">
+    <span class="search-icon">&#128269;</span>
+    <input type="text" placeholder="Search post, department, or state">
+  </div>
+</div>
+
+<main>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span class="sep">/</span><a href="/organizations/">Organizations</a><span class="sep">/</span><span>RRB</span>
+  </nav>
+
+  <!-- ORG HEADER — org_stat numbers = live COUNT(*) per notification_type
+       WHERE recruiting_org = this org, same "single source of truth" rule
+       flagged on the gateway pages' type cards. org-link "sameAs" pairs
+       with the Organization JSON-LD below — this is the actual payoff of
+       the earlier MID/Knowledge Graph entity-linking discussion: this page
+       is where that link lives, once per organization, not per-notification. -->
+  <div class="org-header">
+    <div class="org-logo">RRB</div>
+    <div class="org-info">
+      <div class="org-name">Railway Recruitment Board</div>
+      <div class="org-fullname">Ministry of Railways, Government of India</div>
+      <p class="org-desc">RRB conducts recruitment for non-gazetted posts across Indian Railways, including technical, non-technical, and Group C/D positions, through zonal boards nationwide.</p>
+      <div class="org-links">
+        <a class="org-link" href="https://www.rrbcdg.gov.in/" target="_blank" rel="noopener">Official website &#8599;</a>
+        <a class="org-link" href="https://en.wikipedia.org/wiki/Railway_Recruitment_Board" target="_blank" rel="noopener">About RRB &#8599;</a>
+      </div>
+    </div>
+    <div class="org-stats">
+      <div><div class="org-stat-num">3</div><div class="org-stat-label">Active vacancies</div></div>
+      <div><div class="org-stat-num">47</div><div class="org-stat-label">Total this year</div></div>
+    </div>
+  </div>
+
+  <!-- VACANCIES SECTION
+       Route per row: /{notification_slug}/. "View all" →
+       /vacancy/?org=rrb (see the known-gap note at the top of this file —
+       gateway pages need an org filter added for this to work end to end). -->
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Vacancies <span class="type-count-badge">3 active</span></div>
+      <a class="type-section-link" href="/vacancy/?org=rrb">View all &rarr;</a>
+    </div>
+    <a class="org-row" href="/rrb-ntpc-recruitment-2026/">
+      <span class="org-row-title">RRB NTPC recruitment 2026 — 6,557 posts</span>
+      <span class="org-row-meta urgent">26d left</span>
+    </a>
+    <a class="org-row" href="/rrb-group-d-recruitment-2026/">
+      <span class="org-row-title">RRB Group D recruitment 2026 — 4,120 posts</span>
+      <span class="org-row-meta">38d left</span>
+    </a>
+    <a class="org-row" href="/rrb-je-recruitment-2026/">
+      <span class="org-row-title">RRB Junior Engineer recruitment 2026 — 892 posts</span>
+      <span class="org-row-meta">12d left</span>
+    </a>
+  </div>
+
+  <!-- ADMIT CARDS SECTION (added — see note at top of response about
+       completeness vs. the originally requested 4 types) -->
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Admit cards <span class="type-count-badge">1 released</span></div>
+      <a class="type-section-link" href="/admit-card/?org=rrb">View all &rarr;</a>
+    </div>
+    <a class="org-row" href="/rrb-je-2025-admit-card/">
+      <span class="org-row-title">RRB Junior Engineer 2025 admit card</span>
+      <span class="org-row-meta">Released 3d ago</span>
+    </a>
+    <div class="empty-section" id="admitEmptyNote" style="display:none;">No admit cards currently released for RRB.</div>
+  </div>
+
+  <!-- RESULTS SECTION -->
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Results <span class="type-count-badge">2 declared</span></div>
+      <a class="type-section-link" href="/result/?org=rrb">View all &rarr;</a>
+    </div>
+    <a class="org-row" href="/rrb-group-d-2025-cbt1-result/">
+      <span class="org-row-title">RRB Group D 2025 CBT 1 result — cutoff out</span>
+      <span class="org-row-meta">Declared 5d ago</span>
+    </a>
+    <a class="org-row" href="/rrb-ntpc-2024-final-result/">
+      <span class="org-row-title">RRB NTPC 2024 final result</span>
+      <span class="org-row-meta">Declared 41d ago</span>
+    </a>
+  </div>
+
+  <!-- ANSWER KEY SECTION -->
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Answer keys <span class="type-count-badge">1 provisional</span></div>
+      <a class="type-section-link" href="/answer-key/?org=rrb">View all &rarr;</a>
+    </div>
+    <a class="org-row" href="/rrb-ntpc-2026-cbt1-answer-key/">
+      <span class="org-row-title">RRB NTPC 2026 CBT 1 provisional answer key</span>
+      <span class="org-row-meta urgent">Objections close in 6d</span>
+    </a>
+  </div>
+
+  <!-- NOTIFICATIONS SECTION — general/corrigendum notices specifically,
+       not a repeat of the four sections above (which already cover
+       vacancy/admit-card/result/answer-key individually). This section is
+       for notification_type = 'General' only — corrigenda, date
+       extensions, exam-city changes. Route: /notifications/?org=rrb&type=general -->
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Notifications <span class="type-count-badge">1 update</span></div>
+      <a class="type-section-link" href="/notifications/?org=rrb">View all &rarr;</a>
+    </div>
+    <a class="org-row" href="/rrb-ntpc-corrigendum-2026/">
+      <span class="org-row-title">RRB NTPC 2026 — last date extended, corrigendum notice</span>
+      <span class="org-row-meta">2d ago</span>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  getsarkariresult.net — independent source for government recruitment updates. Not affiliated with any government body.
+</footer>
+
+<!-- STRUCTURED DATA
+     Organization schema with sameAs → Wikidata is the actual payoff of the
+     entity/Knowledge-Graph-linking discussion from earlier in this build:
+     it lives HERE, once per org hub page, not duplicated across every
+     individual notification page. BreadcrumbList pairs with the visible
+     breadcrumb. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "name": "Railway Recruitment Board",
+  "alternateName": "RRB",
+  "url": "https://getsarkariresult.net/rrb/",
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q7291029",
+    "https://en.wikipedia.org/wiki/Railway_Recruitment_Board",
+    "https://www.rrbcdg.gov.in/"
+  ],
+  "parentOrganization": {
+    "@type": "GovernmentOrganization",
+    "name": "Ministry of Railways, Government of India"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getsarkariresult.net/" },
+    { "@type": "ListItem", "position": 2, "name": "Organizations", "item": "https://getsarkariresult.net/organizations/" },
+    { "@type": "ListItem", "position": 3, "name": "RRB", "item": "https://getsarkariresult.net/rrb/" }
+  ]
+}
+</script>
+
+<script>
+  // Dark mode — identical logic across all pages.
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+  applyTheme(savedTheme || (systemPrefersDark ? 'dark' : 'light'));
+  function applyTheme(theme) {
+    if (theme === 'dark') { root.setAttribute('data-theme', 'dark'); themeBtn.innerHTML = '&#9789;'; }
+    else { root.removeAttribute('data-theme'); themeBtn.innerHTML = '&#9788;'; }
+  }
+  themeBtn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+
+  // NOTE: this page intentionally has no filter engine of its own — unlike
+  // the five gateway pages, it's already scoped to one organization by
+  // definition, so there's nothing left to filter by on the page itself.
+  // The only interactivity here is dark mode and the "View all" cross-links
+  // to the gateway pages (which need the org-filter addition noted at the
+  // top of this file to fully close the loop).
+</script>
+
+</body>
+</html>

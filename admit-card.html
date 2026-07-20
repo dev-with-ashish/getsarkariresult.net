@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government exam admit cards 2026 — download links | getsarkariresult.net</title>
+<meta name="description" content="All released government exam admit cards with direct download links, exam dates, and shift timing — updated as they're released.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- SHARED IDENTITY NOTE: same as notifications.html / vacancy.html — extract
+     shared CSS to one stylesheet in the real build. button/select/input all
+     need color set explicitly (see the dim-text bug fixed on notifications.html). -->
+<style>
+  :root {
+    --ink: #1B2A3D; --paper: #F7F5EF; --paper-raised: #FFFFFF;
+    --seal: #A23B2E; --marigold: #C98A2C; --ledger-green: #3F6B4A;
+    --slate: #5B6470; --line: #DCD8CC;
+    --font-display: 'Newsreader', serif; --font-body: 'IBM Plex Sans', sans-serif; --font-mono: 'IBM Plex Mono', monospace;
+  }
+  html[data-theme="dark"] {
+    --ink: #EDEAE0; --paper: #14181F; --paper-raised: #1D232C;
+    --seal: #E08674; --marigold: #E4B15C; --ledger-green: #6FAE81;
+    --slate: #8B93A0; --line: #2B323C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.5; transition: background 0.2s, color 0.2s; }
+  a { color: inherit; text-decoration: none; }
+  button, select, input { color: var(--ink); font-family: var(--font-body); }
+
+  header { background: #1B2A3D; color: #F7F5EF; padding: 14px 20px; }
+  .header-row { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { font-family: var(--font-display); font-size: 22px; font-weight: 600; }
+  .brand span { color: var(--marigold); }
+  .updated-tag { font-family: var(--font-mono); font-size: 11px; color: #B9C2CE; display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ledger-green); display: inline-block; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  #themeToggle { background: transparent; border: 1px solid #3A4658; color: #F7F5EF; border-radius: 6px; width: 30px; height: 30px; cursor: pointer; font-size: 15px; line-height: 1; flex-shrink: 0; }
+
+  .search-band { background: #1B2A3D; padding: 0 20px 20px; }
+  .search-wrap { max-width: 960px; margin: 0 auto; position: relative; }
+  .search-wrap input { width: 100%; padding: 13px 16px 13px 44px; border-radius: 6px; border: none; font-size: 15px; background: var(--paper-raised); }
+  .search-wrap input:focus { outline: 2px solid var(--marigold); }
+  .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--slate); font-size: 16px; }
+
+  main { max-width: 960px; margin: 0 auto; padding: 20px 20px 60px; }
+
+  .breadcrumb { font-size: 12px; color: var(--slate); margin-bottom: 12px; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { margin: 0 6px; }
+
+  .page-title { font-family: var(--font-display); font-size: 24px; font-weight: 600; margin-bottom: 4px; }
+  .page-sub { font-size: 13px; color: var(--slate); margin-bottom: 20px; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .filter-chip { padding: 7px 14px; background: var(--paper-raised); border: 1px solid var(--line); border-radius: 20px; font-size: 13px; cursor: pointer; }
+  .filter-chip.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  html[data-theme="dark"] .filter-chip.is-active { color: #14181F; }
+
+  .filter-selects { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .filter-selects select { font-size: 13px; padding: 8px 10px; background: var(--paper-raised); border: 1px solid var(--line); border-radius: 6px; }
+
+  .result-count { font-size: 12px; color: var(--slate); margin-bottom: 14px; font-family: var(--font-mono); }
+
+  /* Admit card cards — optimized for fastest path to download, per the
+     page spec (low-dwell-time, high-urgency page type). Status badge +
+     a real quick-download action are the two things that matter most here,
+     more than in any other listing page type. */
+  .admit-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+  .admit-card {
+    display: flex; align-items: center; gap: 16px; padding: 14px 16px;
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: 8px;
+  }
+  .admit-card:hover { border-color: var(--ink); }
+  .admit-main { flex: 1; min-width: 0; }
+  .admit-status {
+    display: inline-block; font-family: var(--font-mono); font-size: 10px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.4px; padding: 2px 8px; border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  .admit-status.released { color: var(--ledger-green); background: rgba(63,107,74,0.1); }
+  .admit-status.awaited { color: var(--slate); background: rgba(91,100,112,0.1); }
+  .admit-title { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+  .admit-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .admit-tag { font-size: 11px; color: var(--slate); }
+  .admit-tag::after { content: '\00b7'; margin-left: 8px; color: var(--line); }
+  .admit-tag:last-child::after { content: ''; }
+  .admit-stats { display: grid; grid-template-columns: repeat(2, minmax(76px, auto)); gap: 10px 22px; flex-shrink: 0; }
+  .admit-stat { text-align: right; }
+  .admit-stat-num { font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--ink); }
+  .admit-stat-label { font-size: 10px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.4px; }
+  .admit-download-btn {
+    flex-shrink: 0; background: var(--ink); color: var(--paper); font-size: 12px; font-weight: 500;
+    padding: 9px 16px; border-radius: 6px; white-space: nowrap;
+  }
+  html[data-theme="dark"] .admit-download-btn { color: #14181F; }
+  .admit-download-btn.is-disabled { background: var(--paper-raised); color: var(--slate); border: 1px solid var(--line); pointer-events: none; }
+
+  .pagination { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 20px; }
+  .page-link {
+    min-width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--line); border-radius: 6px; font-size: 13px; font-family: var(--font-mono); padding: 0 8px;
+  }
+  .page-link:hover { border-color: var(--ink); }
+  .page-link.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  html[data-theme="dark"] .page-link.is-active { color: #14181F; }
+  .page-link.is-disabled { color: var(--line); pointer-events: none; }
+
+  footer { border-top: 1px solid var(--line); padding: 24px 20px; text-align: center; font-size: 12px; color: var(--slate); }
+
+  /* Mobile: compact left-aligned grouping, NOT edge-to-edge stretch.
+     (Lesson carried over from the vacancy page fix — repeat(2,1fr) with
+     right-align on a full-width container spreads stats to opposite card
+     edges with an awkward empty gap; auto-sized columns + left-align keeps
+     them grouped as a readable block instead.) */
+  @media (max-width: 600px) {
+    .admit-card { flex-wrap: wrap; }
+    .admit-stats {
+      width: 100%; grid-template-columns: repeat(2, auto); justify-content: flex-start;
+      gap: 14px 40px; padding-top: 10px; border-top: 1px solid var(--line);
+    }
+    .admit-stats .admit-stat { text-align: left; }
+    .admit-download-btn { width: 100%; text-align: center; margin-top: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a href="/" class="brand">getsarkariresult<span>.net</span></a>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div class="updated-tag"><span class="dot"></span>Updated 4 minutes ago</div>
+      <button id="themeToggle" aria-label="Toggle dark mode">&#9788;</button>
+    </div>
+  </div>
+</header>
+
+<div class="search-band">
+  <div class="search-wrap">
+    <span class="search-icon">&#128269;</span>
+    <input type="text" placeholder="Search post, department, or state">
+  </div>
+</div>
+
+<main>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span class="sep">/</span><span>Admit Cards</span>
+  </nav>
+
+  <h1 class="page-title">Government exam admit cards</h1>
+  <p class="page-sub">Download links for released admit cards, plus exams awaiting release.</p>
+
+  <!-- CATEGORY FILTER — same taxonomy/route pattern as vacancy.html.
+       Route: /admit-card/?category={slug} -->
+  <div class="filter-bar" id="categoryFilter">
+    <button class="filter-chip is-active" data-category="all">All</button>
+    <button class="filter-chip" data-category="railways">Railways</button>
+    <button class="filter-chip" data-category="banking">Banking</button>
+    <button class="filter-chip" data-category="ssc">SSC</button>
+    <button class="filter-chip" data-category="defence-police">Defence &amp; police</button>
+    <button class="filter-chip" data-category="teaching">Teaching</button>
+    <button class="filter-chip" data-category="psu">PSU</button>
+  </div>
+
+  <div class="filter-selects">
+    <select id="stateFilter" aria-label="Filter by state">
+      <option value="">All states</option>
+      <option value="uttar-pradesh">Uttar Pradesh</option>
+      <option value="bihar">Bihar</option>
+      <option value="rajasthan">Rajasthan</option>
+      <option value="madhya-pradesh">Madhya Pradesh</option>
+      <option value="maharashtra">Maharashtra</option>
+      <option value="west-bengal">West Bengal</option>
+      <!-- full 36-state list in production, trimmed here for the demo —
+           see notifications.html for the complete option set to copy in. -->
+    </select>
+    <!-- STATUS FILTER — specific to this page type, no equivalent on
+         vacancy.html. Distinguishes "already downloadable" from
+         "notification exists but admit card not out yet" — a real and
+         common user need on this exact page type. -->
+    <select id="statusFilter" aria-label="Filter by status">
+      <option value="">All statuses</option>
+      <option value="released">Released — download now</option>
+      <option value="awaited">Awaiting release</option>
+    </select>
+    <select id="sortOrder" aria-label="Sort order">
+      <option value="newest">Newest first</option>
+      <option value="exam-soon">Exam date soon</option>
+    </select>
+  </div>
+
+  <p class="result-count" id="resultCount">Showing 1–20 of 48 admit cards</p>
+
+  <!-- ADMIT CARD ROWS
+       Route per row (clicking title/main area): /{notification_slug}/ —
+       goes to the detail page, which hosts the actual login-gated download
+       flow (needs registration no. + DOB, per field schema Section 3).
+       The "Download" button here is a SEPARATE, more direct affordance —
+       clicking it should go straight to the official portal's admit-card
+       download entry point (download_url field), skipping our own detail
+       page entirely, since speed-to-download is this page's whole job per
+       the page spec. Disabled/greyed state when status = awaited. -->
+  <div class="admit-list" id="admitList">
+    <div class="admit-card" data-category="ssc" data-state="all-india" data-status="released" data-exam-days="9">
+      <a class="admit-main" href="/ssc-chsl-admit-card-2026/">
+        <span class="admit-status released">Released</span>
+        <div class="admit-title">SSC CHSL tier 1 admit card 2026</div>
+        <div class="admit-tags">
+          <span class="admit-tag">Staff Selection Commission</span>
+          <span class="admit-tag">All India</span>
+        </div>
+      </a>
+      <div class="admit-stats">
+        <div class="admit-stat"><div class="admit-stat-num">9 Aug</div><div class="admit-stat-label">Exam date</div></div>
+        <div class="admit-stat"><div class="admit-stat-num">2 days ago</div><div class="admit-stat-label">Released</div></div>
+      </div>
+      <a class="admit-download-btn" href="https://ssc.gov.in/" target="_blank" rel="noopener">Download</a>
+    </div>
+
+    <div class="admit-card" data-category="banking" data-state="all-india" data-status="released" data-exam-days="6">
+      <a class="admit-main" href="/ibps-clerk-admit-card-2026/">
+        <span class="admit-status released">Released</span>
+        <div class="admit-title">IBPS clerk prelims admit card 2026</div>
+        <div class="admit-tags">
+          <span class="admit-tag">Institute of Banking Personnel Selection</span>
+          <span class="admit-tag">All India</span>
+        </div>
+      </a>
+      <div class="admit-stats">
+        <div class="admit-stat"><div class="admit-stat-num">6 Aug</div><div class="admit-stat-label">Exam date</div></div>
+        <div class="admit-stat"><div class="admit-stat-num">3 days ago</div><div class="admit-stat-label">Released</div></div>
+      </div>
+      <a class="admit-download-btn" href="https://ibps.in/" target="_blank" rel="noopener">Download</a>
+    </div>
+
+    <div class="admit-card" data-category="railways" data-state="all-india" data-status="awaited" data-exam-days="41">
+      <a class="admit-main" href="/rrb-ntpc-admit-card-2026/">
+        <span class="admit-status awaited">Awaiting release</span>
+        <div class="admit-title">RRB NTPC admit card 2026</div>
+        <div class="admit-tags">
+          <span class="admit-tag">Railway Recruitment Board</span>
+          <span class="admit-tag">All India</span>
+        </div>
+      </a>
+      <div class="admit-stats">
+        <div class="admit-stat"><div class="admit-stat-num">9 Sep</div><div class="admit-stat-label">Exam date</div></div>
+        <div class="admit-stat"><div class="admit-stat-num">&mdash;</div><div class="admit-stat-label">Released</div></div>
+      </div>
+      <a class="admit-download-btn is-disabled" href="#">Not out yet</a>
+    </div>
+
+    <div class="admit-card" data-category="defence-police" data-state="bihar" data-status="released" data-exam-days="21">
+      <a class="admit-main" href="/bihar-police-si-admit-card-2026/">
+        <span class="admit-status released">Released</span>
+        <div class="admit-title">Bihar Police SI admit card 2026</div>
+        <div class="admit-tags">
+          <span class="admit-tag">Bihar Police Subordinate Services Commission</span>
+          <span class="admit-tag">Bihar</span>
+        </div>
+      </a>
+      <div class="admit-stats">
+        <div class="admit-stat"><div class="admit-stat-num">21 Aug</div><div class="admit-stat-label">Exam date</div></div>
+        <div class="admit-stat"><div class="admit-stat-num">1 day ago</div><div class="admit-stat-label">Released</div></div>
+      </div>
+      <a class="admit-download-btn" href="https://bpssc.bih.nic.in/" target="_blank" rel="noopener">Download</a>
+    </div>
+
+    <div class="admit-card" data-category="teaching" data-state="all-india" data-status="awaited" data-exam-days="55">
+      <a class="admit-main" href="/ctet-2026-admit-card/">
+        <span class="admit-status awaited">Awaiting release</span>
+        <div class="admit-title">CTET 2026 admit card</div>
+        <div class="admit-tags">
+          <span class="admit-tag">Central Board of Secondary Education</span>
+          <span class="admit-tag">All India</span>
+        </div>
+      </a>
+      <div class="admit-stats">
+        <div class="admit-stat"><div class="admit-stat-num">13 Sep</div><div class="admit-stat-label">Exam date</div></div>
+        <div class="admit-stat"><div class="admit-stat-num">&mdash;</div><div class="admit-stat-label">Released</div></div>
+      </div>
+      <a class="admit-download-btn is-disabled" href="#">Not out yet</a>
+    </div>
+
+    <div class="admit-card" data-category="psu" data-state="all-india" data-status="released" data-exam-days="4">
+      <a class="admit-main" href="/ongc-je-admit-card-2026/">
+        <span class="admit-status released">Released</span>
+        <div class="admit-title">ONGC junior engineer admit card 2026</div>
+        <div class="admit-tags">
+          <span class="admit-tag">Oil and Natural Gas Corporation</span>
+          <span class="admit-tag">All India</span>
+        </div>
+      </a>
+      <div class="admit-stats">
+        <div class="admit-stat"><div class="admit-stat-num">4 Aug</div><div class="admit-stat-label">Exam date</div></div>
+        <div class="admit-stat"><div class="admit-stat-num">5 days ago</div><div class="admit-stat-label">Released</div></div>
+      </div>
+      <a class="admit-download-btn" href="https://ongcindia.com/" target="_blank" rel="noopener">Download</a>
+    </div>
+  </div>
+
+  <nav class="pagination" aria-label="Pagination">
+    <a class="page-link is-disabled" href="#">&larr;</a>
+    <a class="page-link is-active" href="/admit-card/?page=1">1</a>
+    <a class="page-link" href="/admit-card/?page=2">2</a>
+    <a class="page-link" href="/admit-card/?page=3">3</a>
+    <a class="page-link" href="/admit-card/?page=2">&rarr;</a>
+  </nav>
+
+</main>
+
+<footer>
+  getsarkariresult.net — independent source for government recruitment updates. Not affiliated with any government body.
+  <br><span style="font-size: 11px;">Always download admit cards from the official portal linked above — never share your registration number or DOB anywhere else.</span>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getsarkariresult.net/" },
+    { "@type": "ListItem", "position": 2, "name": "Admit Cards", "item": "https://getsarkariresult.net/admit-card/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Government exam admit cards",
+  "url": "https://getsarkariresult.net/admit-card/"
+}
+</script>
+
+<script>
+  // Dark mode — identical logic across all pages.
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+  applyTheme(savedTheme || (systemPrefersDark ? 'dark' : 'light'));
+  function applyTheme(theme) {
+    if (theme === 'dark') { root.setAttribute('data-theme', 'dark'); themeBtn.innerHTML = '&#9789;'; }
+    else { root.removeAttribute('data-theme'); themeBtn.innerHTML = '&#9788;'; }
+  }
+  themeBtn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+
+  // ===== COMBINED FILTER ENGINE =====
+  // Same architecture as vacancy.html/notifications.html — demo runs
+  // against static cards; production replaces applyFilters() body with a
+  // real fetch/navigation to /admit-card/?category=X&state=Y&status=Z&sort=W.
+  const categoryButtons = document.querySelectorAll('#categoryFilter .filter-chip');
+  const stateSelect = document.getElementById('stateFilter');
+  const statusSelect = document.getElementById('statusFilter');
+  const sortSelect = document.getElementById('sortOrder');
+  const listEl = document.getElementById('admitList');
+  const resultCountEl = document.getElementById('resultCount');
+  const allCards = Array.from(document.querySelectorAll('.admit-card'));
+
+  let activeCategory = 'all';
+
+  function syncUrl() {
+    const params = new URLSearchParams();
+    if (activeCategory !== 'all') params.set('category', activeCategory);
+    if (stateSelect.value) params.set('state', stateSelect.value);
+    if (statusSelect.value) params.set('status', statusSelect.value);
+    if (sortSelect.value !== 'newest') params.set('sort', sortSelect.value);
+    const query = params.toString();
+    window.history.replaceState({}, '', window.location.pathname + (query ? '?' + query : ''));
+  }
+
+  function applyFilters() {
+    syncUrl();
+    let visible = allCards.filter(card => {
+      if (activeCategory !== 'all' && card.dataset.category !== activeCategory) return false;
+      if (stateSelect.value && card.dataset.state !== stateSelect.value && card.dataset.state !== 'all-india') return false;
+      if (statusSelect.value && card.dataset.status !== statusSelect.value) return false;
+      return true;
+    });
+
+    if (sortSelect.value === 'exam-soon') {
+      visible.sort((a, b) => Number(a.dataset.examDays) - Number(b.dataset.examDays));
+    }
+
+    allCards.forEach(card => { card.style.display = 'none'; });
+    visible.forEach(card => { card.style.display = 'flex'; listEl.appendChild(card); });
+
+    resultCountEl.textContent = visible.length === 0
+      ? 'No admit cards match these filters'
+      : `Showing 1–${visible.length} of ${visible.length} admit cards`;
+  }
+
+  categoryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryButtons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      activeCategory = btn.dataset.category;
+      applyFilters();
+    });
+  });
+  stateSelect.addEventListener('change', applyFilters);
+  statusSelect.addEventListener('change', applyFilters);
+  sortSelect.addEventListener('change', applyFilters);
+
+  (function hydrateFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const urlCategory = params.get('category');
+    if (urlCategory) {
+      activeCategory = urlCategory;
+      categoryButtons.forEach(b => b.classList.toggle('is-active', b.dataset.category === urlCategory));
+    }
+    if (params.get('state')) stateSelect.value = params.get('state');
+    if (params.get('status')) statusSelect.value = params.get('status');
+    if (params.get('sort')) sortSelect.value = params.get('sort');
+    applyFilters();
+  })();
+</script>
+
+</body>
+</html>

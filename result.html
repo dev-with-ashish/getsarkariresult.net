@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government exam results 2026 — cutoff marks &amp; merit list | getsarkariresult.net</title>
+<meta name="description" content="Latest government exam results with category-wise cutoff marks, merit lists, and next-stage details — updated as results are declared.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- SHARED IDENTITY NOTE: same as other listing pages — extract shared CSS
+     to one stylesheet in the real build. button/select/input need explicit
+     color set (see the dim-text bug fixed on notifications.html). -->
+<style>
+  :root {
+    --ink: #1B2A3D; --paper: #F7F5EF; --paper-raised: #FFFFFF;
+    --seal: #A23B2E; --marigold: #C98A2C; --ledger-green: #3F6B4A;
+    --slate: #5B6470; --line: #DCD8CC;
+    --font-display: 'Newsreader', serif; --font-body: 'IBM Plex Sans', sans-serif; --font-mono: 'IBM Plex Mono', monospace;
+  }
+  html[data-theme="dark"] {
+    --ink: #EDEAE0; --paper: #14181F; --paper-raised: #1D232C;
+    --seal: #E08674; --marigold: #E4B15C; --ledger-green: #6FAE81;
+    --slate: #8B93A0; --line: #2B323C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.5; transition: background 0.2s, color 0.2s; }
+  a { color: inherit; text-decoration: none; }
+  button, select, input { color: var(--ink); font-family: var(--font-body); }
+
+  header { background: #1B2A3D; color: #F7F5EF; padding: 14px 20px; }
+  .header-row { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { font-family: var(--font-display); font-size: 22px; font-weight: 600; }
+  .brand span { color: var(--marigold); }
+  .updated-tag { font-family: var(--font-mono); font-size: 11px; color: #B9C2CE; display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ledger-green); display: inline-block; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  #themeToggle { background: transparent; border: 1px solid #3A4658; color: #F7F5EF; border-radius: 6px; width: 30px; height: 30px; cursor: pointer; font-size: 15px; line-height: 1; flex-shrink: 0; }
+
+  .search-band { background: #1B2A3D; padding: 0 20px 20px; }
+  .search-wrap { max-width: 960px; margin: 0 auto; position: relative; }
+  .search-wrap input { width: 100%; padding: 13px 16px 13px 44px; border-radius: 6px; border: none; font-size: 15px; background: var(--paper-raised); }
+  .search-wrap input:focus { outline: 2px solid var(--marigold); }
+  .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--slate); font-size: 16px; }
+
+  main { max-width: 960px; margin: 0 auto; padding: 20px 20px 60px; }
+
+  .breadcrumb { font-size: 12px; color: var(--slate); margin-bottom: 12px; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { margin: 0 6px; }
+
+  .page-title { font-family: var(--font-display); font-size: 24px; font-weight: 600; margin-bottom: 4px; }
+  .page-sub { font-size: 13px; color: var(--slate); margin-bottom: 20px; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .filter-chip { padding: 7px 14px; background: var(--paper-raised); border: 1px solid var(--line); border-radius: 20px; font-size: 13px; cursor: pointer; }
+  .filter-chip.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  html[data-theme="dark"] .filter-chip.is-active { color: #14181F; }
+
+  .filter-selects { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .filter-selects select { font-size: 13px; padding: 8px 10px; background: var(--paper-raised); border: 1px solid var(--line); border-radius: 6px; }
+
+  .result-count { font-size: 12px; color: var(--slate); margin-bottom: 14px; font-family: var(--font-mono); }
+
+  /* Result cards — the cutoff table is the highest-dwell-time element on
+     the whole site per the page spec, so it gets real structural weight
+     here: a visible mini-table, not a buried stat or a link-away. */
+  .result-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .result-card {
+    padding: 16px; background: var(--paper-raised); border: 1px solid var(--line); border-radius: 8px;
+  }
+  .result-card:hover { border-color: var(--ink); }
+  .result-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+  .result-stage {
+    display: inline-block; font-family: var(--font-mono); font-size: 10px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.4px; padding: 2px 8px; border-radius: 4px;
+    color: var(--seal); background: rgba(162,59,46,0.08); margin-bottom: 5px;
+  }
+  .result-title { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+  .result-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .result-tag { font-size: 11px; color: var(--slate); }
+  .result-tag::after { content: '\00b7'; margin-left: 8px; color: var(--line); }
+  .result-tag:last-child::after { content: ''; }
+  .result-date { flex-shrink: 0; font-family: var(--font-mono); font-size: 11px; color: var(--slate); text-align: right; white-space: nowrap; }
+
+  /* THE CUTOFF TABLE — given deliberate visual weight: its own bordered
+     block, a header row, and clear category columns. This is the element
+     the page spec calls out by name as needing "real visual weight, not a
+     buried table." */
+  .cutoff-table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
+  .cutoff-table caption {
+    text-align: left; font-size: 11px; color: var(--slate); text-transform: uppercase;
+    letter-spacing: 0.4px; margin-bottom: 6px; font-family: var(--font-mono);
+  }
+  .cutoff-table th, .cutoff-table td {
+    text-align: center; padding: 8px 6px; font-size: 13px; border: 1px solid var(--line);
+  }
+  .cutoff-table th {
+    background: var(--paper); font-family: var(--font-mono); font-size: 10px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.3px; color: var(--slate);
+  }
+  .cutoff-table td { font-family: var(--font-display); font-weight: 600; color: var(--ink); }
+
+  .result-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .result-link-btn {
+    font-size: 12px; font-weight: 500; padding: 8px 14px; border-radius: 6px;
+    border: 1px solid var(--line); color: var(--ink);
+  }
+  .result-link-btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  html[data-theme="dark"] .result-link-btn.primary { color: #14181F; }
+
+  .pagination { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 20px; }
+  .page-link {
+    min-width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--line); border-radius: 6px; font-size: 13px; font-family: var(--font-mono); padding: 0 8px;
+  }
+  .page-link:hover { border-color: var(--ink); }
+  .page-link.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  html[data-theme="dark"] .page-link.is-active { color: #14181F; }
+  .page-link.is-disabled { color: var(--line); pointer-events: none; }
+
+  footer { border-top: 1px solid var(--line); padding: 24px 20px; text-align: center; font-size: 12px; color: var(--slate); }
+
+  @media (max-width: 600px) {
+    .result-top { flex-direction: column; }
+    .result-date { text-align: left; }
+    .cutoff-table th, .cutoff-table td { padding: 6px 3px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a href="/" class="brand">getsarkariresult<span>.net</span></a>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div class="updated-tag"><span class="dot"></span>Updated 4 minutes ago</div>
+      <button id="themeToggle" aria-label="Toggle dark mode">&#9788;</button>
+    </div>
+  </div>
+</header>
+
+<div class="search-band">
+  <div class="search-wrap">
+    <span class="search-icon">&#128269;</span>
+    <input type="text" placeholder="Search post, department, or state">
+  </div>
+</div>
+
+<main>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span class="sep">/</span><span>Results</span>
+  </nav>
+
+  <h1 class="page-title">Government exam results</h1>
+  <p class="page-sub">Cutoff marks, merit lists, and next-stage details for declared results.</p>
+
+  <!-- CATEGORY FILTER — same taxonomy/route pattern as vacancy.html and
+       admit-card.html. Route: /result/?category={slug} -->
+  <div class="filter-bar" id="categoryFilter">
+    <button class="filter-chip is-active" data-category="all">All</button>
+    <button class="filter-chip" data-category="railways">Railways</button>
+    <button class="filter-chip" data-category="banking">Banking</button>
+    <button class="filter-chip" data-category="ssc">SSC</button>
+    <button class="filter-chip" data-category="state-psc">State PSC</button>
+    <button class="filter-chip" data-category="psu">PSU</button>
+  </div>
+
+  <div class="filter-selects">
+    <select id="stateFilter" aria-label="Filter by state">
+      <option value="">All states</option>
+      <option value="uttar-pradesh">Uttar Pradesh</option>
+      <option value="bihar">Bihar</option>
+      <option value="rajasthan">Rajasthan</option>
+      <option value="madhya-pradesh">Madhya Pradesh</option>
+      <option value="maharashtra">Maharashtra</option>
+      <!-- full 36-state list in production — see notifications.html for the
+           complete option set to copy in. -->
+    </select>
+    <!-- STAGE FILTER — specific to results: a Prelims result and a Final
+         result are functionally different documents for the same
+         recruitment (field schema Section 5: result_type enum), and users
+         very often want specifically one or the other. -->
+    <select id="stageFilter" aria-label="Filter by result stage">
+      <option value="">All stages</option>
+      <option value="prelims">Prelims</option>
+      <option value="mains">Mains</option>
+      <option value="final">Final</option>
+      <option value="interview">Interview</option>
+    </select>
+    <select id="sortOrder" aria-label="Sort order">
+      <option value="newest">Newest first</option>
+    </select>
+  </div>
+
+  <p class="result-count" id="resultCount">Showing 1–20 of 65 results</p>
+
+  <!-- RESULT CARDS
+       Each card's cutoff table = cutoff_marks_category_wise from the field
+       schema (Section 5) — the single field this page exists to surface.
+       Values here MUST match exactly what's on the flagship detail page;
+       a mismatch on cutoff numbers specifically is a serious trust failure,
+       not just an inconsistency — someone could believe they missed a cutoff
+       they actually cleared, or vice versa. Treat this like the
+       application_last_date field from earlier: verify against source,
+       don't let it drift between pages. -->
+  <div class="result-list" id="resultList">
+
+    <div class="result-card" data-category="state-psc" data-state="uttar-pradesh" data-stage="final">
+      <div class="result-top">
+        <div>
+          <span class="result-stage">Final result</span>
+          <div class="result-title">UPPSC PCS 2025 final result</div>
+          <div class="result-tags">
+            <span class="result-tag">Uttar Pradesh Public Service Commission</span>
+            <span class="result-tag">Uttar Pradesh</span>
+          </div>
+        </div>
+        <span class="result-date">Declared 1 day ago</span>
+      </div>
+      <table class="cutoff-table">
+        <caption>Category-wise cutoff (out of 200)</caption>
+        <thead>
+          <tr><th>General</th><th>OBC</th><th>SC</th><th>ST</th><th>EWS</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>142</td><td>136</td><td>121</td><td>108</td><td>139</td></tr>
+        </tbody>
+      </table>
+      <div class="result-actions">
+        <a class="result-link-btn primary" href="/uppsc-pcs-result-2025/">View full result</a>
+        <a class="result-link-btn" href="/uppsc-pcs-result-2025/#merit-list">Merit list</a>
+      </div>
+    </div>
+
+    <div class="result-card" data-category="ssc" data-state="all-india" data-stage="mains">
+      <div class="result-top">
+        <div>
+          <span class="result-stage">Mains result</span>
+          <div class="result-title">SSC CGL 2025 tier 2 result</div>
+          <div class="result-tags">
+            <span class="result-tag">Staff Selection Commission</span>
+            <span class="result-tag">All India</span>
+          </div>
+        </div>
+        <span class="result-date">Declared 3 days ago</span>
+      </div>
+      <table class="cutoff-table">
+        <caption>Category-wise cutoff (out of 400)</caption>
+        <thead>
+          <tr><th>General</th><th>OBC</th><th>SC</th><th>ST</th><th>EWS</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>287</td><td>271</td><td>248</td><td>231</td><td>279</td></tr>
+        </tbody>
+      </table>
+      <div class="result-actions">
+        <a class="result-link-btn primary" href="/ssc-cgl-2025-tier2-result/">View full result</a>
+        <a class="result-link-btn" href="/ssc-cgl-2025-tier2-result/#next-stage">Next stage details</a>
+      </div>
+    </div>
+
+    <div class="result-card" data-category="railways" data-state="all-india" data-stage="prelims">
+      <div class="result-top">
+        <div>
+          <span class="result-stage">Prelims result</span>
+          <div class="result-title">RRB Group D 2025 CBT 1 result</div>
+          <div class="result-tags">
+            <span class="result-tag">Railway Recruitment Board</span>
+            <span class="result-tag">All India</span>
+          </div>
+        </div>
+        <span class="result-date">Declared 5 days ago</span>
+      </div>
+      <table class="cutoff-table">
+        <caption>Category-wise cutoff (out of 100)</caption>
+        <thead>
+          <tr><th>General</th><th>OBC</th><th>SC</th><th>ST</th><th>EWS</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>71</td><td>66</td><td>58</td><td>52</td><td>68</td></tr>
+        </tbody>
+      </table>
+      <div class="result-actions">
+        <a class="result-link-btn primary" href="/rrb-group-d-2025-cbt1-result/">View full result</a>
+        <a class="result-link-btn" href="/rrb-group-d-2025-cbt1-result/#next-stage">Next stage details</a>
+      </div>
+    </div>
+
+    <div class="result-card" data-category="banking" data-state="all-india" data-stage="final">
+      <div class="result-top">
+        <div>
+          <span class="result-stage">Final result</span>
+          <div class="result-title">IBPS RRB officer scale 1 2025 final result</div>
+          <div class="result-tags">
+            <span class="result-tag">Institute of Banking Personnel Selection</span>
+            <span class="result-tag">All India</span>
+          </div>
+        </div>
+        <span class="result-date">Declared 6 days ago</span>
+      </div>
+      <table class="cutoff-table">
+        <caption>Category-wise cutoff (out of 100)</caption>
+        <thead>
+          <tr><th>General</th><th>OBC</th><th>SC</th><th>ST</th><th>EWS</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>68</td><td>63</td><td>55</td><td>49</td><td>65</td></tr>
+        </tbody>
+      </table>
+      <div class="result-actions">
+        <a class="result-link-btn primary" href="/ibps-rrb-officer-scale1-2025-result/">View full result</a>
+        <a class="result-link-btn" href="/ibps-rrb-officer-scale1-2025-result/#merit-list">Merit list</a>
+      </div>
+    </div>
+
+  </div>
+
+  <nav class="pagination" aria-label="Pagination">
+    <a class="page-link is-disabled" href="#">&larr;</a>
+    <a class="page-link is-active" href="/result/?page=1">1</a>
+    <a class="page-link" href="/result/?page=2">2</a>
+    <a class="page-link" href="/result/?page=3">3</a>
+    <a class="page-link" href="/result/?page=2">&rarr;</a>
+  </nav>
+
+</main>
+
+<footer>
+  getsarkariresult.net — independent source for government recruitment updates. Not affiliated with any government body.
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getsarkariresult.net/" },
+    { "@type": "ListItem", "position": 2, "name": "Results", "item": "https://getsarkariresult.net/result/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Government exam results",
+  "url": "https://getsarkariresult.net/result/"
+}
+</script>
+
+<script>
+  // Dark mode — identical logic across all pages.
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+  applyTheme(savedTheme || (systemPrefersDark ? 'dark' : 'light'));
+  function applyTheme(theme) {
+    if (theme === 'dark') { root.setAttribute('data-theme', 'dark'); themeBtn.innerHTML = '&#9789;'; }
+    else { root.removeAttribute('data-theme'); themeBtn.innerHTML = '&#9788;'; }
+  }
+  themeBtn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+
+  // ===== COMBINED FILTER ENGINE =====
+  // Same architecture as every other listing page in this build — demo runs
+  // against static cards; production replaces applyFilters() body with a
+  // real fetch/navigation to /result/?category=X&state=Y&stage=Z&sort=W.
+  const categoryButtons = document.querySelectorAll('#categoryFilter .filter-chip');
+  const stateSelect = document.getElementById('stateFilter');
+  const stageSelect = document.getElementById('stageFilter');
+  const sortSelect = document.getElementById('sortOrder');
+  const listEl = document.getElementById('resultList');
+  const resultCountEl = document.getElementById('resultCount');
+  const allCards = Array.from(document.querySelectorAll('.result-card'));
+
+  let activeCategory = 'all';
+
+  function syncUrl() {
+    const params = new URLSearchParams();
+    if (activeCategory !== 'all') params.set('category', activeCategory);
+    if (stateSelect.value) params.set('state', stateSelect.value);
+    if (stageSelect.value) params.set('stage', stageSelect.value);
+    if (sortSelect.value !== 'newest') params.set('sort', sortSelect.value);
+    const query = params.toString();
+    window.history.replaceState({}, '', window.location.pathname + (query ? '?' + query : ''));
+  }
+
+  function applyFilters() {
+    syncUrl();
+    let visible = allCards.filter(card => {
+      if (activeCategory !== 'all' && card.dataset.category !== activeCategory) return false;
+      if (stateSelect.value && card.dataset.state !== stateSelect.value && card.dataset.state !== 'all-india') return false;
+      if (stageSelect.value && card.dataset.stage !== stageSelect.value) return false;
+      return true;
+    });
+
+    allCards.forEach(card => { card.style.display = 'none'; });
+    visible.forEach(card => { card.style.display = 'block'; listEl.appendChild(card); });
+
+    resultCountEl.textContent = visible.length === 0
+      ? 'No results match these filters'
+      : `Showing 1–${visible.length} of ${visible.length} results`;
+  }
+
+  categoryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryButtons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      activeCategory = btn.dataset.category;
+      applyFilters();
+    });
+  });
+  stateSelect.addEventListener('change', applyFilters);
+  stageSelect.addEventListener('change', applyFilters);
+  sortSelect.addEventListener('change', applyFilters);
+
+  (function hydrateFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const urlCategory = params.get('category');
+    if (urlCategory) {
+      activeCategory = urlCategory;
+      categoryButtons.forEach(b => b.classList.toggle('is-active', b.dataset.category === urlCategory));
+    }
+    if (params.get('state')) stateSelect.value = params.get('state');
+    if (params.get('stage')) stageSelect.value = params.get('stage');
+    if (params.get('sort')) sortSelect.value = params.get('sort');
+    applyFilters();
+  })();
+</script>
+
+</body>
+</html>

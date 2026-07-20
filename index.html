@@ -1,116 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lightning fast updates for all government jobs, results, and admit cards.">
-    <title>GetSarkariResult | Instant Job Notifications</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>getsarkariresult.net — latest government job notifications</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1B2A3D;
+    --paper: #F7F5EF;
+    --paper-raised: #FFFFFF;
+    --seal: #A23B2E;
+    --marigold: #C98A2C;
+    --ledger-green: #3F6B4A;
+    --slate: #5B6470;
+    --line: #DCD8CC;
+    --font-display: 'Newsreader', serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+  html[data-theme="dark"] {
+    --ink: #EDEAE0;
+    --paper: #14181F;
+    --paper-raised: #1D232C;
+    --seal: #E08674;
+    --marigold: #E4B15C;
+    --ledger-green: #6FAE81;
+    --slate: #8B93A0;
+    --line: #2B323C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+    transition: background 0.2s, color 0.2s;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* Header — fixed navy bar, intentionally stays constant across themes */
+  header {
+    background: #1B2A3D;
+    color: #F7F5EF;
+    padding: 14px 20px;
+  }
+  .header-row {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+  .brand span { color: var(--marigold); }
+  .updated-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #B9C2CE;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+  }
+  .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--ledger-green);
+    display: inline-block;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  /* Search — sits under the fixed navy header */
+  .search-band {
+    background: #1B2A3D;
+    padding: 0 20px 20px;
+  }
+  .search-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .search-wrap input {
+    width: 100%;
+    padding: 13px 16px 13px 44px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    font-family: var(--font-body);
+    background: var(--paper-raised);
+    color: var(--ink);
+  }
+  .search-wrap input:focus { outline: 2px solid var(--marigold); }
+  .search-icon {
+    position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+    color: var(--slate); font-size: 16px;
+  }
+
+  main { max-width: 960px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* Stat ledger strip */
+  .ledger-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--paper-raised);
+    margin-bottom: 32px;
+  }
+  .ledger-cell {
+    padding: 16px 12px;
+    text-align: center;
+    border-right: 1px solid var(--line);
+  }
+  .ledger-cell:last-child { border-right: none; }
+  .ledger-num {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .ledger-label {
+    font-size: 11px;
+    color: var(--slate);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+
+  /* Gateway cards — primary type navigation */
+  .gateway-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .gateway-card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gw-color, var(--ink));
+    border-radius: 6px;
+    padding: 14px 10px;
+    text-align: center;
+    display: block;
+  }
+  .gateway-card:hover { border-color: var(--gw-color, var(--ink)); }
+  .gateway-card .gateway-num {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .gateway-card .gateway-label {
+    font-size: 11px;
+    color: var(--slate);
+    margin-top: 3px;
+  }
+  @media (max-width: 700px) {
+    .gateway-grid { grid-template-columns: repeat(2, 1fr); }
+    .gateway-grid a:last-child { grid-column: span 2; }
+  }
+
+  /* Section headings */
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 8px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+  }
+  .section-link {
+    font-size: 12px;
+    color: var(--seal);
+    font-weight: 500;
+  }
+
+  /* Register / feed list */
+  .register {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+  }
+  .register-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--line);
+    transition: background 0.15s;
+  }
+  .register-row:hover { background: rgba(0,0,0,0.02); }
+  .stamp {
+    flex-shrink: 0;
+    width: 84px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding: 4px 0;
+    border-radius: 4px;
+    border: 1px solid currentColor;
+  }
+  .stamp.vacancy { color: var(--ledger-green); }
+  .stamp.admit { color: var(--marigold); }
+  .stamp.result { color: var(--seal); }
+  .stamp.answer { color: var(--slate); }
+  .register-title {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .register-meta {
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--slate);
+  }
+
+  /* Chip rows */
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .chip {
+    padding: 7px 14px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .chip:hover { border-color: var(--ink); }
+
+  /* Category cards */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .category-card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 14px;
+    display: block;
+  }
+  .category-card:hover { border-color: var(--ink); }
+  .category-card.is-hidden { display: none; }
+  .chip.is-hidden { display: none; }
+  .category-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .category-count {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--slate);
+  }
+  .show-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .show-more-btn {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 9px 20px;
+    cursor: pointer;
+  }
+  .show-more-btn:hover { border-color: var(--ink); }
+
+  @media (max-width: 700px) {
+    .category-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Trust footer */
+  .trust-note {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ledger-green);
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: var(--slate);
+    margin-bottom: 8px;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 24px 20px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--slate);
+  }
+
+  @media (max-width: 560px) {
+    .ledger-strip { grid-template-columns: repeat(2, 1fr); }
+    .ledger-cell:nth-child(2) { border-right: none; }
+    .ledger-cell:nth-child(3), .ledger-cell:nth-child(4) { border-top: 1px solid var(--line); }
+    .stamp { width: 68px; font-size: 9px; }
+    .register-meta { display: none; }
+  }
+</style>
 </head>
 <body>
-    <div class="glow-bg"></div>
-    <div class="glow-bg glow-bg-2"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar glass">
-        <div class="container nav-container">
-            <a href="/" class="logo">
-                <span class="logo-icon">🚀</span>
-                <span class="logo-text">GetSarkari<span class="highlight">Result</span></span>
-            </a>
-            <div class="nav-links">
-                <a href="#latest-jobs" class="active">Latest Jobs</a>
-                <a href="#admit-cards">Admit Cards</a>
-                <a href="#results">Results</a>
-            </div>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="moon-icon">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
+<header>
+  <div class="header-row">
+    <div class="brand">getsarkariresult<span>.net</span></div>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div class="updated-tag"><span class="dot"></span>Updated 4 minutes ago</div>
+      <!-- Client-side only — no route, no backend call. Persists choice in
+           localStorage('theme'); falls back to prefers-color-scheme on first visit. -->
+      <button id="themeToggle" aria-label="Toggle dark mode" style="background: transparent; border: 1px solid #3A4658; color: #F7F5EF; border-radius: 6px; width: 30px; height: 30px; cursor: pointer; font-size: 15px; line-height: 1; flex-shrink: 0;">&#9788;</button>
+    </div>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container hero-container">
-            <div class="hero-badge fade-in-up">🔥 Real-time updates directly from govt servers</div>
-            <h1 class="hero-title fade-in-up delay-1">Never Miss A <br> <span class="gradient-text">Government Job</span> Again</h1>
-            <p class="hero-subtitle fade-in-up delay-2">We bypass the bureaucracy. Instant, automated, and 100% accurate notifications for SSC, UPSC, Railways, and more.</p>
-            
-            <!-- Global Search -->
-            <div class="search-container glass fade-in-up delay-3">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input type="text" id="global-search" placeholder="Search for SSC CGL, Railways NTPC, UPPSC...">
-            </div>
-        </div>
-    </header>
+<!-- SEARCH
+     Currently wired for CLIENT-SIDE filtering of the visible feed only (see
+     script below) — that's a homepage nicety, not the real search.
+     Production behavior: on Enter/submit, navigate to /search?q={query},
+     a server-rendered results page querying across notification.title +
+     recruiting_org_name + post_name(s) (field schema Section 1-2). Needs a
+     real <form action="/search" method="get"> wrapping this input with
+     name="q", plus the client-side filter kept as a progressive-enhancement
+     layer for instant feedback before submit. -->
+<div class="search-band">
+  <div class="search-wrap">
+    <span class="search-icon">&#128269;</span>
+    <input type="text" placeholder="Search by post, department, or state — e.g. RRB NTPC, UP Police, 12th pass">
+  </div>
+</div>
 
-    <!-- Main Content -->
-    <main class="container main-layout">
-        
-        <!-- Results Column -->
-        <section class="job-column" id="results">
-            <div class="column-header">
-                <h2><span class="emoji">🏆</span> Results</h2>
-                <div class="pulse-indicator"></div>
-            </div>
-            <div class="jobs-grid" id="results-grid">
-                <!-- Injected via JS -->
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-            </div>
-        </section>
+<main>
 
-        <!-- Admit Cards Column -->
-        <section class="job-column" id="admit-cards">
-            <div class="column-header">
-                <h2><span class="emoji">🎫</span> Admit Cards</h2>
-                <div class="pulse-indicator"></div>
-            </div>
-            <div class="jobs-grid" id="admit-cards-grid">
-                <!-- Injected via JS -->
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-            </div>
-        </section>
+  <!-- TYPE GATEWAY CARDS
+       Route pattern: /{type-slug}/ — each is a paginated listing page.
+       Backend filter: WHERE notification_type = '{Vacancy|Admit Card|Result|
+       Answer Key|General}' (field schema Section 1: notification_type enum).
+       "Notifications" (/notifications/) is the umbrella — shows ALL types,
+       equivalent to the Latest Updates feed below but with full pagination
+       instead of a homepage-limited preview. The number in each card = live
+       COUNT(*) for that filter, must match whatever the homepage feed and
+       gateway page both query against (keep this a single source of truth,
+       don't hardcode counts separately in two places). -->
+  <div class="gateway-grid">
+    <a class="gateway-card" href="/notifications/" style="--gw-color: var(--ink);">
+      <div class="gateway-num">156</div>
+      <div class="gateway-label">Notifications</div>
+    </a>
+    <a class="gateway-card" href="/vacancy/" style="--gw-color: var(--ledger-green);">
+      <div class="gateway-num">312</div>
+      <div class="gateway-label">Vacancies</div>
+    </a>
+    <a class="gateway-card" href="/admit-card/" style="--gw-color: var(--marigold);">
+      <div class="gateway-num">48</div>
+      <div class="gateway-label">Admit cards</div>
+    </a>
+    <a class="gateway-card" href="/result/" style="--gw-color: var(--seal);">
+      <div class="gateway-num">65</div>
+      <div class="gateway-label">Results</div>
+    </a>
+    <a class="gateway-card" href="/answer-key/" style="--gw-color: var(--slate);">
+      <div class="gateway-num">29</div>
+      <div class="gateway-label">Answer keys</div>
+    </a>
+  </div>
 
-        <!-- Latest Jobs Column -->
-        <section class="job-column primary-column" id="latest-jobs">
-            <div class="column-header">
-                <h2><span class="emoji">💼</span> Latest Jobs</h2>
-                <span class="live-badge">LIVE</span>
-            </div>
-            <div class="jobs-grid" id="latest-jobs-grid">
-                <!-- Injected via JS -->
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-            </div>
-        </section>
-        
-    </main>
+  <div class="section-head">
+    <div class="section-title">Latest updates</div>
+    <a href="#" class="section-link">View all &rarr;</a>
+  </div>
+  <!-- LATEST UPDATES FEED
+       Route pattern: /{notification_slug}/ — one page per notification_id
+       (see field schema doc, Section 1: notification_id, official_advt_number).
+       Backend query: latest N rows across ALL notification_type values,
+       ORDER BY date_ingested DESC. The .stamp badge class/label/color
+       (vacancy/admit/result/answer) is driven directly by notification_type.
+       Each href below = the actual recruitment-event / admit-card / result /
+       answer-key detail page for that specific notification_id, NOT a filtered
+       list — clicking a row goes straight to that one notification's full page. -->
+  <div class="register" id="latestFeed">
+    <a class="register-row" href="/rrb-ntpc-recruitment-2026/">
+      <span class="stamp vacancy">Vacancy</span>
+      <span class="register-title">RRB NTPC recruitment 2026 — 6,557 posts, apply online</span>
+      <span class="register-meta">2h ago</span>
+    </a>
+    <a class="register-row" href="/ssc-chsl-admit-card-2026/">
+      <span class="stamp admit">Admit card</span>
+      <span class="register-title">SSC CHSL tier 1 admit card 2026 released</span>
+      <span class="register-meta">5h ago</span>
+    </a>
+    <a class="register-row" href="/uppsc-pcs-result-2025/">
+      <span class="stamp result">Result</span>
+      <span class="register-title">UPPSC PCS 2025 final result declared, cutoff out</span>
+      <span class="register-meta">1d ago</span>
+    </a>
+    <a class="register-row" href="/mpesb-iti-training-officer-answer-key-2026/">
+      <span class="stamp answer">Answer key</span>
+      <span class="register-title">MPESB ITI training officer answer key 2026</span>
+      <span class="register-meta">1d ago</span>
+    </a>
+    <a class="register-row" href="/bihar-police-constable-recruitment-2026/">
+      <span class="stamp vacancy">Vacancy</span>
+      <span class="register-title">Bihar Police constable recruitment 2026 — 21,391 posts</span>
+      <span class="register-meta">1d ago</span>
+    </a>
+    <a class="register-row" href="/ibps-clerk-admit-card-2026/">
+      <span class="stamp admit">Admit card</span>
+      <span class="register-title">IBPS clerk prelims admit card 2026 out</span>
+      <span class="register-meta">2d ago</span>
+    </a>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <p>© 2026 GetSarkariResult. Built with automation.</p>
-            <p class="disclaimer">Disclaimer: This is an independent platform and is not affiliated with any government organization. All data is autonomously sourced from official public domains.</p>
-        </div>
-    </footer>
+  <div class="section-head">
+    <div class="section-title">Popular exams</div>
+  </div>
+  <!-- POPULAR EXAM LINKS
+       Route pattern: /exam/{exam-slug}/
+       Destination = a distinct "Exam/Post entity" hub — NOT the same as a
+       single Recruitment Event page. This page should aggregate every
+       historical + current recruitment cycle for that recurring exam (e.g.
+       /exam/ssc-cgl/ lists SSC CGL 2024, 2025, 2026 cycles together) —
+       this is where the historical_vacancy_trend derived field (schema doc
+       Section 8) gets displayed. Hardcoded to the top 8 highest-search-volume
+       exams for now; long-term this list should be data-driven, ranked by
+       actual search/traffic volume per exam once analytics exist. -->
+  <div class="chip-row">
+    <a class="chip" href="/exam/ssc-cgl/">SSC CGL</a>
+    <a class="chip" href="/exam/rrb-ntpc/">RRB NTPC</a>
+    <a class="chip" href="/exam/ibps-po/">IBPS PO</a>
+    <a class="chip" href="/exam/upsc-cse/">UPSC CSE</a>
+    <a class="chip" href="/exam/rrb-group-d/">RRB Group D</a>
+    <a class="chip" href="/exam/ssc-chsl/">SSC CHSL</a>
+    <a class="chip" href="/exam/ctet/">CTET</a>
+    <a class="chip" href="/exam/ibps-clerk/">IBPS Clerk</a>
+    <a class="chip" href="/exams/">All exams &rarr;</a>
+  </div>
 
-    <!-- JS -->
-    <script src="app.js"></script>
+  <div class="section-head">
+    <div class="section-title">Browse by category</div>
+  </div>
+  <!-- CATEGORY HUB LINKS
+       Route pattern: /{category-slug}-jobs/
+       Destination = "Organization/Category Hub Page" (spec doc section 2) —
+       lists all recruitments where recruiting_org's category tag matches.
+       "Show more" below is CLIENT-SIDE ONLY (toggles a CSS class, no network
+       call, no route change) — all 16 cards already exist in the DOM/HTML
+       from page load, so every category link is crawlable even with JS
+       disabled. Do not rebuild this as a JS-fetched "load more" — that would
+       hide the extra category pages from search crawlers. -->
+  <div class="category-grid" id="categoryGrid">
+    <a class="category-card" href="/railway-jobs/">
+      <div class="category-name">Railways</div>
+      <div class="category-count">47 active</div>
+    </a>
+    <a class="category-card" href="/banking-jobs/">
+      <div class="category-name">Banking</div>
+      <div class="category-count">23 active</div>
+    </a>
+    <a class="category-card" href="/ssc-jobs/">
+      <div class="category-name">SSC</div>
+      <div class="category-count">18 active</div>
+    </a>
+    <a class="category-card" href="/defence-police-jobs/">
+      <div class="category-name">Defence &amp; police</div>
+      <div class="category-count">31 active</div>
+    </a>
+    <a class="category-card" href="/teaching-jobs/">
+      <div class="category-name">Teaching</div>
+      <div class="category-count">29 active</div>
+    </a>
+    <a class="category-card" href="/psu-jobs/">
+      <div class="category-name">PSU</div>
+      <div class="category-count">12 active</div>
+    </a>
+    <a class="category-card" href="/upsc-jobs/">
+      <div class="category-name">UPSC</div>
+      <div class="category-count">8 active</div>
+    </a>
+    <a class="category-card" href="/healthcare-jobs/">
+      <div class="category-name">Healthcare</div>
+      <div class="category-count">15 active</div>
+    </a>
+    <a class="category-card is-hidden" href="/court-jobs/">
+      <div class="category-name">Court &amp; judiciary</div>
+      <div class="category-count">14 active</div>
+    </a>
+    <a class="category-card is-hidden" href="/state-psc-jobs/">
+      <div class="category-name">State PSC</div>
+      <div class="category-count">22 active</div>
+    </a>
+    <a class="category-card is-hidden" href="/university-jobs/">
+      <div class="category-name">University &amp; college</div>
+      <div class="category-count">9 active</div>
+    </a>
+    <a class="category-card is-hidden" href="/anganwadi-jobs/">
+      <div class="category-name">Anganwadi &amp; women-specific</div>
+      <div class="category-count">6 active</div>
+    </a>
+    <a class="category-card is-hidden" href="/without-exam-jobs/">
+      <div class="category-name">Without exam / walk-in</div>
+      <div class="category-count">11 active</div>
+    </a>
+    <a class="category-card is-hidden" href="/engineering-jobs/">
+      <div class="category-name">Engineering</div>
+      <div class="category-count">13 active</div>
+    </a>
+    <a class="category-card is-hidden" href="/postal-jobs/">
+      <div class="category-name">Postal &amp; India Post</div>
+      <div class="category-count">7 active</div>
+    </a>
+    <a class="category-card is-hidden" href="/insurance-jobs/">
+      <div class="category-name">Insurance</div>
+      <div class="category-count">5 active</div>
+    </a>
+  </div>
+  <!-- Client-side only — no route, no backend call. Toggles .is-hidden on the
+       8 extra .category-card elements already present in the HTML above. -->
+  <div class="show-more-wrap">
+    <button class="show-more-btn" id="showMoreBtn">Show more categories</button>
+  </div>
+
+  <div class="section-head">
+    <div class="section-title">Browse by state</div>
+  </div>
+  <!-- STATE HUB LINKS
+       Route pattern: /{state-slug}-govt-jobs/
+       Destination = "State Hub Page" (spec doc section 5) — lists all recruitment
+       events where notification.state_or_region == this state, OR state_or_region
+       == "All India" (central govt posts apply to every state). Backend filter:
+       WHERE state_or_region IN ('Maharashtra', 'All India') ORDER BY date_published DESC.
+
+       COMPLETENESS: all 28 states + 8 union territories are listed below (36 total,
+       the full current list — no state/UT reorganization since the 2019 J&K
+       bifurcation and 2020 Dadra & Nagar Haveli / Daman & Diu merger). The first
+       12 are visible by default (ranked by expected search volume — largest
+       population/most active recruiters first); the rest expand via "Show more",
+       same pattern and same crawlability reasoning as the category cards above —
+       all 36 links exist in the DOM from page load, none are JS-injected. -->
+  <div class="chip-row" id="stateGrid">
+    <a class="chip" href="/uttar-pradesh-govt-jobs/">Uttar Pradesh</a>
+    <a class="chip" href="/bihar-govt-jobs/">Bihar</a>
+    <a class="chip" href="/maharashtra-govt-jobs/">Maharashtra</a>
+    <a class="chip" href="/west-bengal-govt-jobs/">West Bengal</a>
+    <a class="chip" href="/madhya-pradesh-govt-jobs/">Madhya Pradesh</a>
+    <a class="chip" href="/rajasthan-govt-jobs/">Rajasthan</a>
+    <a class="chip" href="/tamil-nadu-govt-jobs/">Tamil Nadu</a>
+    <a class="chip" href="/karnataka-govt-jobs/">Karnataka</a>
+    <a class="chip" href="/gujarat-govt-jobs/">Gujarat</a>
+    <a class="chip" href="/andhra-pradesh-govt-jobs/">Andhra Pradesh</a>
+    <a class="chip" href="/odisha-govt-jobs/">Odisha</a>
+    <a class="chip" href="/telangana-govt-jobs/">Telangana</a>
+    <a class="chip is-hidden" href="/kerala-govt-jobs/">Kerala</a>
+    <a class="chip is-hidden" href="/jharkhand-govt-jobs/">Jharkhand</a>
+    <a class="chip is-hidden" href="/assam-govt-jobs/">Assam</a>
+    <a class="chip is-hidden" href="/punjab-govt-jobs/">Punjab</a>
+    <a class="chip is-hidden" href="/chhattisgarh-govt-jobs/">Chhattisgarh</a>
+    <a class="chip is-hidden" href="/haryana-govt-jobs/">Haryana</a>
+    <a class="chip is-hidden" href="/delhi-govt-jobs/">Delhi (NCT)</a>
+    <a class="chip is-hidden" href="/jammu-kashmir-govt-jobs/">Jammu &amp; Kashmir</a>
+    <a class="chip is-hidden" href="/uttarakhand-govt-jobs/">Uttarakhand</a>
+    <a class="chip is-hidden" href="/himachal-pradesh-govt-jobs/">Himachal Pradesh</a>
+    <a class="chip is-hidden" href="/tripura-govt-jobs/">Tripura</a>
+    <a class="chip is-hidden" href="/meghalaya-govt-jobs/">Meghalaya</a>
+    <a class="chip is-hidden" href="/manipur-govt-jobs/">Manipur</a>
+    <a class="chip is-hidden" href="/nagaland-govt-jobs/">Nagaland</a>
+    <a class="chip is-hidden" href="/goa-govt-jobs/">Goa</a>
+    <a class="chip is-hidden" href="/arunachal-pradesh-govt-jobs/">Arunachal Pradesh</a>
+    <a class="chip is-hidden" href="/mizoram-govt-jobs/">Mizoram</a>
+    <a class="chip is-hidden" href="/sikkim-govt-jobs/">Sikkim</a>
+    <a class="chip is-hidden" href="/puducherry-govt-jobs/">Puducherry</a>
+    <a class="chip is-hidden" href="/chandigarh-govt-jobs/">Chandigarh</a>
+    <a class="chip is-hidden" href="/ladakh-govt-jobs/">Ladakh</a>
+    <a class="chip is-hidden" href="/andaman-nicobar-govt-jobs/">Andaman &amp; Nicobar Islands</a>
+    <a class="chip is-hidden" href="/dnh-daman-diu-govt-jobs/">Dadra &amp; Nagar Haveli and Daman &amp; Diu</a>
+    <a class="chip is-hidden" href="/lakshadweep-govt-jobs/">Lakshadweep</a>
+  </div>
+  <div class="show-more-wrap">
+    <button class="show-more-btn" id="showMoreStatesBtn">Show all 36 states &amp; union territories</button>
+  </div>
+
+  <div class="section-head">
+    <div class="section-title">Browse by qualification</div>
+  </div>
+  <!-- QUALIFICATION HUB LINKS
+       Route pattern: /{qualification-slug}-govt-jobs/
+       Destination = "Qualification Hub Page" (spec doc section 6).
+       Filters on notification.qualification_level_enum. Important: this is
+       typically a "minimum qualification" filter, not exact-match — e.g.
+       "10th pass" should include posts open to 10th pass AND anyone with
+       higher qualifications who's also eligible (most govt posts state a
+       floor, not a ceiling) — confirm this inclusion rule with content team
+       before building the query, since it affects which cards populate.
+       All 6 enum values from the field schema doc are represented here
+       (added PhD/Doctorate, which was missing from the original draft). -->
+  <div class="chip-row">
+    <a class="chip" href="/10th-pass-govt-jobs/">10th pass</a>
+    <a class="chip" href="/12th-pass-govt-jobs/">12th pass</a>
+    <a class="chip" href="/diploma-iti-govt-jobs/">Diploma / ITI</a>
+    <a class="chip" href="/graduate-govt-jobs/">Graduate</a>
+    <a class="chip" href="/post-graduate-govt-jobs/">Post graduate</a>
+    <a class="chip" href="/phd-govt-jobs/">PhD / Doctorate</a>
+  </div>
+
+  <div class="trust-note">
+    Every listing links directly to the official notification and application portal. We never collect payment or ask for OTPs — always apply on the government's own website.
+  </div>
+
+</main>
+
+<footer>
+  getsarkariresult.net — independent source for government recruitment updates. Not affiliated with any government body.
+</footer>
+
+<script>
+  // Dark mode: respects saved preference, falls back to system preference.
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+  const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      themeBtn.innerHTML = '&#9789;'; // moon
+    } else {
+      root.removeAttribute('data-theme');
+      themeBtn.innerHTML = '&#9788;'; // sun
+    }
+  }
+  applyTheme(initialTheme);
+
+  themeBtn.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+
+  // Show more / show less toggle for category cards.
+  // All cards are real <a> links present in the HTML from the start —
+  // hiding extras with a CSS class (not injecting via JS) keeps every
+  // category link crawlable even before this script runs.
+  const showMoreBtn = document.getElementById('showMoreBtn');
+  const hiddenCards = document.querySelectorAll('.category-card.is-hidden');
+  let expanded = false;
+  showMoreBtn.addEventListener('click', () => {
+    expanded = !expanded;
+    hiddenCards.forEach(card => card.classList.toggle('is-hidden', !expanded));
+    showMoreBtn.textContent = expanded ? 'Show fewer categories' : 'Show more categories';
+  });
+
+  // Show more / show less toggle for state chips — same pattern, same
+  // crawlability reasoning: all 36 states/UTs exist as real <a> links from
+  // page load, this only toggles a CSS class.
+  const showMoreStatesBtn = document.getElementById('showMoreStatesBtn');
+  const hiddenStates = document.querySelectorAll('#stateGrid .chip.is-hidden');
+  let statesExpanded = false;
+  showMoreStatesBtn.addEventListener('click', () => {
+    statesExpanded = !statesExpanded;
+    hiddenStates.forEach(chip => chip.classList.toggle('is-hidden', !statesExpanded));
+    showMoreStatesBtn.textContent = statesExpanded ? 'Show fewer states' : 'Show all 36 states & union territories';
+  });
+
+  // Simple client-side filter for the search box (demo behavior)
+  const input = document.querySelector('.search-wrap input');
+  const rows = document.querySelectorAll('.register-row');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    rows.forEach(row => {
+      const text = row.querySelector('.register-title').textContent.toLowerCase();
+      row.style.display = text.includes(q) ? 'flex' : 'none';
+    });
+  });
+</script>
+
 </body>
 </html>

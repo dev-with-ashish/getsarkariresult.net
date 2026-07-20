@@ -1,0 +1,57 @@
+{
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "{{POST_TITLE}} Recruitment {{YEAR}}",
+  "description": "{{PLAIN_TEXT_SUMMARY_MIN_100_WORDS}}",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "{{ORG_SHORT_NAME}}",
+    "value": "{{ADVT_NUMBER_OR_INTERNAL_ID}}"
+  },
+  "datePosted": "{{ISO_DATE_NOTIFICATION_RELEASED}}",
+  "validThrough": "{{ISO_DATE_LAST_DATE_TO_APPLY}}",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "{{FULL_ORG_NAME}}",
+    "sameAs": "{{WIKIDATA_OR_OFFICIAL_WEBSITE_URL}}",
+    "logo": "{{ORG_LOGO_URL_IF_AVAILABLE}}"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{CITY_IF_KNOWN}}",
+      "addressRegion": "{{STATE}}",
+      "addressCountry": "IN"
+    }
+  },
+  "applicantLocationRequirements": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "totalJobOpenings": "{{VACANCY_COUNT_INTEGER}}",
+  "educationRequirements": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "{{e.g. bachelor degree / 10th pass / diploma}}"
+  },
+  "experienceRequirements": {
+    "@type": "OccupationalExperienceRequirements",
+    "monthsOfExperience": "{{IF_STATED_ELSE_OMIT_FIELD}}"
+  },
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "INR",
+    "value": {
+      "@type": "QuantitativeValue",
+      "minValue": "{{PAY_SCALE_MIN}}",
+      "maxValue": "{{PAY_SCALE_MAX}}",
+      "unitText": "MONTH"
+    }
+  },
+  "directApply": true,
+  "applicationContact": {
+    "@type": "ContactPoint",
+    "url": "{{OFFICIAL_APPLICATION_URL}}"
+  }
+}

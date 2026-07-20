@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest government job vacancies 2026 — apply online | getsarkariresult.net</title>
+<meta name="description" content="Browse all active government job vacancies — filter by state, qualification, and department. Updated daily with direct links to apply.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!--
+  SHARED IDENTITY NOTE (same as notifications.html): extract :root, dark-mode
+  overrides, header/search/chip/pagination rules into one shared stylesheet
+  included on every page in the real build. Also note the button/select
+  color bug fixed on notifications.html — button, select, input all need
+  color: var(--ink) set explicitly, they don't inherit from body by default.
+-->
+<style>
+  :root {
+    --ink: #1B2A3D;
+    --paper: #F7F5EF;
+    --paper-raised: #FFFFFF;
+    --seal: #A23B2E;
+    --marigold: #C98A2C;
+    --ledger-green: #3F6B4A;
+    --slate: #5B6470;
+    --line: #DCD8CC;
+    --font-display: 'Newsreader', serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+  html[data-theme="dark"] {
+    --ink: #EDEAE0;
+    --paper: #14181F;
+    --paper-raised: #1D232C;
+    --seal: #E08674;
+    --marigold: #E4B15C;
+    --ledger-green: #6FAE81;
+    --slate: #8B93A0;
+    --line: #2B323C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.5; transition: background 0.2s, color 0.2s; }
+  a { color: inherit; text-decoration: none; }
+  button, select, input { color: var(--ink); font-family: var(--font-body); }
+
+  header { background: #1B2A3D; color: #F7F5EF; padding: 14px 20px; }
+  .header-row { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { font-family: var(--font-display); font-size: 22px; font-weight: 600; }
+  .brand span { color: var(--marigold); }
+  .updated-tag { font-family: var(--font-mono); font-size: 11px; color: #B9C2CE; display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ledger-green); display: inline-block; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  #themeToggle { background: transparent; border: 1px solid #3A4658; color: #F7F5EF; border-radius: 6px; width: 30px; height: 30px; cursor: pointer; font-size: 15px; line-height: 1; flex-shrink: 0; }
+
+  .search-band { background: #1B2A3D; padding: 0 20px 20px; }
+  .search-wrap { max-width: 960px; margin: 0 auto; position: relative; }
+  .search-wrap input { width: 100%; padding: 13px 16px 13px 44px; border-radius: 6px; border: none; font-size: 15px; background: var(--paper-raised); }
+  .search-wrap input:focus { outline: 2px solid var(--marigold); }
+  .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--slate); font-size: 16px; }
+
+  main { max-width: 960px; margin: 0 auto; padding: 20px 20px 60px; }
+
+  .breadcrumb { font-size: 12px; color: var(--slate); margin-bottom: 12px; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { margin: 0 6px; }
+
+  .page-title { font-family: var(--font-display); font-size: 24px; font-weight: 600; margin-bottom: 4px; }
+  .page-sub { font-size: 13px; color: var(--slate); margin-bottom: 20px; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .filter-chip { padding: 7px 14px; background: var(--paper-raised); border: 1px solid var(--line); border-radius: 20px; font-size: 13px; cursor: pointer; }
+  .filter-chip.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  html[data-theme="dark"] .filter-chip.is-active { color: #14181F; }
+
+  .filter-selects { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .filter-selects select { font-size: 13px; padding: 8px 10px; background: var(--paper-raised); border: 1px solid var(--line); border-radius: 6px; }
+
+  .result-count { font-size: 12px; color: var(--slate); margin-bottom: 14px; font-family: var(--font-mono); }
+
+  /* Vacancy cards — richer than the generic notification row, since
+     vacancy count and last date are the two highest-scan-value fields
+     for this specific page type (per field schema doc notes). */
+  .vacancy-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+  .vacancy-card {
+    display: flex; align-items: center; gap: 16px; padding: 14px 16px;
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: 8px;
+  }
+  .vacancy-card:hover { border-color: var(--ink); }
+  .vacancy-main { flex: 1; min-width: 0; }
+  .vacancy-title { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+  .vacancy-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .vacancy-tag { font-size: 11px; color: var(--slate); }
+  .vacancy-tag::after { content: '\00b7'; margin-left: 8px; color: var(--line); }
+  .vacancy-tag:last-child::after { content: ''; }
+  .vacancy-stats { display: grid; grid-template-columns: repeat(2, minmax(76px, auto)); gap: 10px 22px; flex-shrink: 0; }
+  .vacancy-stat { text-align: right; }
+  .vacancy-stat-num { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--ink); }
+  .vacancy-stat-num.is-text { font-family: var(--font-body); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .vacancy-stat-label { font-size: 10px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.4px; }
+  .vacancy-stat.urgent .vacancy-stat-num { color: var(--seal); }
+
+  .pagination { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 20px; }
+  .page-link {
+    min-width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--line); border-radius: 6px; font-size: 13px; font-family: var(--font-mono); padding: 0 8px;
+  }
+  .page-link:hover { border-color: var(--ink); }
+  .page-link.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  html[data-theme="dark"] .page-link.is-active { color: #14181F; }
+  .page-link.is-disabled { color: var(--line); pointer-events: none; }
+
+  footer { border-top: 1px solid var(--line); padding: 24px 20px; text-align: center; font-size: 12px; color: var(--slate); }
+
+  @media (max-width: 600px) {
+    .vacancy-card { flex-wrap: wrap; }
+    .vacancy-stats {
+      width: 100%;
+      grid-template-columns: repeat(2, auto);
+      justify-content: flex-start;
+      gap: 14px 40px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+    .vacancy-stats .vacancy-stat { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a href="/" class="brand">getsarkariresult<span>.net</span></a>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div class="updated-tag"><span class="dot"></span>Updated 4 minutes ago</div>
+      <button id="themeToggle" aria-label="Toggle dark mode">&#9788;</button>
+    </div>
+  </div>
+</header>
+
+<div class="search-band">
+  <div class="search-wrap">
+    <span class="search-icon">&#128269;</span>
+    <input type="text" placeholder="Search post, department, or state">
+  </div>
+</div>
+
+<main>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span class="sep">/</span><span>Vacancies</span>
+  </nav>
+
+  <h1 class="page-title">Latest government job vacancies</h1>
+  <p class="page-sub">All active recruitment notifications currently accepting applications.</p>
+
+  <!-- CATEGORY FILTER (not type — this whole page is already
+       notification_type='Vacancy'; category is the useful facet here).
+       Route: /vacancy/?category={slug}. Same taxonomy as homepage category
+       cards — keep these two lists in sync if either changes. -->
+  <div class="filter-bar" id="categoryFilter">
+    <button class="filter-chip is-active" data-category="all">All</button>
+    <button class="filter-chip" data-category="railways">Railways</button>
+    <button class="filter-chip" data-category="banking">Banking</button>
+    <button class="filter-chip" data-category="ssc">SSC</button>
+    <button class="filter-chip" data-category="defence-police">Defence &amp; police</button>
+    <button class="filter-chip" data-category="teaching">Teaching</button>
+    <button class="filter-chip" data-category="psu">PSU</button>
+  </div>
+
+  <div class="filter-selects">
+    <select id="stateFilter" aria-label="Filter by state">
+      <option value="">All states</option>
+      <option value="uttar-pradesh">Uttar Pradesh</option>
+      <option value="bihar">Bihar</option>
+      <option value="rajasthan">Rajasthan</option>
+      <option value="madhya-pradesh">Madhya Pradesh</option>
+      <option value="maharashtra">Maharashtra</option>
+      <option value="west-bengal">West Bengal</option>
+      <!-- full 36-state list in production, trimmed here for the demo —
+           see notifications.html for the complete option set to copy in. -->
+    </select>
+    <select id="qualFilter" aria-label="Filter by qualification">
+      <option value="">All qualifications</option>
+      <option value="10th">10th pass</option>
+      <option value="12th">12th pass</option>
+      <option value="diploma">Diploma / ITI</option>
+      <option value="graduate">Graduate</option>
+      <option value="pg">Post graduate</option>
+      <option value="phd">PhD / Doctorate</option>
+    </select>
+    <select id="sortOrder" aria-label="Sort order">
+      <option value="newest">Newest first</option>
+      <option value="vacancies">Most vacancies</option>
+      <option value="closing">Closing soon</option>
+    </select>
+  </div>
+
+  <p class="result-count" id="resultCount">Showing 1–20 of 312 vacancies</p>
+
+  <!-- VACANCY CARDS
+       Route per card: /{notification_slug}/ — the flagship Recruitment
+       Event page. Every field shown here (vacancies, last date) must match
+       exactly what's on that detail page and in its JobPosting schema —
+       a mismatch between this list and the detail page is a real user
+       trust problem, not just an SEO one.
+       data-vacancies / data-days-left drive the "Most vacancies" and
+       "Closing soon" sort options — see JS below.
+       data-fee / the Fee stat shown = application_fee_general from the
+       field schema doc (general-category rate), NOT the full picture —
+       SC/ST/PwD/women applicants often pay less or are exempted
+       (application_fee_category_wise). Showing only the general rate here
+       is intentional for card-level scannability; the full category-wise
+       breakdown belongs on the flagship Recruitment Event detail page,
+       not this list. Don't let this general figure be the only fee
+       information available anywhere on the site. -->
+  <div class="vacancy-list" id="vacancyList">
+    <a class="vacancy-card" href="/rrb-ntpc-recruitment-2026/" data-category="railways" data-state="all-india" data-qualification="graduate" data-vacancies="6557" data-days-left="26" data-fee="500">
+      <div class="vacancy-main">
+        <div class="vacancy-title">RRB NTPC recruitment 2026</div>
+        <div class="vacancy-tags">
+          <span class="vacancy-tag">Railway Recruitment Board</span>
+          <span class="vacancy-tag">All India</span>
+        </div>
+      </div>
+      <div class="vacancy-stats">
+        <div class="vacancy-stat"><div class="vacancy-stat-num">6,557</div><div class="vacancy-stat-label">Posts</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">26d</div><div class="vacancy-stat-label">Left to apply</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">&#8377;500</div><div class="vacancy-stat-label">Fee</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num is-text">Graduate</div><div class="vacancy-stat-label">Min. qualification</div></div>
+      </div>
+    </a>
+    <a class="vacancy-card" href="/bihar-police-constable-recruitment-2026/" data-category="defence-police" data-state="bihar" data-qualification="12th" data-vacancies="21391" data-days-left="14" data-fee="150">
+      <div class="vacancy-main">
+        <div class="vacancy-title">Bihar Police constable recruitment 2026</div>
+        <div class="vacancy-tags">
+          <span class="vacancy-tag">Bihar Police</span>
+          <span class="vacancy-tag">Bihar</span>
+        </div>
+      </div>
+      <div class="vacancy-stats">
+        <div class="vacancy-stat"><div class="vacancy-stat-num">21,391</div><div class="vacancy-stat-label">Posts</div></div>
+        <div class="vacancy-stat urgent"><div class="vacancy-stat-num">14d</div><div class="vacancy-stat-label">Left to apply</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">&#8377;150</div><div class="vacancy-stat-label">Fee</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num is-text">12th pass</div><div class="vacancy-stat-label">Min. qualification</div></div>
+      </div>
+    </a>
+    <a class="vacancy-card" href="/ibps-po-recruitment-2026/" data-category="banking" data-state="all-india" data-qualification="graduate" data-vacancies="3487" data-days-left="19" data-fee="850">
+      <div class="vacancy-main">
+        <div class="vacancy-title">IBPS PO recruitment 2026</div>
+        <div class="vacancy-tags">
+          <span class="vacancy-tag">Institute of Banking Personnel Selection</span>
+          <span class="vacancy-tag">All India</span>
+        </div>
+      </div>
+      <div class="vacancy-stats">
+        <div class="vacancy-stat"><div class="vacancy-stat-num">3,487</div><div class="vacancy-stat-label">Posts</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">19d</div><div class="vacancy-stat-label">Left to apply</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">&#8377;850</div><div class="vacancy-stat-label">Fee</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num is-text">Graduate</div><div class="vacancy-stat-label">Min. qualification</div></div>
+      </div>
+    </a>
+    <a class="vacancy-card" href="/ssc-cgl-recruitment-2026/" data-category="ssc" data-state="all-india" data-qualification="graduate" data-vacancies="9583" data-days-left="4" data-fee="100">
+      <div class="vacancy-main">
+        <div class="vacancy-title">SSC CGL recruitment 2026</div>
+        <div class="vacancy-tags">
+          <span class="vacancy-tag">Staff Selection Commission</span>
+          <span class="vacancy-tag">All India</span>
+        </div>
+      </div>
+      <div class="vacancy-stats">
+        <div class="vacancy-stat"><div class="vacancy-stat-num">9,583</div><div class="vacancy-stat-label">Posts</div></div>
+        <div class="vacancy-stat urgent"><div class="vacancy-stat-num">4d</div><div class="vacancy-stat-label">Left to apply</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">&#8377;100</div><div class="vacancy-stat-label">Fee</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num is-text">Graduate</div><div class="vacancy-stat-label">Min. qualification</div></div>
+      </div>
+    </a>
+    <a class="vacancy-card" href="/dsssb-tgt-recruitment-2026/" data-category="teaching" data-state="delhi" data-qualification="graduate" data-vacancies="1876" data-days-left="31" data-fee="100">
+      <div class="vacancy-main">
+        <div class="vacancy-title">DSSSB TGT recruitment 2026</div>
+        <div class="vacancy-tags">
+          <span class="vacancy-tag">Delhi Subordinate Services Selection Board</span>
+          <span class="vacancy-tag">Delhi</span>
+        </div>
+      </div>
+      <div class="vacancy-stats">
+        <div class="vacancy-stat"><div class="vacancy-stat-num">1,876</div><div class="vacancy-stat-label">Posts</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">31d</div><div class="vacancy-stat-label">Left to apply</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">&#8377;100</div><div class="vacancy-stat-label">Fee</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num is-text">Graduate</div><div class="vacancy-stat-label">Min. qualification</div></div>
+      </div>
+    </a>
+    <a class="vacancy-card" href="/ongc-junior-engineer-recruitment-2026/" data-category="psu" data-state="all-india" data-qualification="graduate" data-vacancies="542" data-days-left="11" data-fee="300">
+      <div class="vacancy-main">
+        <div class="vacancy-title">ONGC junior engineer recruitment 2026</div>
+        <div class="vacancy-tags">
+          <span class="vacancy-tag">Oil and Natural Gas Corporation</span>
+          <span class="vacancy-tag">All India</span>
+        </div>
+      </div>
+      <div class="vacancy-stats">
+        <div class="vacancy-stat"><div class="vacancy-stat-num">542</div><div class="vacancy-stat-label">Posts</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">11d</div><div class="vacancy-stat-label">Left to apply</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num">&#8377;300</div><div class="vacancy-stat-label">Fee</div></div>
+        <div class="vacancy-stat"><div class="vacancy-stat-num is-text">Graduate</div><div class="vacancy-stat-label">Min. qualification</div></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- PAGINATION — real links, same crawlability reasoning as notifications.html -->
+  <nav class="pagination" aria-label="Pagination">
+    <a class="page-link is-disabled" href="#">&larr;</a>
+    <a class="page-link is-active" href="/vacancy/?page=1">1</a>
+    <a class="page-link" href="/vacancy/?page=2">2</a>
+    <a class="page-link" href="/vacancy/?page=3">3</a>
+    <span class="page-link is-disabled">&hellip;</span>
+    <a class="page-link" href="/vacancy/?page=16">16</a>
+    <a class="page-link" href="/vacancy/?page=2">&rarr;</a>
+  </nav>
+
+</main>
+
+<footer>
+  getsarkariresult.net — independent source for government recruitment updates. Not affiliated with any government body.
+</footer>
+
+<!-- STRUCTURED DATA
+     BreadcrumbList + CollectionPage mark this as a listing page.
+     ItemList referencing each JobPosting is what lets this specific page
+     type (a jobs listing/aggregator page) potentially qualify for
+     Google's job-listing rich result treatment beyond individual
+     JobPosting pages — populate item/url dynamically from the same query
+     that renders the visible cards, keep in sync with visible content. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getsarkariresult.net/" },
+    { "@type": "ListItem", "position": 2, "name": "Vacancies", "item": "https://getsarkariresult.net/vacancy/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Latest government job vacancies",
+  "url": "https://getsarkariresult.net/vacancy/",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "url": "https://getsarkariresult.net/rrb-ntpc-recruitment-2026/" },
+      { "@type": "ListItem", "position": 2, "url": "https://getsarkariresult.net/bihar-police-constable-recruitment-2026/" },
+      { "@type": "ListItem", "position": 3, "url": "https://getsarkariresult.net/ibps-po-recruitment-2026/" },
+      { "@type": "ListItem", "position": 4, "url": "https://getsarkariresult.net/ssc-cgl-recruitment-2026/" },
+      { "@type": "ListItem", "position": 5, "url": "https://getsarkariresult.net/dsssb-tgt-recruitment-2026/" },
+      { "@type": "ListItem", "position": 6, "url": "https://getsarkariresult.net/ongc-junior-engineer-recruitment-2026/" }
+    ]
+  }
+}
+</script>
+
+<script>
+  // Dark mode — identical logic across all pages, keep in sync.
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+  applyTheme(savedTheme || (systemPrefersDark ? 'dark' : 'light'));
+  function applyTheme(theme) {
+    if (theme === 'dark') { root.setAttribute('data-theme', 'dark'); themeBtn.innerHTML = '&#9789;'; }
+    else { root.removeAttribute('data-theme'); themeBtn.innerHTML = '&#9788;'; }
+  }
+  themeBtn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+
+  // ===== COMBINED FILTER ENGINE =====
+  // Same architecture as notifications.html: demo runs against static cards
+  // via data-* attributes; production replaces the body of applyFilters()
+  // with a real fetch/navigation to /vacancy/?category=X&state=Y&qualification=Z&sort=W.
+  const categoryButtons = document.querySelectorAll('#categoryFilter .filter-chip');
+  const stateSelect = document.getElementById('stateFilter');
+  const qualSelect = document.getElementById('qualFilter');
+  const sortSelect = document.getElementById('sortOrder');
+  const listEl = document.getElementById('vacancyList');
+  const resultCountEl = document.getElementById('resultCount');
+  const allCards = Array.from(document.querySelectorAll('.vacancy-card'));
+  const qualRank = { '10th': 0, '12th': 1, 'diploma': 2, 'graduate': 3, 'pg': 4, 'phd': 5 };
+
+  let activeCategory = 'all';
+
+  function syncUrl() {
+    const params = new URLSearchParams();
+    if (activeCategory !== 'all') params.set('category', activeCategory);
+    if (stateSelect.value) params.set('state', stateSelect.value);
+    if (qualSelect.value) params.set('qualification', qualSelect.value);
+    if (sortSelect.value !== 'newest') params.set('sort', sortSelect.value);
+    const query = params.toString();
+    window.history.replaceState({}, '', window.location.pathname + (query ? '?' + query : ''));
+  }
+
+  function applyFilters() {
+    syncUrl();
+    let visible = allCards.filter(card => {
+      if (activeCategory !== 'all' && card.dataset.category !== activeCategory) return false;
+      if (stateSelect.value && card.dataset.state !== stateSelect.value && card.dataset.state !== 'all-india') return false;
+      if (qualSelect.value && qualRank[card.dataset.qualification] > qualRank[qualSelect.value]) return false;
+      return true;
+    });
+
+    if (sortSelect.value === 'vacancies') {
+      visible.sort((a, b) => Number(b.dataset.vacancies) - Number(a.dataset.vacancies));
+    } else if (sortSelect.value === 'closing') {
+      visible.sort((a, b) => Number(a.dataset.daysLeft) - Number(b.dataset.daysLeft));
+    }
+
+    allCards.forEach(card => { card.style.display = 'none'; });
+    visible.forEach(card => { card.style.display = 'flex'; listEl.appendChild(card); });
+
+    resultCountEl.textContent = visible.length === 0
+      ? 'No vacancies match these filters'
+      : `Showing 1–${visible.length} of ${visible.length} vacancies`;
+  }
+
+  categoryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryButtons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      activeCategory = btn.dataset.category;
+      applyFilters();
+    });
+  });
+  stateSelect.addEventListener('change', applyFilters);
+  qualSelect.addEventListener('change', applyFilters);
+  sortSelect.addEventListener('change', applyFilters);
+
+  (function hydrateFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const urlCategory = params.get('category');
+    if (urlCategory) {
+      activeCategory = urlCategory;
+      categoryButtons.forEach(b => b.classList.toggle('is-active', b.dataset.category === urlCategory));
+    }
+    if (params.get('state')) stateSelect.value = params.get('state');
+    if (params.get('qualification')) qualSelect.value = params.get('qualification');
+    if (params.get('sort')) sortSelect.value = params.get('sort');
+    applyFilters();
+  })();
+</script>
+
+</body>
+</html>
