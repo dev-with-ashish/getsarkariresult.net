@@ -4,26 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024 | getsarkariresult.net</title>
-<meta name="description" content="Official update for Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024 by Railway Recruitment Board (RRB).">
+<meta name="description" content="Admit Card Released: Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024 — Railway Recruitment Board (RRB). Official notification.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<!-- SHARED IDENTITY NOTE: same as every other page — extract shared CSS to
-     one stylesheet in production. button/select/input need explicit color
-     set (see the dim-text bug fixed on notifications.html).
-
-     ROUTE PATTERN: this file represents /rrb-ntpc-recruitment-2026/
-     specifically, but structurally it's ONE template (Recruitment Event
-     detail page, spec doc Section 1) rendering per notification_id — not
-     one hand-built file per recruitment. Every field below maps directly
-     to a field schema doc column; see inline comments at each section.
-
-     CONSISTENCY REQUIREMENT: every number on this page (1 posts, TBD
-     last date, Check Notification fee, 18-33 age) MUST match exactly what's shown for
-     this same notification on vacancy.html, the homepage feed, and the
-     organization-rrb.html page — those pages already reference this exact
-     recruitment. A mismatch here is the trust-critical bug flagged
-     repeatedly earlier in this build (same severity class as the cutoff
-     table drift warning on result.html). -->
 <style>
   :root {
     --ink: #1B2A3D; --paper: #F7F5EF; --paper-raised: #FFFFFF;
@@ -65,10 +48,12 @@
   /* ===== ABOVE THE FOLD ===== */
   .status-badge {
     display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono);
-    font-size: 11px; font-weight: 500; color: var(--ledger-green); background: rgba(63,107,74,0.1);
-    padding: 4px 10px; border-radius: 4px; margin-bottom: 10px;
+    font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 4px; margin-bottom: 10px;
   }
-  .status-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--ledger-green); }
+  .status-badge.is-active { color: var(--ledger-green); background: rgba(63,107,74,0.1); }
+  .status-badge.is-result { color: var(--marigold); background: rgba(201,138,44,0.1); }
+  .status-badge.is-other { color: var(--slate); background: rgba(91,100,112,0.1); }
+  .status-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; border-radius: 50%; }
   .page-h1 { font-family: var(--font-display); font-size: 26px; font-weight: 600; margin-bottom: 4px; line-height: 1.25; }
   .page-sub { font-size: 13px; color: var(--slate); margin-bottom: 18px; }
   .page-sub .org-link { color: var(--seal); font-weight: 500; }
@@ -79,11 +64,11 @@
   .stat-value { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--ink); }
   .stat-value.urgent { color: var(--seal); }
 
-  .apply-btn {
+  .action-btn {
     display: block; width: 100%; text-align: center; background: var(--ink); color: var(--paper);
     font-size: 15px; font-weight: 500; padding: 13px; border-radius: 8px; margin-bottom: 28px;
   }
-  html[data-theme="dark"] .apply-btn { color: #14181F; }
+  html[data-theme="dark"] .action-btn { color: #14181F; }
 
   /* ===== SECTIONS ===== */
   .section { margin-bottom: 26px; }
@@ -97,11 +82,6 @@
   .data-table td:last-child { text-align: right; font-weight: 500; color: var(--ink); }
   .data-table tr.highlight td { font-weight: 600; }
   .data-table tr.highlight td:last-child { color: var(--seal); }
-
-  .cat-table { width: 100%; border-collapse: collapse; }
-  .cat-table th, .cat-table td { text-align: center; padding: 7px 4px; font-size: 12px; border: 1px solid var(--line); }
-  .cat-table th { background: var(--paper); font-family: var(--font-mono); font-size: 10px; color: var(--slate); text-transform: uppercase; }
-  .cat-table td { font-weight: 600; }
 
   .eligibility-summary {
     background: var(--paper-raised); border: 1px solid var(--line); border-left: 3px solid var(--marigold);
@@ -120,9 +100,6 @@
   }
   html[data-theme="dark"] .step-list li::before { color: #14181F; }
 
-  .selection-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .selection-chip { background: var(--paper-raised); border: 1px solid var(--line); border-radius: 20px; padding: 6px 12px; font-size: 12px; }
-
   .official-links { display: flex; flex-direction: column; gap: 8px; }
   .official-link {
     display: flex; align-items: center; gap: 10px; background: var(--paper-raised);
@@ -130,13 +107,6 @@
   }
   .official-link:hover { border-color: var(--ink); }
   .official-link .icon { font-size: 15px; flex-shrink: 0; }
-
-  .stage-nav { display: flex; gap: 8px; flex-wrap: wrap; }
-  .stage-pill {
-    font-size: 12px; padding: 7px 12px; border-radius: 20px; border: 1px solid var(--line);
-    color: var(--slate);
-  }
-  .stage-pill.is-live { color: var(--ink); border-color: var(--ink); font-weight: 500; }
 
   .trust-note {
     display: flex; gap: 10px; background: var(--paper-raised); border: 1px solid var(--line);
@@ -174,103 +144,46 @@
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a><span class="sep">/</span>
-    <a href="/vacancy.html">Vacancies</a><span class="sep">/</span>
+    <a href="/admit-card.html">Admit Cards</a><span class="sep">/</span>
     <span>Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024</span>
   </nav>
 
-  <!-- ===== ABOVE THE FOLD — per page spec Section 1 ===== -->
-  <span class="status-badge">Active — accepting applications</span>
+  <span class="status-badge is-active">Admit Card Released</span>
   <h1 class="page-h1">Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024</h1>
-  <p class="page-sub">Notification details &middot; 3868a6363241 &middot; <a class="org-link" href="/organization-rrb.html">Railway Recruitment Board (RRB)</a></p>
+  <p class="page-sub">Official notification &middot; 3868a6363241 &middot; <a class="org-link" href="/organization-rrb.html">Railway Recruitment Board (RRB)</a></p>
 
-  <!-- The 4 stat cells = the fields people scan for first. Values here must
-       match vacancy.html's card for this exact notification_id. -->
   <div class="stat-row">
-    <div class="stat-cell"><div class="stat-label">Vacancies</div><div class="stat-value">1</div></div>
-    <div class="stat-cell"><div class="stat-label">Last date</div><div class="stat-value urgent">TBD</div></div>
-    <div class="stat-cell"><div class="stat-label">Age limit</div><div class="stat-value">18&ndash;33</div></div>
-    <div class="stat-cell"><div class="stat-label">Qualification</div><div class="stat-value">Check Notification</div></div>
+    
+    <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">RRB</div></div>
+    <div class="stat-cell"><div class="stat-label">Exam date</div><div class="stat-value">See notification</div></div>
+    <div class="stat-cell"><div class="stat-label">Available</div><div class="stat-value is-active">Now</div></div>
+    <div class="stat-cell"><div class="stat-label">Hall ticket</div><div class="stat-value">Download</div></div>
   </div>
 
-  <!-- Real official application URL, never a redirect through our own
-       tracking/interstitial page — trust requirement flagged in the page
-       spec's design language notes. -->
-  <a class="apply-btn" href="https://www.rrbcdg.gov.in" target="_blank" rel="noopener">Apply Online &#8599;</a>
+  <a class="action-btn" href="https://www.rrbcdg.gov.in" target="_blank" rel="noopener">Download Admit Card &#8599;</a>
 
   <!-- ===== IMPORTANT DATES ===== -->
-  <div class="section">
-    <div class="section-title">Important dates</div>
-    <table class="data-table">
-      <tr><td>Notification</td><td>See Official PDF</td></tr>
-    </table>
-  </div>
+  
 
-  <!-- ===== APPLICATION FEE — category-wise, per field schema Section 2.
-       This is the full breakdown the vacancy.html card explicitly deferred
-       to this page (see the comment on that page about showing only the
-       general rate on card-level view). ===== -->
-  <div class="section">
-    <div class="section-title">Application fee</div>
-    <table class="data-table">
-      <tr><td>General</td><td>Check Notification</td></tr>
-    </table>
-    <p style="font-size: 11px; color: var(--slate); margin-top: 6px;"></p>
-  </div>
+  <!-- ===== APPLICATION FEE ===== -->
+  
 
   <!-- ===== AGE LIMIT ===== -->
-  <div class="section">
-    <div class="section-title">Age limit &amp; relaxation</div>
-    <table class="data-table">
-      <tr><td>Age Limit</td><td>Check Notification</td></tr>
-    </table>
-  </div>
+  
 
-  <!-- ===== VACANCY BREAKDOWN — category-wise, per field schema Section 2
-       (vacancy_breakdown_by_category). This is the detailed version behind
-       the single "1" number shown above the fold. ===== -->
-  <div class="section">
-    <div class="section-title">Vacancy breakdown</div>
-    <table class="data-table">
-      <tr><td>Total</td><td>1</td></tr>
-    </table>
-  </div>
+  <!-- ===== VACANCY BREAKDOWN ===== -->
+  
 
-  <!-- ===== ELIGIBILITY — normalized_eligibility_summary derived field
-       (schema Section 8) shown first as a plain-language summary, followed
-       by the exact stated qualification. ===== -->
-  <div class="section">
-    <div class="section-title">Eligibility</div>
-    <div class="eligibility-summary">
-      Please check the official notification for complete eligibility details.
-    </div>
-    <table class="data-table">
-      <tr><td>Qualification</td><td>Check Notification</td></tr>
-    </table>
-  </div>
+  <!-- ===== ELIGIBILITY ===== -->
+  
 
-  <!-- ===== SELECTION PROCESS — genuinely sequential, numbering justified
-       per the design-guidance note in the earlier page spec. ===== -->
-  <div class="section">
-    <div class="section-title">Selection process</div>
-    <ol class="step-list">
-      <li>Check Notification</li>
-    </ol>
-  </div>
+  <!-- ===== SELECTION PROCESS ===== -->
+  
 
   <!-- ===== HOW TO APPLY ===== -->
-  <div class="section">
-    <div class="section-title">How to apply</div>
-    <ol class="step-list">
-      <li>Register on the official RRB portal with a valid email and mobile number</li>
-      <li>Fill in personal, educational, and category details</li>
-      <li>Upload photograph and signature as per the specified format</li>
-      <li>Pay the application fee online</li>
-      <li>Review and submit — download the confirmation page for your records</li>
-    </ol>
-  </div>
+  
 
-  <!-- ===== OFFICIAL LINKS — given real visual weight, not buried, per the
-       trust-signal requirement in the page spec. ===== -->
+  <!-- ===== OFFICIAL LINKS ===== -->
   <div class="section">
     <div class="section-title">Official links</div>
     <div class="official-links">
@@ -278,27 +191,11 @@
         <span class="icon">&#128196;</span> Download official notification (PDF)
       </a>
       <a class="official-link" href="https://www.rrbcdg.gov.in" target="_blank" rel="noopener">
-        <span class="icon">&#127760;</span> Official RRB website
-      </a>
-      <a class="official-link" href="https://www.rrbcdg.gov.in/apply" target="_blank" rel="noopener">
-        <span class="icon">&#9997;&#65039;</span> Apply online portal
+        <span class="icon">&#127760;</span> Railway Recruitment Board (RRB) official website
       </a>
     </div>
     <div class="trust-note">
-      Always apply through the official RRB website linked above. We never collect payment or ask for your registration details — beware of unofficial portals impersonating RRB.
-    </div>
-  </div>
-
-  <!-- ===== RELATED STAGE NAV — auto-populated via related_notification_id
-       once those pages exist (per field schema Section 8). Live pills link
-       out; upcoming stages show as inactive, not broken links. ===== -->
-  <div class="section">
-    <div class="section-title">Related updates for this recruitment</div>
-    <div class="stage-nav">
-      <span class="stage-pill">Admit card — not released yet</span>
-      <span class="stage-pill">Answer key — not released yet</span>
-      <span class="stage-pill">Result — not released yet</span>
-      <a class="stage-pill is-live" href="/rrb-ntpc-corrigendum-2026/">Corrigendum notice &rarr;</a>
+      getsarkariresult.net is an independent aggregator. We do not collect payments or personal details. Always verify information from the official link above.
     </div>
   </div>
 
@@ -308,74 +205,17 @@
   getsarkariresult.net — independent source for government recruitment updates. Not affiliated with any government body.
 </footer>
 
-<!-- ===== STRUCTURED DATA =====
-     JobPosting is the entire point of this page existing as a distinct
-     template — this is what makes the site eligible for Google for Jobs at
-     all, per the very first finding in this whole build (none of the four
-     competitor sites ship this). Every field below maps 1:1 to a field in
-     the schema doc; keep them in sync if the visible content above changes. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "JobPosting",
-  "title": "Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024",
-  "description": "Recruitment for Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024 by Railway Recruitment Board (RRB).",
-  "identifier": {
-    "@type": "PropertyValue",
-    "name": "RRB",
-    "value": "3868a6363241"
-  },
-  "datePosted": "2026-07-15",
-  "validThrough": "2026-08-15",
-  "employmentType": "FULL_TIME",
-  "hiringOrganization": {
+  "@type": "WebPage",
+  "name": "Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024",
+  "description": "Official admit card notification: Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024 by Railway Recruitment Board (RRB).",
+  "publisher": {
     "@type": "GovernmentOrganization",
     "name": "Railway Recruitment Board (RRB)",
-    "sameAs": "https://www.wikidata.org/wiki/Q7291029",
-    "url": "https://www.rrbcdg.gov.in/"
-  },
-  "jobLocation": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "IN"
-    }
-  },
-  "applicantLocationRequirements": {
-    "@type": "Country",
-    "name": "India"
-  },
-  "totalJobOpenings": "1",
-  "educationRequirements": {
-    "@type": "EducationalOccupationalCredential",
-    "credentialCategory": "bachelor degree"
-  },
-  "baseSalary": {
-    "@type": "MonetaryAmount",
-    "currency": "INR",
-    "value": {
-      "@type": "QuantitativeValue",
-      "minValue": 19900,
-      "maxValue": 63200,
-      "unitText": "MONTH"
-    }
-  },
-  "directApply": true,
-  "applicationContact": {
-    "@type": "ContactPoint",
-    "url": "https://www.rrbcdg.gov.in/apply"
+    "url": "https://www.rrbcdg.gov.in"
   }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getsarkariresult.net/" },
-    { "@type": "ListItem", "position": 2, "name": "Vacancies", "item": "https://getsarkariresult.net/vacancy/" },
-    { "@type": "ListItem", "position": 3, "name": "Link to download the E-call letter for CBT exam for Level-1 posts of CEN 08/2024", "item": "https://getsarkariresult.net/rrb/2026/3868a6363241" }
-  ]
 }
 </script>
 

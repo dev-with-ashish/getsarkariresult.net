@@ -16,17 +16,70 @@ def update_html_feed(filepath, start_marker, end_marker, new_content):
         
     pattern = re.compile(rf'({re.escape(start_marker)}).*?({re.escape(end_marker)})', re.DOTALL)
     
-    # If markers don't exist, try to inject them (one-time setup for our empty templates)
     if not pattern.search(content):
-        if "id=\"latestFeed\">" in content:
+        if 'id="latestFeed">' in content:
             content = content.replace('id="latestFeed">', f'id="latestFeed">\n{start_marker}\n{end_marker}')
-        elif "id=\"vacancyList\">" in content:
+        elif 'id="vacancyList">' in content:
             content = content.replace('id="vacancyList">', f'id="vacancyList">\n{start_marker}\n{end_marker}')
         
     content = pattern.sub(rf'\1\n{new_content}\n\2', content)
     
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(content)
+
+def conditional_section(html, tag, content, condition):
+    """Replace {{#TAG}}...{{/TAG}} blocks based on condition."""
+    pattern = re.compile(rf'\{{{{#{tag}\}}}}\s*(.*?)\s*\{{{{\/{tag}\}}}}', re.DOTALL)
+    if condition and content:
+        html = pattern.sub(r'\1', html)
+    else:
+        html = pattern.sub('', html)
+    return html
+
+def build_json_ld(doc_cat, title, org_name, org_url, notice_ref, vacancies, apply_url, org_slug):
+    """Build context-appropriate JSON-LD schema based on document category."""
+    base = {
+        "@context": "https://schema.org",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://getsarkariresult.net/"},
+                {"@type": "ListItem", "position": 2, "name": org_name, "item": f"https://getsarkariresult.net/organization-{org_slug}.html"},
+                {"@type": "ListItem", "position": 3, "name": title, "item": f"https://getsarkariresult.net/{org_slug}/2026/{notice_ref}"}
+            ]
+        }
+    }
+
+    if doc_cat == "vacancy":
+        schema = {
+            "@context": "https://schema.org",
+            "@type": "JobPosting",
+            "title": title,
+            "description": f"Official recruitment notification: {title} by {org_name}.",
+            "identifier": {"@type": "PropertyValue", "name": org_name, "value": notice_ref},
+            "datePosted": datetime.now().strftime("%Y-%m-%d"),
+            "employmentType": "FULL_TIME",
+            "hiringOrganization": {
+                "@type": "GovernmentOrganization",
+                "name": org_name,
+                "url": org_url
+            },
+            "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressCountry": "IN"}},
+            "applicantLocationRequirements": {"@type": "Country", "name": "India"},
+            "totalJobOpenings": vacancies,
+            "directApply": True,
+            "applicationContact": {"@type": "ContactPoint", "url": apply_url}
+        }
+    else:
+        schema = {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": title,
+            "description": f"Official {doc_cat.replace('_', ' ')} notification: {title} by {org_name}.",
+            "publisher": {"@type": "GovernmentOrganization", "name": org_name, "url": org_url}
+        }
+    
+    return json.dumps(schema, indent=2)
 
 def main():
     try:
@@ -38,139 +91,217 @@ def main():
         
     try:
         with open("job-details.html", "r", encoding="utf-8") as f:
-            template_vacancy = f.read()
-        with open("template-generic.html", "r", encoding="utf-8") as f:
-            template_generic = f.read()
+            template = f.read()
     except FileNotFoundError:
-        print("Templates not found")
+        print("job-details.html template not found")
         return
 
     feed_items = []
     vacancy_cards = []
-    
-    # Group jobs by organization for org page feeds
     org_feeds = {}
 
     active_jobs = [j for j in jobs if j.get("status") == "active"]
     
     for job in active_jobs:
-        title = job.get("title", "Job Update").replace("Click to know Update", "").strip()
-        org_short = job.get("organizationShort", "ORG")
+        title = job.get("title", "Job Update")
+        # Clean up junk suffixes that scrapers sometimes add
+        for junk in ["Click to know Update", "-- ", "  "]:
+            title = title.replace(junk, " ").strip()
+        title = re.sub(r'\s{2,}', ' ', title).strip(' -–')
+
+        org_name = job.get("organization", job.get("organizationShort", "ORG"))
+        org_short = job.get("organizationShort", org_name)
+        org_slug = slugify(org_short)
+        org_url = job.get("links", {}).get("officialWebsite") or "#"
+        
+        year = datetime.now().year
         slug_base = slugify(title)[:50]
         if not slug_base: slug_base = "job"
         slug = f"{slug_base}-{job['id'][:6]}"
-        
-        org_slug = slugify(org_short)
-        year = datetime.now().year
         
         silo_dir = f"{org_slug}/{year}"
         os.makedirs(silo_dir, exist_ok=True)
         
         page_path = f"{silo_dir}/{slug}.html"
         page_url = f"/{page_path}"
+        notice_ref = job.get("id", "")
         
-        vacancies = job.get("totalVacancies") or "Various"
-        fee = job.get("applicationFee") or "Check Notification"
-        age = job.get("ageLimit") or "Check Notification"
-        qual = ", ".join(job.get("qualifications", [])) if job.get("qualifications") else "Check Notification"
-        apply_url = job.get("links", {}).get("officialWebsite") or "#"
-        notice_ref = job.get("id")
-        
-        # Determine Category and Template
-        doc_cat = job.get("documentCategory", "other").lower()
-        if doc_cat not in ["vacancy", "admit_card", "answer_key", "result"]:
+        # ── Determine document category ──────────────────────────────────
+        doc_cat = job.get("documentCategory", "").lower()
+        if doc_cat not in ["vacancy", "admit_card", "answer_key", "result", "other"]:
             notif_type = str(job.get("notificationType", "")).lower()
-            if notif_type in ["recruitment", "vacancy", "admit_card", "answer_key", "result"]:
+            if notif_type in ["recruitment", "vacancy"]:
                 doc_cat = "vacancy"
+            elif notif_type == "admit_card":
+                doc_cat = "admit_card"
+            elif notif_type == "answer_key":
+                doc_cat = "answer_key"
+            elif notif_type == "result":
+                doc_cat = "result"
             else:
                 doc_cat = "other"
-                
-        is_vacancy = doc_cat in ["vacancy", "admit_card", "answer_key", "result"]
-        html = template_vacancy if is_vacancy else template_generic
+
+        # ── Category-specific UI labels ──────────────────────────────────
+        cat_labels = {
+            "vacancy":    ("Active — accepting applications", "is-active", "Apply Online",      "/vacancy.html",      "Vacancies"),
+            "admit_card": ("Admit Card Released",             "is-active", "Download Admit Card","/admit-card.html",   "Admit Cards"),
+            "answer_key": ("Answer Key Available",            "is-active", "View Answer Key",   "/answer-key.html",   "Answer Keys"),
+            "result":     ("Result Declared",                 "is-result", "View Result",       "/result.html",       "Results"),
+            "other":      ("Official Notification",           "is-other",  "View Document",     "/notifications.html","Notifications"),
+        }
+        badge_text, badge_class, btn_label, bc_url, bc_label = cat_labels.get(doc_cat, cat_labels["other"])
+
+        # ── Data fields ──────────────────────────────────────────────────
+        vacancies    = job.get("totalVacancies") or "N/A"
+        fee          = job.get("applicationFee") or None
+        age          = job.get("ageLimit") or None
+        qual_list    = job.get("qualifications", [])
+        qual         = ", ".join(qual_list) if qual_list else None
+        apply_url    = job.get("links", {}).get("officialWebsite") or "#"
+        pdf_url      = job.get("links", {}).get("notification") or apply_url
+        category_sub = job.get("categorySubtitle") or "Official notification"
+
+        # ── Stat row — varies by category ───────────────────────────────
+        dates         = job.get("importantDates") or {}
+        last_date_val = (dates.get("Last Date to Apply")
+                         or dates.get("Last Date")
+                         or dates.get("lastDateToApply")
+                         or "TBD")
+        last_date_short = str(last_date_val)[:25]
+
+        if doc_cat == "vacancy":
+            stat_row = f"""
+    <div class="stat-cell"><div class="stat-label">Vacancies</div><div class="stat-value">{vacancies}</div></div>
+    <div class="stat-cell"><div class="stat-label">Last date</div><div class="stat-value urgent">{last_date_short}</div></div>
+    <div class="stat-cell"><div class="stat-label">Age limit</div><div class="stat-value">{age or 'See notification'}</div></div>
+    <div class="stat-cell"><div class="stat-label">Qualification</div><div class="stat-value">{(qual or 'Check notification')[:20]}</div></div>"""
+        elif doc_cat == "admit_card":
+            stat_row = f"""
+    <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
+    <div class="stat-cell"><div class="stat-label">Exam date</div><div class="stat-value">{dates.get('Exam Date') or 'See notification'}</div></div>
+    <div class="stat-cell"><div class="stat-label">Available</div><div class="stat-value is-active">{dates.get('Admit Card Available') or 'Now'}</div></div>
+    <div class="stat-cell"><div class="stat-label">Hall ticket</div><div class="stat-value">Download</div></div>"""
+        elif doc_cat == "answer_key":
+            stat_row = f"""
+    <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
+    <div class="stat-cell"><div class="stat-label">Objection deadline</div><div class="stat-value urgent">{dates.get('Last Date to Object') or dates.get('Objection Deadline') or 'See notification'}</div></div>
+    <div class="stat-cell"><div class="stat-label">Exam held on</div><div class="stat-value">{dates.get('Exam Date') or 'See notification'}</div></div>
+    <div class="stat-cell"><div class="stat-label">Status</div><div class="stat-value">Available</div></div>"""
+        elif doc_cat == "result":
+            stat_row = f"""
+    <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
+    <div class="stat-cell"><div class="stat-label">Result date</div><div class="stat-value">{dates.get('Result Date') or dates.get('Declaration Date') or last_date_short}</div></div>
+    <div class="stat-cell"><div class="stat-label">Candidates</div><div class="stat-value">{vacancies if str(vacancies) != 'N/A' else 'See result'}</div></div>
+    <div class="stat-cell"><div class="stat-label">Status</div><div class="stat-value">Declared</div></div>"""
+        else:  # other
+            stat_row = f"""
+    <div class="stat-cell"><div class="stat-label">Organization</div><div class="stat-value">{org_short}</div></div>
+    <div class="stat-cell"><div class="stat-label">Published</div><div class="stat-value">{dates.get('Notification Released') or dates.get('notificationDate') or 'See document'}</div></div>
+    <div class="stat-cell"><div class="stat-label">Type</div><div class="stat-value">Notice</div></div>
+    <div class="stat-cell"><div class="stat-label">Source</div><div class="stat-value">{org_short}</div></div>"""
+
+        # ── Build HTML ───────────────────────────────────────────────────
+        html = template
+
+        # Simple replacements
+        html = html.replace("{{JOB_TITLE}}",               title)
+        html = html.replace("{{NOTICE_REF}}",              str(notice_ref)[:12])
+        html = html.replace("{{ORG_NAME}}",                org_name)
+        html = html.replace("{{ORG_SLUG}}",                org_slug)
+        html = html.replace("{{APPLY_URL}}",               apply_url)
+        html = html.replace("{{NOTIFICATION_PDF_URL}}",    pdf_url)
+        html = html.replace("{{CATEGORY_SUBTITLE}}",       category_sub)
+        html = html.replace("{{STATUS_BADGE_CLASS}}",      badge_class)
+        html = html.replace("{{STATUS_BADGE_TEXT}}",       badge_text)
+        html = html.replace("{{ACTION_BTN_LABEL}}",        btn_label)
+        html = html.replace("{{BREADCRUMB_SECTION_URL}}",  bc_url)
+        html = html.replace("{{BREADCRUMB_SECTION_LABEL}}",bc_label)
+        html = html.replace("{{STAT_ROW_HTML}}",           stat_row)
+        html = html.replace("{{META_DESCRIPTION}}",        f"{badge_text}: {title} — {org_name}. {category_sub}.")
         
-        html = html.replace("{{JOB_TITLE}}", title)
-        html = html.replace("{{TOTAL_VACANCIES}}", str(vacancies))
-        html = html.replace("{{FEE_SHORT}}", str(fee)[:30])
-        html = html.replace("{{AGE_LIMIT_SHORT}}", str(age)[:30])
-        html = html.replace("{{QUAL_SHORT}}", str(qual)[:30])
-        html = html.replace("{{NOTICE_REF}}", str(notice_ref))
-        html = html.replace("{{ORG_NAME}}", job.get("organization", org_short))
-        html = html.replace("{{ORG_SLUG}}", org_slug)
-        html = html.replace("{{APPLY_URL}}", apply_url)
-        
-        # New Detailed AI Fields
-        html = html.replace("{{CATEGORY_SUBTITLE}}", job.get("categorySubtitle") or "Notification details")
-        html = html.replace("{{ELIGIBILITY_SUMMARY}}", job.get("eligibilitySummary") or "Please check the official notification for complete eligibility details.")
-        html = html.replace("{{FEE_NOTE}}", job.get("feeNote") or "")
-        
-        pdf_url = job.get("links", {}).get("notification") or apply_url
-        html = html.replace("{{NOTIFICATION_PDF_URL}}", pdf_url)
-        
-        # Important Dates Table
-        dates = job.get("importantDates", {})
-        if not dates:
-            dates = {"Notification": "See Official PDF"}
-            
-        last_date_short = dates.get("Last Date to Apply") or dates.get("Last Date") or "TBD"
-        html = html.replace("{{LAST_DATE_SHORT}}", str(last_date_short)[:30])
-        
-        dates_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in dates.items()])
+        # Important dates table
+        dates_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in dates.items() if v and v != "None"])
+        html = conditional_section(html, "IMPORTANT_DATES_SECTION", dates_html, bool(dates_html))
         html = html.replace("{{IMPORTANT_DATES_ROWS}}", dates_html)
         
-        # Application Fee Table
-        fee_details = job.get("applicationFeeDetails", {})
-        if not fee_details:
+        # Application fee — only for vacancy/admit_card
+        fee_details = job.get("applicationFeeDetails") or {}
+        if not fee_details and fee:
             fee_details = {"General": fee}
         fee_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in fee_details.items()])
+        show_fee = doc_cat in ["vacancy", "admit_card"] and bool(fee_html)
+        html = conditional_section(html, "FEE_SECTION", fee_html, show_fee)
         html = html.replace("{{APPLICATION_FEE_ROWS}}", fee_html)
-        
-        # Age Limit Table
-        age_details = job.get("ageLimitDetails", {})
-        if not age_details:
+        fee_note = job.get("feeNote") or ""
+        html = conditional_section(html, "FEE_NOTE_HTML", fee_note, bool(fee_note))
+        html = html.replace("{{FEE_NOTE}}", fee_note)
+
+        # Age limit — only for vacancy
+        age_details = job.get("ageLimitDetails") or {}
+        if not age_details and age:
             age_details = {"Age Limit": age}
         age_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in age_details.items()])
+        show_age = doc_cat == "vacancy" and bool(age_html)
+        html = conditional_section(html, "AGE_SECTION", age_html, show_age)
         html = html.replace("{{AGE_LIMIT_ROWS}}", age_html)
-        
-        # Vacancy Breakdown Table
-        vac_details = job.get("vacancyBreakdown", {})
-        if not vac_details:
-            vac_details = {"Total": str(vacancies)}
+
+        # Vacancy breakdown — only for vacancy
+        vac_details = job.get("vacancyBreakdown") or {}
         vac_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in vac_details.items()])
+        show_vac = doc_cat == "vacancy" and bool(vac_html)
+        html = conditional_section(html, "VACANCY_SECTION", vac_html, show_vac)
         html = html.replace("{{VACANCY_BREAKDOWN_ROWS}}", vac_html)
-        
-        # Eligibility Rows
-        elig_details = job.get("eligibilityDetails", {})
-        if not elig_details:
-            elig_details = {"Qualification": qual}
+
+        # Eligibility — only for vacancy
+        elig_details = job.get("eligibilityDetails") or {}
+        elig_summary = job.get("eligibilitySummary") or ""
+        if not elig_details and qual:
+            elig_details = {"Educational Qualification": qual}
         elig_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in elig_details.items()])
+        show_elig = doc_cat == "vacancy" and (bool(elig_html) or bool(elig_summary))
+        html = conditional_section(html, "ELIGIBILITY_SECTION", elig_html or elig_summary, show_elig)
+        html = html.replace("{{ELIGIBILITY_SUMMARY}}", elig_summary or "Please refer to official notification.")
         html = html.replace("{{ELIGIBILITY_ROWS}}", elig_html)
-        
-        # Selection Process
-        steps = job.get("selectionProcess", [])
-        if not steps:
-            steps = ["Check Notification"]
+
+        # Selection process — only for vacancy
+        steps = job.get("selectionProcess") or []
         if isinstance(steps, str):
             steps = [steps]
         step_html = "".join([f"<li>{s}</li>" for s in steps])
+        show_sel = doc_cat == "vacancy" and bool(step_html)
+        html = conditional_section(html, "SELECTION_SECTION", step_html, show_sel)
         html = html.replace("{{SELECTION_PROCESS_ROWS}}", step_html)
-        
+
+        # How to apply — only for vacancy (populated by AI extraction if available)
+        how_to_apply = job.get("howToApply") or []
+        if isinstance(how_to_apply, str):
+            how_to_apply = [how_to_apply]
+        hta_html = "".join([f"<li>{s}</li>" for s in how_to_apply])
+        show_hta = doc_cat == "vacancy" and bool(hta_html)
+        html = conditional_section(html, "HOW_TO_APPLY_SECTION", hta_html, show_hta)
+        html = html.replace("{{HOW_TO_APPLY_ROWS}}", hta_html)
+
+        # JSON-LD
+        json_ld = build_json_ld(doc_cat, title, org_name, org_url, notice_ref, vacancies, apply_url, org_slug)
+        html = html.replace("{{JSON_LD_SCHEMA}}", json_ld)
+
         with open(page_path, "w", encoding="utf-8") as f:
             f.write(html)
             
-        # Index feed
+        # ── Index feed (all active docs) ─────────────────────────────────
         feed_items.append(f'''
         <a class="register-row" href="{page_url}">
           <div class="register-title">{title}</div>
           <div class="register-meta">
             <span class="register-tag">{org_short}</span>
-            <span class="register-tag">{vacancies} posts</span>
+            <span class="register-tag">{bc_label[:-1] if bc_label.endswith('s') else bc_label}</span>
           </div>
         </a>''')
         
-        # Vacancy feed (only show actual vacancies)
+        # ── Vacancy feed (only vacancies) ────────────────────────────────
         if doc_cat == "vacancy":
             vacancy_cards.append(f'''
-            <a class="vacancy-card" href="{page_url}" data-category="central" data-state="all-india" data-qualification="{slugify(qual)}" data-vacancies="{vacancies}" data-days-left="30" data-fee="0">
+            <a class="vacancy-card" href="{page_url}" data-category="central" data-state="all-india" data-qualification="{slugify(qual or '')}" data-vacancies="{vacancies}" data-days-left="30" data-fee="0">
               <div class="vacancy-main">
                 <div class="vacancy-title">{title}</div>
                 <div class="vacancy-tags">
@@ -179,18 +310,17 @@ def main():
               </div>
               <div class="vacancy-stats">
                 <div class="vacancy-stat"><div class="vacancy-stat-num">{vacancies}</div><div class="vacancy-stat-label">Posts</div></div>
-                <div class="vacancy-stat"><div class="vacancy-stat-num">TBD</div><div class="vacancy-stat-label">Left to apply</div></div>
+                <div class="vacancy-stat"><div class="vacancy-stat-num">{last_date_short}</div><div class="vacancy-stat-label">Last date</div></div>
               </div>
             </a>''')
         
-        # Org feed
+        # ── Org page feed ────────────────────────────────────────────────
         if org_slug not in org_feeds:
             org_feeds[org_slug] = []
-            
         org_feeds[org_slug].append(f'''
         <a class="org-row" href="{page_url}">
           <span class="org-row-title">{title}</span>
-          <span class="org-row-meta">New</span>
+          <span class="org-row-meta">{bc_label[:-1] if bc_label.endswith('s') else bc_label}</span>
         </a>''')
 
     # Update global feeds
@@ -201,27 +331,19 @@ def main():
     for org_slug, rows in org_feeds.items():
         org_file = f"organization-{org_slug}.html"
         if os.path.exists(org_file):
-            # Injecting into the Vacancies section
             with open(org_file, "r", encoding="utf-8") as f:
                 content = f.read()
             
-            # Since we didn't add markers to org pages, let's inject after the type-section-head of Vacancies
-            # Remove the empty-section if it exists
             content = re.sub(r'<div class="empty-section">No active vacancies currently for this organization.</div>', '', content)
             
-            # Add markers if not present
             marker_start = "<!-- ORG_VACANCY_START -->"
             marker_end = "<!-- ORG_VACANCY_END -->"
             if marker_start not in content:
-                # Find the end of type-section-head for Vacancies
                 pattern = r'(<div class="type-section-title">Vacancies <span class="type-count-badge">.*?</span></div>\s*<a class="type-section-link"[^>]*>View all &rarr;</a>\s*</div>)'
                 content = re.sub(pattern, rf'\1\n{marker_start}\n{marker_end}', content)
                 
-            # Now update it
             pattern2 = re.compile(rf'({re.escape(marker_start)}).*?({re.escape(marker_end)})', re.DOTALL)
             content = pattern2.sub(rf'\1\n' + "".join(rows) + rf'\n\2', content)
-            
-            # Update badge
             content = re.sub(r'(<div class="type-section-title">Vacancies <span class="type-count-badge">)\d+ (active</span></div>)', rf'\g<1>{len(rows)} \g<2>', content)
             
             with open(org_file, "w", encoding="utf-8") as f:
