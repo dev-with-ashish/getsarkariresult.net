@@ -115,22 +115,21 @@ def run_scrapers(sources=None):
                         enriched_data = parse_pdf_with_ai(pdf_url)
                         if enriched_data:
                             # Merge AI data into job
-                            if enriched_data.get('documentCategory'):
-                                job['documentCategory'] = enriched_data['documentCategory']
-                            job['applicationFee'] = enriched_data.get('applicationFee')
-                            job['ageLimit'] = enriched_data.get('ageLimit')
-                            if enriched_data.get('totalVacancies'):
-                                job['totalVacancies'] = enriched_data['totalVacancies']
-                            if enriched_data.get('importantDates'):
-                                job['importantDates'].update(enriched_data['importantDates'])
-                            if enriched_data.get('qualifications'):
-                                job['qualifications'] = enriched_data['qualifications']
-                            if enriched_data.get('categoryWiseVacancies'):
-                                job['categoryWiseVacancies'] = enriched_data['categoryWiseVacancies']
-                            if enriched_data.get('selectionProcess'):
-                                job['selectionProcess'] = enriched_data['selectionProcess']
-                            if enriched_data.get('payScale'):
-                                job['payScale'] = enriched_data['payScale']
+                            fields_to_merge = [
+                                'documentCategory', 'categorySubtitle', 
+                                'applicationFee', 'applicationFeeDetails', 'feeNote',
+                                'ageLimit', 'ageLimitDetails',
+                                'totalVacancies', 'vacancyBreakdown',
+                                'importantDates', 'eligibilitySummary', 
+                                'eligibilityDetails', 'selectionProcess', 'payScale'
+                            ]
+                            for field in fields_to_merge:
+                                if enriched_data.get(field):
+                                    if isinstance(enriched_data[field], dict) and isinstance(job.get(field), dict):
+                                        job[field].update(enriched_data[field])
+                                    else:
+                                        job[field] = enriched_data[field]
+                            
                             logger.info(f"✅ Successfully enriched: {job['title'][:30]}")
     except ImportError:
         logger.warning("pdf_parser module not found or missing dependencies.")

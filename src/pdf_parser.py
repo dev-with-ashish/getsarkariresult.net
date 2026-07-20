@@ -18,12 +18,10 @@ def setup_gemini():
 def download_pdf(url):
     """Downloads a PDF to a temporary file and returns the file path."""
     try:
-        # Create a temp file
         fd, path = tempfile.mkstemp(suffix=".pdf")
         os.close(fd)
         
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        # Disable SSL verification for govt sites
         import ssl
         ctx = ssl.create_default_context()
         ctx.check_hostname = False
@@ -42,7 +40,7 @@ def extract_text_from_pdf(pdf_path):
     try:
         reader = PdfReader(pdf_path)
         text = ""
-        # Only read the first 5 pages to save tokens and because fees/dates are usually at the top
+        # Read the whole PDF (Gemini 2.5 Flash has a massive 1M token limit)
         for page in reader.pages:
             text += page.extract_text() + "\n"
         return text
@@ -53,7 +51,6 @@ def extract_text_from_pdf(pdf_path):
 def parse_pdf_with_ai(pdf_url):
     """
     Downloads the PDF, extracts text, and uses Gemini to parse structured data.
-    Returns a dict with applicationFee, ageLimit, totalVacancies, importantDates.
     """
     if not setup_gemini():
         logger.warning("GEMINI_API_KEY not found. Skipping AI PDF parsing.")
@@ -77,32 +74,43 @@ def parse_pdf_with_ai(pdf_url):
     
     Required JSON structure:
     {
-        "documentCategory": "Categorize the document strictly as one of: 'vacancy', 'admit_card', 'answer_key', 'result', or 'other'. Use 'other' for generic notices, statistical reports, rules, etc.",
-        "applicationFee": "Extract the fee details. E.g. 'General/OBC: ₹100, SC/ST: Nil'",
-        "ageLimit": "Extract the minimum and maximum age limit and the cutoff date. E.g. '18-27 Years as on 01/08/2026'",
-        "totalVacancies": "Extract the total number of vacancies. Return an integer, or null if not found.",
-        "categoryWiseVacancies": "Extract breakdown if available. E.g. 'UR: 50, OBC: 20, SC: 10'",
+        "documentCategory": "Categorize the document strictly as one of: 'vacancy', 'admit_card', 'answer_key', 'result', or 'other'.",
+        "categorySubtitle": "A short 3-6 word subtitle describing the specific posts or department. E.g. 'Paramedical Categories' or 'Group D Posts'",
+        
+        "applicationFee": "Extract a short fee summary (e.g. '₹500')",
+        "applicationFeeDetails": {"General/OBC": "₹500", "SC/ST": "₹250"},
+        "feeNote": "Any note about fee refunds or payment methods.",
+        
+        "ageLimit": "Short summary (e.g. '18-33 Years')",
+        "ageLimitDetails": {"Minimum Age": "18 Years", "Maximum Age": "33 Years", "Age Reckoned As On": "01 Jan 2027", "OBC Relaxation": "+3 Years", "SC/ST Relaxation": "+5 Years"},
+        
+        "totalVacancies": "Integer total number of vacancies. Return null if not found.",
+        "vacancyBreakdown": {"General": "100", "OBC": "50", "SC": "30", "ST": "15"},
+        
         "importantDates": {
-            "applicationBegin": "YYYY-MM-DD",
-            "lastDate": "YYYY-MM-DD"
+            "Notification Released": "YYYY-MM-DD",
+            "Application Start": "YYYY-MM-DD",
+            "Last Date to Apply": "YYYY-MM-DD"
         },
-        "qualifications": ["list", "of", "educational", "qualifications"],
-        "selectionProcess": "Brief summary of the selection process (e.g. 'Written Exam, Physical Test, Interview')",
+        
+        "eligibilitySummary": "A short 1-2 sentence paragraph summarizing the eligibility.",
+        "eligibilityDetails": {"Educational Qualification": "Bachelor's degree", "Nationality": "Indian Citizen"},
+        
+        "selectionProcess": ["Computer Based Test (CBT) - Stage 1", "Document Verification", "Medical Examination"],
         "payScale": "Extract the salary or pay level. E.g. 'Level-6 (Rs. 35,400 - 1,12,400)'"
     }
     
-    If you cannot find a specific field, return null for it.
+    If you cannot find a specific field or detail, omit the key or return null.
     
     PDF Text:
     \"\"\"
-    """ + text[:15000] + "\n\"\"\"" # Limit to 15k chars to avoid token limits
+    """ + text[:300000] + "\n\"\"\"" # 300k chars is plenty safe and grabs almost all docs
     
     try:
         model = genai.GenerativeModel('gemini-2.5-flash')
         response = model.generate_content(prompt)
         result_text = response.text.strip()
         
-        # Clean up possible markdown wrappers
         if result_text.startswith("```json"):
             result_text = result_text.replace("```json", "", 1)
         if result_text.endswith("```"):
@@ -115,18 +123,4 @@ def parse_pdf_with_ai(pdf_url):
         return None
 
 if __name__ == "__main__":
-    # Test script
-    logging.basicConfig(level=logging.INFO)
-    
-    # Load .env manually for testing
-    if os.path.exists(".env"):
-        with open(".env", "r") as f:
-            for line in f:
-                if line.startswith("GEMINI_API_KEY="):
-                    os.environ["GEMINI_API_KEY"] = line.strip().split("=", 1)[1]
-                    
-    test_url = "https://jssc.jharkhand.gov.in/sites/default/files/Brochure%20JILCCE-2026.pdf" 
-    print("Testing AI parser on real JSSC Job PDF...")
-    res = parse_pdf_with_ai(test_url)
-    print("\n--- AI EXTRACTION RESULT ---")
-    print(json.dumps(res, indent=2) if res else "Failed or no API key.")
+    pass

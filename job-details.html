@@ -181,7 +181,7 @@
   <!-- ===== ABOVE THE FOLD — per page spec Section 1 ===== -->
   <span class="status-badge">Active — accepting applications</span>
   <h1 class="page-h1">{{JOB_TITLE}}</h1>
-  <p class="page-sub">Non-Technical Popular Categories &middot; {{NOTICE_REF}} &middot; <a class="org-link" href="/organization-{{ORG_SLUG}}.html">{{ORG_NAME}}</a></p>
+  <p class="page-sub">{{CATEGORY_SUBTITLE}} &middot; {{NOTICE_REF}} &middot; <a class="org-link" href="/organization-{{ORG_SLUG}}.html">{{ORG_NAME}}</a></p>
 
   <!-- The 4 stat cells = the fields people scan for first. Values here must
        match vacancy.html's card for this exact notification_id. -->
@@ -201,12 +201,7 @@
   <div class="section">
     <div class="section-title">Important dates</div>
     <table class="data-table">
-      <tr><td>Notification released</td><td>15 Jul 2026</td></tr>
-      <tr><td>Application start</td><td>18 Jul 2026</td></tr>
-      <tr class="highlight"><td>Last date to apply</td><td>{{LAST_DATE_FULL}}</td></tr>
-      <tr><td>Last date for fee payment</td><td>17 Aug 2026</td></tr>
-      <tr><td>Correction window</td><td>19&ndash;25 Aug 2026</td></tr>
-      <tr><td>Exam date</td><td>To be announced</td></tr>
+      {{IMPORTANT_DATES_ROWS}}
     </table>
   </div>
 
@@ -216,23 +211,17 @@
        general rate on card-level view). ===== -->
   <div class="section">
     <div class="section-title">Application fee</div>
-    <table class="cat-table">
-      <tr><th>General / OBC / EWS</th><th>SC / ST / PwD</th><th>Women (all categories)</th></tr>
-      <tr><td>&#8377;500</td><td>&#8377;250</td><td>&#8377;250</td></tr>
+    <table class="data-table">
+      {{APPLICATION_FEE_ROWS}}
     </table>
-    <p style="font-size: 11px; color: var(--slate); margin-top: 6px;">&#8377;400 of the general/OBC/EWS fee is refunded upon appearing for the exam.</p>
+    <p style="font-size: 11px; color: var(--slate); margin-top: 6px;">{{FEE_NOTE}}</p>
   </div>
 
   <!-- ===== AGE LIMIT ===== -->
   <div class="section">
     <div class="section-title">Age limit &amp; relaxation</div>
     <table class="data-table">
-      <tr><td>Minimum age</td><td>18 years</td></tr>
-      <tr><td>Maximum age</td><td>33 years</td></tr>
-      <tr><td>Age reckoned as on</td><td>1 Jan 2027</td></tr>
-      <tr><td>OBC relaxation</td><td>+3 years</td></tr>
-      <tr><td>SC/ST relaxation</td><td>+5 years</td></tr>
-      <tr><td>PwD relaxation</td><td>+10 years</td></tr>
+      {{AGE_LIMIT_ROWS}}
     </table>
   </div>
 
@@ -241,9 +230,8 @@
        the single "{{TOTAL_VACANCIES}}" number shown above the fold. ===== -->
   <div class="section">
     <div class="section-title">Vacancy breakdown</div>
-    <table class="cat-table">
-      <tr><th>General</th><th>OBC</th><th>SC</th><th>ST</th><th>EWS</th></tr>
-      <tr><td>2,623</td><td>1,770</td><td>983</td><td>492</td><td>689</td></tr>
+    <table class="data-table">
+      {{VACANCY_BREAKDOWN_ROWS}}
     </table>
   </div>
 
@@ -253,11 +241,10 @@
   <div class="section">
     <div class="section-title">Eligibility</div>
     <div class="eligibility-summary">
-      Open to graduates from a recognized university, aged 18&ndash;33 as of 1 Jan 2027 (with category relaxations above). No prior railway or government experience required.
+      {{ELIGIBILITY_SUMMARY}}
     </div>
     <table class="data-table">
-      <tr><td>Educational qualification</td><td>Bachelor's degree, any stream</td></tr>
-      <tr><td>Nationality</td><td>Indian citizen</td></tr>
+      {{ELIGIBILITY_ROWS}}
     </table>
   </div>
 
@@ -266,11 +253,7 @@
   <div class="section">
     <div class="section-title">Selection process</div>
     <ol class="step-list">
-      <li>Computer Based Test (CBT) — Stage 1</li>
-      <li>Computer Based Test (CBT) — Stage 2</li>
-      <li>Typing skill test / computer based aptitude test (post-dependent)</li>
-      <li>Document verification</li>
-      <li>Medical examination</li>
+      {{SELECTION_PROCESS_ROWS}}
     </ol>
   </div>
 
@@ -291,7 +274,7 @@
   <div class="section">
     <div class="section-title">Official links</div>
     <div class="official-links">
-      <a class="official-link" href="https://www.rrbcdg.gov.in/uploads/rrb-ntpc-2026-notification.pdf" target="_blank" rel="noopener">
+      <a class="official-link" href="{{NOTIFICATION_PDF_URL}}" target="_blank" rel="noopener">
         <span class="icon">&#128196;</span> Download official notification (PDF)
       </a>
       <a class="official-link" href="{{APPLY_URL}}" target="_blank" rel="noopener">
