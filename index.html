@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lightning fast updates for all government jobs, results, and admit cards.">
+    <title>GetSarkariResult | Instant Job Notifications</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <div class="glow-bg glow-bg-2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">GetSarkari<span class="highlight">Result</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#latest-jobs" class="active">Latest Jobs</a>
+                <a href="#admit-cards">Admit Cards</a>
+                <a href="#results">Results</a>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="moon-icon">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-badge fade-in-up">🔥 Real-time updates directly from govt servers</div>
+            <h1 class="hero-title fade-in-up delay-1">Never Miss A <br> <span class="gradient-text">Government Job</span> Again</h1>
+            <p class="hero-subtitle fade-in-up delay-2">We bypass the bureaucracy. Instant, automated, and 100% accurate notifications for SSC, UPSC, Railways, and more.</p>
+            
+            <!-- Global Search -->
+            <div class="search-container glass fade-in-up delay-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="global-search" placeholder="Search for SSC CGL, Railways NTPC, UPPSC...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container main-layout">
+        
+        <!-- Results Column -->
+        <section class="job-column" id="results">
+            <div class="column-header">
+                <h2><span class="emoji">🏆</span> Results</h2>
+                <div class="pulse-indicator"></div>
+            </div>
+            <div class="jobs-grid" id="results-grid">
+                <!-- Injected via JS -->
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </section>
+
+        <!-- Admit Cards Column -->
+        <section class="job-column" id="admit-cards">
+            <div class="column-header">
+                <h2><span class="emoji">🎫</span> Admit Cards</h2>
+                <div class="pulse-indicator"></div>
+            </div>
+            <div class="jobs-grid" id="admit-cards-grid">
+                <!-- Injected via JS -->
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </section>
+
+        <!-- Latest Jobs Column -->
+        <section class="job-column primary-column" id="latest-jobs">
+            <div class="column-header">
+                <h2><span class="emoji">💼</span> Latest Jobs</h2>
+                <span class="live-badge">LIVE</span>
+            </div>
+            <div class="jobs-grid" id="latest-jobs-grid">
+                <!-- Injected via JS -->
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 GetSarkariResult. Built with automation.</p>
+            <p class="disclaimer">Disclaimer: This is an independent platform and is not affiliated with any government organization. All data is autonomously sourced from official public domains.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+</html>

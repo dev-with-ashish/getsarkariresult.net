@@ -1,0 +1,102 @@
+name: 📋 Scrape Government Job Notifications
+
+on:
+  # Run every 60 minutes
+  schedule:
+    - cron: '0 * * * *'
+  
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Specific source to scrape (leave empty for all)'
+        required: false
+        default: ''
+      fresh:
+        description: 'Start fresh (discard existing data)'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    permissions:
+      contents: write  # Needed to push data back to repo
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Install dependencies
+        run: |
+          pip install -r requirements.txt
+          # Install playwright browsers only if needed by railway scraper
+          # python -m playwright install chromium --with-deps
+      
+      - name: 🔍 Run scraper pipeline
+        run: |
+          if [ -n "${{ github.event.inputs.source }}" ]; then
+            python3 src/index.py --source "${{ github.event.inputs.source }}"
+          elif [ "${{ github.event.inputs.fresh }}" = "true" ]; then
+            python3 src/index.py --fresh
+          else
+            python3 src/index.py
+          fi
+      
+      - name: 📊 Show results summary
+        run: |
+          echo "=== Jobs Summary ==="
+          if [ -f data/meta.json ]; then
+            python3 -c "
+          import json
+          with open('data/meta.json') as f:
+              meta = json.load(f)
+          print(f'Total Jobs: {meta[\"totalJobs\"]}')
+          print(f'Active: {meta[\"activeJobs\"]}')
+          print(f'Last Scrape: {meta[\"lastScrapeAt\"]}')
+          print()
+          print('Sources:')
+          for source, info in meta.get('sources', {}).items():
+              icon = '✅' if info['status'] == 'success' else '❌'
+              print(f'  {icon} {source}: {info[\"items\"]} items ({info[\"elapsed\"]}s)')
+          print()
+          print('By Organization:')
+          for org, count in sorted(meta.get('organizations', {}).items(), key=lambda x: -x[1]):
+              print(f'  {org}: {count}')
+          "
+          else
+            echo "No meta.json found — scraper may have failed"
+          fi
+      
+      - name: 💾 Commit and push data
+        run: |
+          git config user.name "Sarkari Scraper Bot"
+          git config user.email "bot@getsarkariresult.net"
+          git add data/
+          
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            TOTAL=$(python3 -c "import json; print(json.load(open('data/meta.json'))['totalJobs'])" 2>/dev/null || echo "?")
+            git commit -m "📋 Update job data — ${TOTAL} jobs ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+            git push
+            echo "Changes committed and pushed!"
+          fi
+      
+      - name: 📁 Upload data as artifact (backup)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scraper-data-${{ github.run_number }}
+          path: data/
+          retention-days: 7

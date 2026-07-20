@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details | GetSarkariResult</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .details-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+        }
+        .details-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .org-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-primary);
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .job-title-large {
+            font-size: 32px;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+        
+        /* Information Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .info-box {
+            background: rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+        }
+        .info-box h3 {
+            color: var(--accent-secondary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+        }
+        .info-list {
+            list-style: none;
+        }
+        .info-list li {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .info-list li strong {
+            color: var(--text-primary);
+        }
+        
+        /* Table Style */
+        .premium-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-surface);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        .premium-table th, .premium-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .premium-table th {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+        .premium-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .btn-large {
+            padding: 16px 24px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            display: block;
+            transition: var(--transition);
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">GetSarkari<span class="highlight">Result</span></span>
+            </a>
+            <a href="index.html" class="btn btn-outline">← Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="details-container glass fade-in-up" id="details-content">
+            <div style="text-align:center; padding: 40px;">
+                <div class="pulse-indicator" style="margin: 0 auto 16px; width: 12px; height: 12px;"></div>
+                <p>Loading AI-Extracted Data...</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const params = new URLSearchParams(window.location.search);
+            const jobId = params.get('id');
+            const container = document.getElementById('details-content');
+            
+            if (!jobId) {
+                container.innerHTML = '<h2 style="color:var(--danger)">Error: No Job ID provided.</h2>';
+                return;
+            }
+            
+            try {
+                const res = await fetch('data/jobs.json');
+                const jobs = await res.json();
+                const job = jobs.find(j => j.id === jobId);
+                
+                if (!job) {
+                    container.innerHTML = '<h2 style="color:var(--danger)">Error: Job not found.</h2>';
+                    return;
+                }
+                
+                // Parse AI Data
+                const feeText = job.applicationFee || 'Detailed fee not extracted yet. Refer to PDF.';
+                const ageText = job.ageLimit || 'Detailed age limit not extracted yet. Refer to PDF.';
+                const vacancyText = job.totalVacancies ? `${job.totalVacancies} Posts` : 'Not specified/Variable';
+                
+                const dates = job.importantDates || {};
+                const start = dates.applicationBegin || 'As per notification';
+                const end = dates.lastDate || 'As per notification';
+                
+                let qualHtml = '';
+                if (job.qualifications && job.qualifications.length > 0) {
+                    qualHtml = `<ul class="info-list" style="margin-top:16px;">
+                        ${job.qualifications.map(q => `<li>✅ <span>${q}</span></li>`).join('')}
+                    </ul>`;
+                }
+                
+                let extraHtml = '';
+                if (job.payScale || job.selectionProcess || job.categoryWiseVacancies) {
+                    extraHtml = `
+                    <div class="info-box" style="margin-top: 24px;">
+                        <h3><span style="font-size:24px">📌</span> Additional Details</h3>
+                        <ul class="info-list">
+                            ${job.payScale ? `<li><strong>Pay Scale/Salary:</strong> ${job.payScale}</li>` : ''}
+                            ${job.selectionProcess ? `<li><strong>Selection Process:</strong> ${job.selectionProcess}</li>` : ''}
+                            ${job.categoryWiseVacancies ? `<li><strong>Category-wise Vacancies:</strong> ${job.categoryWiseVacancies}</li>` : ''}
+                        </ul>
+                    </div>
+                    `;
+                }
+                
+                let pdfBtn = job.links.notification ? 
+                    `<a href="${job.links.notification}" target="_blank" class="btn-large btn-primary">⬇️ Download Official Notification PDF</a>` : '';
+                
+                let webBtn = job.links.officialWebsite ? 
+                    `<a href="${job.links.officialWebsite}" target="_blank" class="btn-large btn-outline">🌐 Visit Official Website</a>` : '';
+                
+                container.innerHTML = `
+                    <div class="details-header">
+                        <span class="org-badge">${job.organization}</span>
+                        <h1 class="job-title-large">${job.title.replace(/^\[.*?\]\s*/, '')}</h1>
+                        <p style="color:var(--text-muted)">Automatically extracted and parsed by AI from official sources.</p>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h3><span style="font-size:24px">💰</span> Application Fee</h3>
+                            <p style="color:var(--text-primary); font-weight: 500; font-size: 16px; margin-bottom: 12px;">${feeText}</p>
+                            <p style="color:var(--text-muted); font-size: 13px;">* Pay the examination fee through Debit Card, Credit Card, Net Banking or E Challan.</p>
+                        </div>
+                        
+                        <div class="info-box">
+                            <h3><span style="font-size:24px">📅</span> Important Dates</h3>
+                            <ul class="info-list">
+                                <li><strong>Application Begin:</strong> ${start}</li>
+                                <li><strong>Last Date to Apply:</strong> <span style="color:var(--danger);font-weight:700">${end}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h2 style="margin-bottom: 16px; border-left: 4px solid var(--accent-primary); padding-left: 12px;">Vacancy Details</h2>
+                    <table class="premium-table">
+                        <thead>
+                            <tr>
+                                <th>Post Name</th>
+                                <th>Total Vacancies</th>
+                                <th>Eligibility / Qualifications</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong style="color:var(--text-primary)">${job.title.replace(/^\[.*?\]\s*/, '')}</strong></td>
+                                <td><span style="color:var(--success); font-weight:700; font-size: 18px;">${vacancyText}</span></td>
+                                <td>
+                                    ${qualHtml || '<span style="color:var(--text-muted)">Refer to the official PDF for full educational qualifications and eligibility criteria.</span>'}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="info-box" style="margin-top: 40px; background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
+                        <h3 style="color:var(--danger)">⚠️ Age Limit</h3>
+                        <p style="color:var(--text-primary); font-weight: 500;">${ageText}</p>
+                        <p style="color:var(--text-muted); font-size: 13px; margin-top: 8px;">Age relaxation is applicable as per the official government recruitment rules.</p>
+                    </div>
+                    
+                    ${extraHtml}
+                    
+                    <div class="action-buttons">
+                        ${pdfBtn}
+                        ${webBtn}
+                    </div>
+                `;
+            } catch (err) {
+                container.innerHTML = '<h2 style="color:var(--danger)">Error loading data.</h2>';
+            }
+        });
+    </script>
+</body>
+</html>

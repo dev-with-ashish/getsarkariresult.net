@@ -1,0 +1,26 @@
+{
+  "lastScrapeAt": "2026-07-18T14:31:49.713572+00:00",
+  "lastScrapeDate": "2026-07-18",
+  "totalJobs": 27,
+  "activeJobs": 27,
+  "expiredJobs": 0,
+  "sources": {
+    "railway": {
+      "status": "success",
+      "items": 44,
+      "elapsed": 49.2,
+      "error": null
+    }
+  },
+  "categories": {
+    "central": 27
+  },
+  "notificationTypes": {
+    "notification": 10,
+    "result": 1,
+    "recruitment": 16
+  },
+  "organizations": {
+    "RRB": 27
+  }
+}

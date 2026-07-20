@@ -1,0 +1,14 @@
+{
+  "name": "sarkari-job-scraper",
+  "version": "1.0.0",
+  "description": "Automated government job notification scraper pipeline for getsarkariresult.net",
+  "language": "python",
+  "python_version": ">=3.9",
+  "scripts": {
+    "scrape": "python3 src/index.py",
+    "scrape:ssc": "python3 src/scrapers/ssc.py",
+    "scrape:upsc": "python3 src/scrapers/upsc.py",
+    "scrape:ibps": "python3 src/scrapers/ibps.py",
+    "test": "python3 src/test.py"
+  }
+}
