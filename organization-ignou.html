@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IGNOU — getsarkariresult.net</title>
+<meta name="description" content="All IGNOU recruitment notifications, vacancies, admit cards, results, and answer keys in one place — updated as they're released.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Generated from the shared org-hub template (see generate_orgs.py) —
+     do not hand-edit divergently from organization-rrb.html's structure.
+     Known gap carried over from the RRB page: "View all" links use
+     ?org=dsssb which the gateway pages don't filter by yet. -->
+<style>
+  :root {
+    --ink: #1B2A3D; --paper: #F7F5EF; --paper-raised: #FFFFFF;
+    --seal: #A23B2E; --marigold: #C98A2C; --ledger-green: #3F6B4A;
+    --slate: #5B6470; --line: #DCD8CC;
+    --font-display: 'Newsreader', serif; --font-body: 'IBM Plex Sans', sans-serif; --font-mono: 'IBM Plex Mono', monospace;
+  }
+  html[data-theme="dark"] {
+    --ink: #EDEAE0; --paper: #14181F; --paper-raised: #1D232C;
+    --seal: #E08674; --marigold: #E4B15C; --ledger-green: #6FAE81;
+    --slate: #8B93A0; --line: #2B323C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.5; transition: background 0.2s, color 0.2s; }
+  a { color: inherit; text-decoration: none; }
+  button, select, input { color: var(--ink); font-family: var(--font-body); }
+
+  header { background: #1B2A3D; color: #F7F5EF; padding: 14px 20px; }
+  .header-row { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { font-family: var(--font-display); font-size: 22px; font-weight: 600; }
+  .brand span { color: var(--marigold); }
+  .updated-tag { font-family: var(--font-mono); font-size: 11px; color: #B9C2CE; display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ledger-green); display: inline-block; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  #themeToggle { background: transparent; border: 1px solid #3A4658; color: #F7F5EF; border-radius: 6px; width: 30px; height: 30px; cursor: pointer; font-size: 15px; line-height: 1; flex-shrink: 0; }
+
+  .search-band { background: #1B2A3D; padding: 0 20px 20px; }
+  .search-wrap { max-width: 960px; margin: 0 auto; position: relative; }
+  .search-wrap input { width: 100%; padding: 13px 16px 13px 44px; border-radius: 6px; border: none; font-size: 15px; background: var(--paper-raised); }
+  .search-wrap input:focus { outline: 2px solid var(--marigold); }
+  .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--slate); font-size: 16px; }
+
+  main { max-width: 960px; margin: 0 auto; padding: 20px 20px 60px; }
+
+  .breadcrumb { font-size: 12px; color: var(--slate); margin-bottom: 16px; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { margin: 0 6px; }
+
+  .org-header {
+    display: flex; gap: 16px; align-items: flex-start; padding: 20px;
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: 10px;
+    margin-bottom: 28px;
+  }
+  .org-logo {
+    flex-shrink: 0; width: 56px; height: 56px; border-radius: 8px; background: var(--ink);
+    color: var(--paper); display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 16px; font-weight: 600;
+  }
+  html[data-theme="dark"] .org-logo { color: #14181F; }
+  .org-info { flex: 1; min-width: 0; }
+  .org-name { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin-bottom: 2px; }
+  .org-fullname { font-size: 13px; color: var(--slate); margin-bottom: 8px; }
+  .org-desc { font-size: 13px; color: var(--ink); margin-bottom: 10px; max-width: 60ch; }
+  .org-links { display: flex; gap: 14px; flex-wrap: wrap; }
+  .org-link { font-size: 12px; color: var(--seal); font-weight: 500; }
+
+  .org-stats { display: flex; gap: 20px; flex-shrink: 0; text-align: right; }
+  .org-stat-num { font-family: var(--font-display); font-size: 20px; font-weight: 600; }
+  .org-stat-label { font-size: 10px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.4px; }
+
+  .type-section { margin-bottom: 32px; }
+  .type-section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;
+  }
+  .type-section-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .type-count-badge {
+    font-family: var(--font-mono); font-size: 11px; color: var(--slate); background: var(--paper);
+    border: 1px solid var(--line); border-radius: 10px; padding: 1px 8px;
+  }
+  .type-section-link { font-size: 12px; color: var(--seal); font-weight: 500; flex-shrink: 0; }
+
+  .org-row {
+    display: flex; align-items: center; gap: 14px; padding: 12px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .org-row:hover { background: rgba(0,0,0,0.02); }
+  .org-row-title { flex: 1; min-width: 0; font-size: 14px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .org-row-meta { flex-shrink: 0; font-family: var(--font-mono); font-size: 11px; color: var(--slate); text-align: right; }
+  .org-row-meta.urgent { color: var(--seal); }
+
+  .empty-section { font-size: 13px; color: var(--slate); padding: 16px 4px; font-style: italic; }
+
+  footer { border-top: 1px solid var(--line); padding: 24px 20px; text-align: center; font-size: 12px; color: var(--slate); }
+
+  @media (max-width: 600px) {
+    .org-header { flex-wrap: wrap; }
+    .org-stats { width: 100%; justify-content: flex-start; padding-top: 12px; border-top: 1px solid var(--line); gap: 24px; text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a href="/" class="brand">getsarkariresult<span>.net</span></a>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div class="updated-tag"><span class="dot"></span>Updated 4 minutes ago</div>
+      <button id="themeToggle" aria-label="Toggle dark mode">&#9788;</button>
+    </div>
+  </div>
+</header>
+
+<div class="search-band">
+  <div class="search-wrap">
+    <span class="search-icon">&#128269;</span>
+    <input type="text" placeholder="Search post, department, or state">
+  </div>
+</div>
+
+<main>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span class="sep">/</span><a href="/organizations/">Organizations</a><span class="sep">/</span><span>IGNOU</span>
+  </nav>
+
+  <div class="org-header">
+    <div class="org-logo">IGNOU</div>
+    <div class="org-info">
+      <div class="org-name">Indira Gandhi National Open University</div>
+      <div class="org-fullname">Government of NCT of Delhi</div>
+      <p class="org-desc">IGNOU conducts recruitment for teaching and non-teaching posts across Delhi government schools, hospitals, and municipal bodies, including TGT, PGT, and PRT positions.</p>
+      <div class="org-links">
+        <a class="org-link" href="https://dsssb.delhi.gov.in/" target="_blank" rel="noopener">Official website &#8599;</a>
+        <a class="org-link" href="https://en.wikipedia.org/wiki/Delhi_Subordinate_Services_Selection_Board" target="_blank" rel="noopener">About IGNOU &#8599;</a>
+      </div>
+    </div>
+    <div class="org-stats">
+      <div><div class="org-stat-num">1</div><div class="org-stat-label">Active vacancies</div></div>
+      <div><div class="org-stat-num">7</div><div class="org-stat-label">Total this year</div></div>
+    </div>
+  </div>
+
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Vacancies <span class="type-count-badge">1 active</span></div>
+      <a class="type-section-link" href="/vacancy/?org=dsssb">View all &rarr;</a>
+    </div>
+    <a class="org-row" href="/dsssb-tgt-recruitment-2026.html">
+      <span class="org-row-title">IGNOU TGT recruitment 2026 — 1,876 posts</span>
+      <span class="org-row-meta">31d left</span>
+    </a>
+  </div>
+
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Admit cards <span class="type-count-badge">0 released</span></div>
+      <a class="type-section-link" href="/admit-card/?org=dsssb">View all &rarr;</a>
+    </div>
+    <div class="empty-section">No admit cards currently for this organization.</div>
+  </div>
+
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Results <span class="type-count-badge">0 declared</span></div>
+      <a class="type-section-link" href="/result/?org=dsssb">View all &rarr;</a>
+    </div>
+    <div class="empty-section">No results currently for this organization.</div>
+  </div>
+
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Answer keys <span class="type-count-badge">0 provisional</span></div>
+      <a class="type-section-link" href="/answer-key/?org=dsssb">View all &rarr;</a>
+    </div>
+    <div class="empty-section">No answer keys currently for this organization.</div>
+  </div>
+
+  <div class="type-section">
+    <div class="type-section-head">
+      <div class="type-section-title">Notifications <span class="type-count-badge">0 updates</span></div>
+      <a class="type-section-link" href="/notifications/?org=dsssb">View all &rarr;</a>
+    </div>
+    <div class="empty-section">No general notifications currently for this organization.</div>
+  </div>
+
+</main>
+
+<footer>
+  getsarkariresult.net — independent source for government recruitment updates. Not affiliated with any government body.
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "name": "Indira Gandhi National Open University",
+  "alternateName": "IGNOU",
+  "url": "https://getsarkariresult.net/dsssb/",
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q61996544",
+    "https://en.wikipedia.org/wiki/Delhi_Subordinate_Services_Selection_Board",
+    "https://dsssb.delhi.gov.in/"
+  ],
+  "parentOrganization": {
+    "@type": "GovernmentOrganization",
+    "name": "Government of NCT of Delhi"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://getsarkariresult.net/" },
+    { "@type": "ListItem", "position": 2, "name": "Organizations", "item": "https://getsarkariresult.net/organizations/" },
+    { "@type": "ListItem", "position": 3, "name": "IGNOU", "item": "https://getsarkariresult.net/dsssb/" }
+  ]
+}
+</script>
+
+<script>
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+  applyTheme(savedTheme || (systemPrefersDark ? 'dark' : 'light'));
+  function applyTheme(theme) {
+    if (theme === 'dark') { root.setAttribute('data-theme', 'dark'); themeBtn.innerHTML = '&#9789;'; }
+    else { root.removeAttribute('data-theme'); themeBtn.innerHTML = '&#9788;'; }
+  }
+  themeBtn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+</script>
+
+</body>
+</html>
