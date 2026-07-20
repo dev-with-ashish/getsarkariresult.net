@@ -76,6 +76,11 @@ jobs:
           else
             echo "No meta.json found — scraper may have failed"
           fi
+
+      - name: 🏗️ Build HTML Pages (SSG)
+        run: |
+          echo "Running HTML Generator..."
+          python3 src/build_html.py
       
       - name: 💾 Commit and push data
         run: |
