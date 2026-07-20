@@ -104,33 +104,76 @@ def run_scrapers(sources=None):
     # AI PDF Extraction Phase (if GEMINI_API_KEY is available)
     try:
         from pdf_parser import parse_pdf_with_ai
-        import os
+        import os, re as _re
         if os.environ.get("GEMINI_API_KEY"):
             logger.info("🤖 Starting AI PDF Extraction Phase...")
+            
+            def find_pdf_in_page(page_url):
+                """Visit an HTML detail page and find the first .pdf link on it."""
+                try:
+                    import requests as _requests
+                    from urllib.parse import urljoin
+                    headers = {"User-Agent": "Mozilla/5.0 (compatible; GovJobBot/1.0)"}
+                    resp = _requests.get(page_url, headers=headers, timeout=20, verify=False)
+                    resp.raise_for_status()
+                    html = resp.text
+                    # Find all href attributes that contain .pdf
+                    pdf_links = _re.findall(r'href=["\']([^"\']+\.pdf(?:\?[^"\']*)?)["\']', html, _re.IGNORECASE)
+                    if not pdf_links:
+                        return None
+                    return urljoin(page_url, pdf_links[0])
+                except Exception as e:
+                    logger.warning(f"Could not crawl detailPage {page_url}: {e}")
+                    return None
+
             for job in all_items:
-                if job.get('applicationFee') is None and job.get('links', {}).get('notification'):
-                    pdf_url = job['links']['notification']
-                    if pdf_url.lower().endswith('.pdf'):
-                        logger.info(f"Extracting rich data from PDF: {job['title'][:30]}...")
-                        enriched_data = parse_pdf_with_ai(pdf_url)
-                        if enriched_data:
-                            # Merge AI data into job
-                            fields_to_merge = [
-                                'documentCategory', 'categorySubtitle', 
-                                'applicationFee', 'applicationFeeDetails', 'feeNote',
-                                'ageLimit', 'ageLimitDetails',
-                                'totalVacancies', 'vacancyBreakdown',
-                                'importantDates', 'eligibilitySummary', 
-                                'eligibilityDetails', 'selectionProcess', 'payScale'
-                            ]
-                            for field in fields_to_merge:
-                                if enriched_data.get(field):
-                                    if isinstance(enriched_data[field], dict) and isinstance(job.get(field), dict):
-                                        job[field].update(enriched_data[field])
-                                    else:
-                                        job[field] = enriched_data[field]
-                            
-                            logger.info(f"✅ Successfully enriched: {job['title'][:30]}")
+                # Skip if already fully enriched (has applicationFee set from a previous run)
+                if job.get('applicationFee') is not None and job.get('documentCategory'):
+                    continue
+                
+                links = job.get('links', {})
+                pdf_url = links.get('notification')
+                
+                # Case 1: We have a direct PDF link
+                if pdf_url and pdf_url.lower().endswith('.pdf'):
+                    pass  # use it as-is
+                
+                # Case 2: No PDF — try to discover one from the detail page
+                elif not pdf_url or not pdf_url.lower().endswith('.pdf'):
+                    detail_page = links.get('detailPage') or links.get('officialWebsite')
+                    if detail_page:
+                        logger.info(f"🔍 No PDF link found, crawling detailPage: {detail_page[:60]}...")
+                        discovered = find_pdf_in_page(detail_page)
+                        if discovered:
+                            logger.info(f"   ✅ Discovered PDF: {discovered[:60]}...")
+                            job['links']['notification'] = discovered
+                            pdf_url = discovered
+                        else:
+                            logger.info(f"   ⚠️  No PDF found on detailPage. Skipping AI enrichment.")
+                            continue
+                    else:
+                        continue  # No links at all, skip
+
+                if pdf_url and pdf_url.lower().endswith('.pdf'):
+                    logger.info(f"Extracting rich data from PDF: {job['title'][:40]}...")
+                    enriched_data = parse_pdf_with_ai(pdf_url)
+                    if enriched_data:
+                        fields_to_merge = [
+                            'documentCategory', 'categorySubtitle', 
+                            'applicationFee', 'applicationFeeDetails', 'feeNote',
+                            'ageLimit', 'ageLimitDetails',
+                            'totalVacancies', 'vacancyBreakdown',
+                            'importantDates', 'eligibilitySummary', 
+                            'eligibilityDetails', 'selectionProcess', 'payScale'
+                        ]
+                        for field in fields_to_merge:
+                            if enriched_data.get(field):
+                                if isinstance(enriched_data[field], dict) and isinstance(job.get(field), dict):
+                                    job[field].update(enriched_data[field])
+                                else:
+                                    job[field] = enriched_data[field]
+                        
+                        logger.info(f"✅ Successfully enriched: {job['title'][:40]}")
     except ImportError:
         logger.warning("pdf_parser module not found or missing dependencies.")
 
