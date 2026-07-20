@@ -1,92 +1,42 @@
 import re
-import os
 
-# 1. Update pdf_parser.py
-with open("src/pdf_parser.py", "r") as f:
-    pdf_code = f.read()
-
-new_prompt = """    Required JSON structure:
-    {
-        "documentCategory": "Categorize the document strictly as one of: 'vacancy', 'admit_card', 'answer_key', 'result', or 'other'. Use 'other' for generic notices, statistical reports, rules, etc.",
-        "applicationFee":"""
-
-pdf_code = pdf_code.replace('    Required JSON structure:\n    {\n        "applicationFee":', new_prompt)
-
-with open("src/pdf_parser.py", "w") as f:
-    f.write(pdf_code)
-
-
-# 2. Update index.py
-with open("src/index.py", "r") as f:
-    idx_code = f.read()
-
-insertion = """                            if enriched_data.get('documentCategory'):
-                                job['documentCategory'] = enriched_data['documentCategory']
-                            job['applicationFee']"""
-
-idx_code = idx_code.replace("                            job['applicationFee']", insertion)
-
-with open("src/index.py", "w") as f:
-    f.write(idx_code)
-
-
-# 3. Create template-generic.html
-with open("job-details.html", "r") as f:
-    gen_html = f.read()
-
-# Remove stat row
-gen_html = re.sub(r'<div class="stat-row">.*?</div>', '', gen_html, flags=re.DOTALL)
-# Change Apply button
-gen_html = gen_html.replace('Apply Online &#8599;', 'View Official Document &#8599;')
-# Remove everything from Important Dates downwards
-gen_html = re.sub(r'<!-- ===== IMPORTANT DATES ===== -->.*(</main>)', r'''
-  <div class="eligibility-summary" style="margin-top: 30px;">
-    <strong>Official Notice:</strong> This document is a generic notification, statistical report, rule update, or other official communication from the department. Please refer to the official document linked above for complete details.
-  </div>
-\1''', gen_html, flags=re.DOTALL)
-
-with open("template-generic.html", "w") as f:
-    f.write(gen_html)
-
-
-# 4. Update build_html.py
 with open("src/build_html.py", "r") as f:
-    build_code = f.read()
+    lines = f.readlines()
 
-build_code = build_code.replace('''    try:
-        with open("job-details.html", "r", encoding="utf-8") as f:
-            template = f.read()
-    except FileNotFoundError:
-        print("job-details.html template not found")
-        return''', '''    try:
-        with open("job-details.html", "r", encoding="utf-8") as f:
-            template_vacancy = f.read()
-        with open("template-generic.html", "r", encoding="utf-8") as f:
-            template_generic = f.read()
-    except FileNotFoundError:
-        print("Templates not found")
-        return''')
+new_lines = []
+in_build_block = False
 
-build_loop_update = '''
-        notice_ref = job.get("id")
+for i, line in enumerate(lines):
+    if line.strip() == 'page_url = f"/{page_path}"':
+        new_lines.append('        is_ai_enriched = "documentCategory" in job\n')
+        new_lines.append('        apply_url = job.get("links", {}).get("officialWebsite") or "#"\n')
+        new_lines.append('        pdf_url = job.get("links", {}).get("notification") or apply_url\n')
+        new_lines.append('        page_url = f"/{page_path}" if is_ai_enriched else (pdf_url or apply_url or "#")\n')
+        continue
+    
+    # Remove the old extractions since we moved them up
+    if line.strip() == 'apply_url    = job.get("links", {}).get("officialWebsite") or "#"':
+        continue
+    if line.strip() == 'pdf_url      = job.get("links", {}).get("notification") or apply_url':
+        continue
+
+    # Start indenting at stat_row logic
+    if line.strip() == 'if doc_cat == "vacancy":' and "stat_row =" in lines[i+1]:
+        new_lines.append('        if is_ai_enriched:\n')
+        in_build_block = True
+    
+    # Stop indenting at feed items
+    if in_build_block and line.strip() == '# ── Index feed (all active docs) ─────────────────────────────────':
+        in_build_block = False
+        new_lines.append(line)
+        continue
         
-        # Determine Category and Template
-        doc_cat = job.get("documentCategory", "other").lower()
-        if doc_cat not in ["vacancy", "admit_card", "answer_key", "result"]:
-            notif_type = str(job.get("notificationType", "")).lower()
-            if notif_type in ["recruitment", "vacancy", "admit_card", "answer_key", "result"]:
-                doc_cat = "vacancy"
-            else:
-                doc_cat = "other"
-                
-        is_vacancy = doc_cat in ["vacancy", "admit_card", "answer_key", "result"]
-        html = template_vacancy if is_vacancy else template_generic
-        
-        html = html.replace("{{JOB_TITLE}}", title)'''
-
-build_code = re.sub(r'\s*notice_ref = job\.get\("id"\)\s*html = template\s*html = html\.replace\("{{JOB_TITLE}}", title\)', build_loop_update, build_code)
+    if in_build_block:
+        new_lines.append('    ' + line if line.strip() else line)
+    else:
+        new_lines.append(line)
 
 with open("src/build_html.py", "w") as f:
-    f.write(build_code)
+    f.writelines(new_lines)
 
-print("All patched successfully!")
+print("Patch applied successfully.")
