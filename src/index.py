@@ -130,6 +130,10 @@ def run_scrapers(sources=None):
                 # Skip if already fully enriched (has applicationFee set from a previous run)
                 if job.get('applicationFee') is not None and job.get('documentCategory'):
                     continue
+
+                # STRICT: Only pass explicitly active listings to the AI parser
+                if job.get('status') != 'active':
+                    continue
                 
                 links = job.get('links', {})
                 pdf_url = links.get('notification')

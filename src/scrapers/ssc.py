@@ -64,6 +64,10 @@ class SSCScraper(BaseScraper):
         results = []
 
         for exam in exams:
+            # Strictly filter only active exams
+            if not exam.get("isActive"):
+                continue
+
             try:
                 notification = self._parse_live_exam(exam)
                 if notification:
