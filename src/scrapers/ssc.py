@@ -216,18 +216,82 @@ class SSCScraper(BaseScraper):
                     result["links"]["applyOnline"] = f"https://ssc.gov.in{meta['navigationUrl']}"
 
     def _fetch_notice_board(self):
-        """
-        Try to scrape the SSC notice board page via HTML fallback.
-        The notice board API requires auth, so we parse the rendered page.
-        """
-        html = self.fetch_html("https://ssc.gov.in")
-        if not html:
+        """Fetch the SSC notice board using the hidden backend API."""
+        url = "https://ssc.gov.in/api/general-website/portal/notice-boards?page=1&limit=20&contentType=notice-boards&key=createdAt&order=DESC&isAttachment=true&language=english&attributes=id,headline,examId,contentType,redirectUrl,startDate,endDate,language,createdAt"
+        data = self.fetch_json(url)
+
+        if not data or data.get("statusCode") != "200":
+            self.logger.warning("Failed to fetch notice board from SSC API")
             return []
 
-        # SSC is an Angular SPA — the HTML won't have notice board content
-        # without JS rendering. For now, return empty.
-        # This will be handled by Playwright in the headless layer.
-        return []
+        notices = data.get("data", [])
+        results = []
+
+        for notice in notices:
+            try:
+                item = self._parse_notice(notice)
+                if item:
+                    results.append(item)
+            except Exception as e:
+                self.logger.warning(f"Error parsing SSC notice: {e}")
+                continue
+
+        return results
+
+    def _parse_notice(self, notice):
+        """Parse a single notice board entry from the API response."""
+        title = clean_text(notice.get("headline", ""))
+        if not title:
+            return None
+
+        # Extract attachments
+        pdf_links = []
+        for att in notice.get("attachments", []):
+            file_server = att.get("fileServer", "attachment")
+            file_name = att.get("fileName", "")
+            if file_name:
+                pdf_url = f"https://ssc.gov.in/api/{file_server}/uploads/masterData/NoticeBoards/{file_name}"
+                pdf_links.append({
+                    "title": title,
+                    "url": pdf_url,
+                })
+                
+        if not pdf_links:
+            return None
+
+        created_at = parse_date(notice.get("createdAt"))
+        
+        notification = {
+            "id": generate_id("ssc-notice", notice.get("id", title)),
+            "title": title,
+            "organization": "Staff Selection Commission (SSC)",
+            "organizationShort": "SSC",
+            "category": "central",
+            "subcategory": "ssc",
+            "examCode": notice.get("examId", ""),
+            "examYear": created_at[:4] if created_at else "",
+            "totalVacancies": None,
+            "qualifications": [],
+            "ageLimit": None,
+            "importantDates": {},
+            "applicationFee": None,
+            "links": {
+                "officialWebsite": "https://ssc.gov.in",
+                "notifications": pdf_links,
+            },
+            "source": "ssc.gov.in",
+            "sourceType": "api",
+            "confidence": 0.95,
+            "status": "active",  # Notice board updates are explicitly active
+            "rawData": {
+                "apiId": notice.get("id"),
+            },
+        }
+        
+        if created_at:
+            notification["importantDates"]["published"] = created_at
+
+        return notification
 
 
 # Allow running this scraper standalone for testing
