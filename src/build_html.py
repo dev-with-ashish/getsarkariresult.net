@@ -103,7 +103,10 @@ def main():
     active_jobs = [j for j in jobs if j.get("status") == "active"]
     
     for job in active_jobs:
-
+        # Strictly enforce: ONLY display jobs fully analyzed by the AI
+        if "documentCategory" not in job:
+            continue
+            
         title = job.get("title", "Job Update")
         # Clean up junk suffixes that scrapers sometimes add
         for junk in ["Click to know Update", "-- ", "  "]:
