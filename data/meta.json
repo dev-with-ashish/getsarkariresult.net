@@ -1,5 +1,5 @@
 {
-  "lastScrapeAt": "2026-07-21T07:02:40.032910+00:00",
+  "lastScrapeAt": "2026-07-21T07:45:13.251030+00:00",
   "lastScrapeDate": "2026-07-21",
   "totalJobs": 429,
   "activeJobs": 429,
@@ -8,7 +8,7 @@
     "ssc": {
       "status": "success",
       "items": 10,
-      "elapsed": 1.8,
+      "elapsed": 1.7,
       "error": null
     }
   },

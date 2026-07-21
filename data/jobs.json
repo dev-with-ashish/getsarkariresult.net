@@ -12,7 +12,8 @@
     "qualifications": [],
     "ageLimit": null,
     "importantDates": {
-      "published": "2026-07-20"
+      "published": "2026-07-20",
+      "Notification Released": "2026-04-13"
     },
     "applicationFee": null,
     "links": {
@@ -28,8 +29,18 @@
     "sourceType": "api",
     "confidence": 0.95,
     "status": "active",
+    "documentCategory": "other",
+    "categorySubtitle": "Vocational Instructor Posts Phase XIV/2026",
+    "eligibilitySummary": "Candidates possessing National Craft Instructor Certificate (NCIC) / Craft Instructor Training Scheme (CITS) qualifications will be awarded 10% additional weightage in the Computer Based Examination.",
+    "eligibilityDetails": {
+      "Educational Qualification": "National Craft Instructor Certificate (NCIC) or Craft Instructor Training Scheme (CITS) for 10% additional weightage"
+    },
+    "selectionProcess": [
+      "Computer Based Examination (CBE) with 10% additional weightage for NCIC/CITS qualified candidates",
+      "Document Verification"
+    ],
     "notificationType": "notification",
-    "lastUpdated": "2026-07-21T07:02:32.134126+00:00"
+    "lastUpdated": "2026-07-21T07:45:05.418437+00:00"
   },
   {
     "id": "d1ce3e89bc0e",
@@ -61,7 +72,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-21T07:02:32.134165+00:00"
+    "lastUpdated": "2026-07-21T07:45:05.418472+00:00"
   },
   {
     "id": "99af541b1f21",
@@ -93,7 +104,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-21T07:02:32.134184+00:00",
+    "lastUpdated": "2026-07-21T07:45:05.418492+00:00",
     "mergedSources": [
       "ssc.gov.in"
     ]
@@ -128,7 +139,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-21T07:02:32.134197+00:00"
+    "lastUpdated": "2026-07-21T07:45:05.418505+00:00"
   },
   {
     "id": "069f121c9a3e",
@@ -160,7 +171,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-21T07:02:32.134210+00:00"
+    "lastUpdated": "2026-07-21T07:45:05.418518+00:00"
   },
   {
     "id": "2b895fdeceaa",
@@ -192,7 +203,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-21T07:02:32.134240+00:00"
+    "lastUpdated": "2026-07-21T07:45:05.418547+00:00"
   },
   {
     "id": "c6236701a38d",
@@ -224,7 +235,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-21T07:02:32.134254+00:00"
+    "lastUpdated": "2026-07-21T07:45:05.418562+00:00"
   },
   {
     "id": "f4c8ce3de727",
@@ -256,7 +267,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-21T07:02:32.134265+00:00"
+    "lastUpdated": "2026-07-21T07:45:05.418572+00:00"
   },
   {
     "id": "dcbed3edcc9e",
@@ -288,7 +299,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-21T07:02:32.134278+00:00"
+    "lastUpdated": "2026-07-21T07:45:05.418586+00:00"
   },
   {
     "id": "24bf506f4b54",
