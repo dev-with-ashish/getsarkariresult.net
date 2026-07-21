@@ -185,18 +185,35 @@ def parse_pdf_with_ai(pdf_url):
     \"\"\"
     """ + text[:300000] + "\n\"\"\"" # 300k chars is plenty safe and grabs almost all docs
     
+    import time
+    
     try:
         model = genai.GenerativeModel('gemini-2.5-flash')
-        response = model.generate_content(prompt)
-        result_text = response.text.strip()
         
-        if result_text.startswith("```json"):
-            result_text = result_text.replace("```json", "", 1)
-        if result_text.endswith("```"):
-            result_text = result_text[:-3]
-            
-        data = json.loads(result_text.strip())
-        return data
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                response = model.generate_content(prompt)
+                result_text = response.text.strip()
+                
+                if result_text.startswith("```json"):
+                    result_text = result_text.replace("```json", "", 1)
+                if result_text.endswith("```"):
+                    result_text = result_text[:-3]
+                    
+                data = json.loads(result_text.strip())
+                
+                # Sleep 5 seconds to respect the 15 RPM free tier limit
+                time.sleep(5) 
+                return data
+            except Exception as inner_e:
+                error_str = str(inner_e)
+                if "429" in error_str:
+                    logger.warning(f"Rate limited (429) on attempt {attempt+1}/{max_retries}. Sleeping 10s...")
+                    time.sleep(10)
+                else:
+                    raise inner_e
+                    
     except Exception as e:
         logger.error(f"Failed to parse PDF with Gemini: {e}")
         return None
