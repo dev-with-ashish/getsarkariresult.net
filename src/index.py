@@ -173,7 +173,8 @@ def run_scrapers(sources=None):
                             'ageLimit', 'ageLimitDetails',
                             'totalVacancies', 'vacancyBreakdown',
                             'importantDates', 'eligibilitySummary', 
-                            'eligibilityDetails', 'selectionProcess', 'payScale'
+                            'eligibilityDetails', 'selectionProcess', 'payScale',
+                            'specialNotice'
                         ]
                         for field in fields_to_merge:
                             if enriched_data.get(field):

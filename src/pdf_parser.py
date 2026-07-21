@@ -160,6 +160,8 @@ def parse_pdf_with_ai(pdf_url):
         "applicationFeeDetails": {"General/OBC": "₹500", "SC/ST": "₹250"},
         "feeNote": "Any note about fee refunds or payment methods.",
         
+        "specialNotice": "If the document is a Corrigendum, Amendment, or contains a critical update (like bonus marks, changed dates, or syllabus changes), summarize the key highlights in 2-3 sentences. Otherwise, return null.",
+        
         "ageLimit": "Short summary (e.g. '18-33 Years')",
         "ageLimitDetails": {"Minimum Age": "18 Years", "Maximum Age": "33 Years", "Age Reckoned As On": "01 Jan 2027", "OBC Relaxation": "+3 Years", "SC/ST Relaxation": "+5 Years"},
         

@@ -243,6 +243,16 @@ def main():
             html = html.replace("{{BREADCRUMB_SECTION_LABEL}}",html_lib.escape(bc_label))
             html = html.replace("{{STAT_ROW_HTML}}",           stat_row) # HTML string (not escaped, tags are safe)
             html = html.replace("{{META_DESCRIPTION}}",        html_lib.escape(f"{badge_text}: {title} — {org_name}. {category_sub}."))
+            
+            # Special Notice Section
+            special_notice = job.get("specialNotice")
+            if special_notice:
+                notice_html = f"""<div class="alert-notice">
+    <div><strong>Notice:</strong> {html_lib.escape(special_notice)}</div>
+</div>"""
+                html = html.replace("{{SPECIAL_NOTICE_SECTION}}", notice_html)
+            else:
+                html = html.replace("{{SPECIAL_NOTICE_SECTION}}", "")
         
             # Important dates table
             dates_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in dates.items() if v and v != "None"])

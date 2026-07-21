@@ -114,6 +114,14 @@
     font-size: 12px; color: var(--slate); margin-top: 8px;
   }
 
+  .alert-notice {
+    display: flex; gap: 10px; background: rgba(201,138,44,0.1); border: 1px solid rgba(201,138,44,0.3);
+    border-left: 3px solid var(--marigold); border-radius: 6px; padding: 14px 16px;
+    font-size: 14px; color: var(--ink); margin-bottom: 20px; line-height: 1.5;
+  }
+  .alert-notice strong { color: var(--marigold); }
+
+
   footer { border-top: 1px solid var(--line); padding: 24px 20px; text-align: center; font-size: 12px; color: var(--slate); }
 
   @media (max-width: 480px) {
@@ -155,6 +163,8 @@
   <div class="stat-row">
     {{STAT_ROW_HTML}}
   </div>
+
+  {{SPECIAL_NOTICE_SECTION}}
 
   <a class="action-btn" href="{{APPLY_URL}}" target="_blank" rel="noopener">{{ACTION_BTN_LABEL}} &#8599;</a>
 
