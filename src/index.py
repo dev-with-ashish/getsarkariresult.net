@@ -138,6 +138,11 @@ def run_scrapers(sources=None):
                 links = job.get('links', {})
                 pdf_url = links.get('notification')
                 
+                # Support scrapers that set 'notifications' as a list of dicts (like ssc.py)
+                if not pdf_url and links.get('notifications'):
+                    if isinstance(links['notifications'], list) and len(links['notifications']) > 0:
+                        pdf_url = links['notifications'][0].get('url')
+                
                 # Case 1: We have a direct PDF link
                 if pdf_url and pdf_url.lower().endswith('.pdf'):
                     pass  # use it as-is
