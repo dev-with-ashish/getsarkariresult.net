@@ -102,6 +102,14 @@ def main():
 
     active_jobs = [j for j in jobs if j.get("status") == "active"]
     
+    stats = {
+        "total": 0,
+        "vacancy": 0,
+        "admit_card": 0,
+        "result": 0,
+        "answer_key": 0
+    }
+    
     for job in active_jobs:
         # Strictly enforce: ONLY display jobs fully analyzed by the AI
         if "documentCategory" not in job:
@@ -147,6 +155,10 @@ def main():
                 doc_cat = "result"
             else:
                 doc_cat = "other"
+
+        stats["total"] += 1
+        if doc_cat in stats:
+            stats[doc_cat] += 1
 
         # ── Category-specific UI labels ──────────────────────────────────
         cat_labels = {
@@ -333,6 +345,13 @@ def main():
     # Update global feeds
     update_html_feed("index.html", "<!-- LATEST_FEED_START -->", "<!-- LATEST_FEED_END -->", "".join(feed_items))
     update_html_feed("vacancy.html", "<!-- VACANCY_FEED_START -->", "<!-- VACANCY_FEED_END -->", "".join(vacancy_cards))
+    
+    # Update dynamic stats
+    update_html_feed("index.html", "<!-- STAT_TOTAL -->", "<!-- /STAT_TOTAL -->", str(stats["total"]))
+    update_html_feed("index.html", "<!-- STAT_VACANCY -->", "<!-- /STAT_VACANCY -->", str(stats["vacancy"]))
+    update_html_feed("index.html", "<!-- STAT_ADMIT_CARD -->", "<!-- /STAT_ADMIT_CARD -->", str(stats["admit_card"]))
+    update_html_feed("index.html", "<!-- STAT_RESULT -->", "<!-- /STAT_RESULT -->", str(stats["result"]))
+    update_html_feed("index.html", "<!-- STAT_ANSWER_KEY -->", "<!-- /STAT_ANSWER_KEY -->", str(stats["answer_key"]))
     
     # Update org pages
     for org_slug, rows in org_feeds.items():
