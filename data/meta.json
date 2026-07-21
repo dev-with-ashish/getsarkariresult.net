@@ -1,24 +1,24 @@
 {
-  "lastScrapeAt": "2026-07-21T06:21:10.224135+00:00",
+  "lastScrapeAt": "2026-07-21T07:02:40.032910+00:00",
   "lastScrapeDate": "2026-07-21",
-  "totalJobs": 420,
-  "activeJobs": 420,
+  "totalJobs": 429,
+  "activeJobs": 429,
   "expiredJobs": 0,
   "sources": {
     "ssc": {
       "status": "success",
-      "items": 0,
-      "elapsed": 2.5,
+      "items": 10,
+      "elapsed": 1.8,
       "error": null
     }
   },
   "categories": {
-    "central": 337,
+    "central": 346,
     "state": 83
   },
   "notificationTypes": {
+    "notification": 102,
     "result": 61,
-    "notification": 93,
     "recruitment": 233,
     "corrigendum": 3,
     "syllabus": 2,
@@ -26,6 +26,7 @@
     "answer_key": 2
   },
   "organizations": {
+    "SSC": 9,
     "UPSC": 22,
     "IBPS": 20,
     "UPPSC": 37,
