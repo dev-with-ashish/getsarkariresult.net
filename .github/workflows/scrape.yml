@@ -84,6 +84,17 @@ jobs:
           echo "Running HTML Generator..."
           python3 src/build_html.py
       
+      - name: 🛡️ Sanity Check (Data Integrity)
+        run: |
+          echo "Running sanity checks on data..."
+          TOTAL=$(python3 -c "import json; print(json.load(open('data/meta.json'))['totalJobs'])" 2>/dev/null || echo "0")
+          if [ "$TOTAL" -lt 50 ]; then
+            echo "::error::Sanity check failed! Total jobs dropped below 50 ($TOTAL). Aborting deployment to protect production data."
+            exit 1
+          fi
+          echo "Sanity check passed with $TOTAL jobs."
+
+      
       - name: 💾 Commit and push data + HTML
         run: |
           git config user.name "Sarkari Scraper Bot"

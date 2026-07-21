@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import html as html_lib
 from datetime import datetime
 
 def slugify(text):
@@ -36,7 +37,7 @@ def conditional_section(html, tag, content, condition):
         html = pattern.sub('', html)
     return html
 
-def build_json_ld(doc_cat, title, org_name, org_url, notice_ref, vacancies, apply_url, org_slug):
+def build_json_ld(job, doc_cat, title, org_name, org_url, notice_ref, vacancies, apply_url, org_slug):
     """Build context-appropriate JSON-LD schema based on document category."""
     base = {
         "@context": "https://schema.org",
@@ -51,13 +52,19 @@ def build_json_ld(doc_cat, title, org_name, org_url, notice_ref, vacancies, appl
     }
 
     if doc_cat == "vacancy":
+        dates = job.get("importantDates", {})
+        date_posted = dates.get("published") or dates.get("Notification Released") or datetime.now().strftime("%Y-%m-%d")
+        # Ensure it's in YYYY-MM-DD format roughly if possible, though date_posted is usually a string
+        
+        has_apply_link = bool(job.get("links", {}).get("applyOnline"))
+        
         schema = {
             "@context": "https://schema.org",
             "@type": "JobPosting",
             "title": title,
             "description": f"Official recruitment notification: {title} by {org_name}.",
             "identifier": {"@type": "PropertyValue", "name": org_name, "value": notice_ref},
-            "datePosted": datetime.now().strftime("%Y-%m-%d"),
+            "datePosted": str(date_posted)[:10] if len(str(date_posted)) >= 10 else datetime.now().strftime("%Y-%m-%d"),
             "employmentType": "FULL_TIME",
             "hiringOrganization": {
                 "@type": "GovernmentOrganization",
@@ -67,7 +74,7 @@ def build_json_ld(doc_cat, title, org_name, org_url, notice_ref, vacancies, appl
             "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressCountry": "IN"}},
             "applicantLocationRequirements": {"@type": "Country", "name": "India"},
             "totalJobOpenings": vacancies,
-            "directApply": True,
+            "directApply": has_apply_link,
             "applicationContact": {"@type": "ContactPoint", "url": apply_url}
         }
     else:
@@ -221,21 +228,21 @@ def main():
             # ── Build HTML ───────────────────────────────────────────────────
             html = template
 
-            # Simple replacements
-            html = html.replace("{{JOB_TITLE}}",               title)
-            html = html.replace("{{NOTICE_REF}}",              str(notice_ref)[:12])
-            html = html.replace("{{ORG_NAME}}",                org_name)
-            html = html.replace("{{ORG_SLUG}}",                org_slug)
-            html = html.replace("{{APPLY_URL}}",               apply_url)
-            html = html.replace("{{NOTIFICATION_PDF_URL}}",    pdf_url)
-            html = html.replace("{{CATEGORY_SUBTITLE}}",       category_sub)
-            html = html.replace("{{STATUS_BADGE_CLASS}}",      badge_class)
-            html = html.replace("{{STATUS_BADGE_TEXT}}",       badge_text)
-            html = html.replace("{{ACTION_BTN_LABEL}}",        btn_label)
-            html = html.replace("{{BREADCRUMB_SECTION_URL}}",  bc_url)
-            html = html.replace("{{BREADCRUMB_SECTION_LABEL}}",bc_label)
-            html = html.replace("{{STAT_ROW_HTML}}",           stat_row)
-            html = html.replace("{{META_DESCRIPTION}}",        f"{badge_text}: {title} — {org_name}. {category_sub}.")
+            # Simple replacements with HTML escaping to prevent XSS
+            html = html.replace("{{JOB_TITLE}}",               html_lib.escape(title))
+            html = html.replace("{{NOTICE_REF}}",              html_lib.escape(str(notice_ref)[:12]))
+            html = html.replace("{{ORG_NAME}}",                html_lib.escape(org_name))
+            html = html.replace("{{ORG_SLUG}}",                html_lib.escape(org_slug))
+            html = html.replace("{{APPLY_URL}}",               html_lib.escape(apply_url))
+            html = html.replace("{{NOTIFICATION_PDF_URL}}",    html_lib.escape(pdf_url))
+            html = html.replace("{{CATEGORY_SUBTITLE}}",       html_lib.escape(category_sub))
+            html = html.replace("{{STATUS_BADGE_CLASS}}",      html_lib.escape(badge_class))
+            html = html.replace("{{STATUS_BADGE_TEXT}}",       html_lib.escape(badge_text))
+            html = html.replace("{{ACTION_BTN_LABEL}}",        html_lib.escape(btn_label))
+            html = html.replace("{{BREADCRUMB_SECTION_URL}}",  html_lib.escape(bc_url))
+            html = html.replace("{{BREADCRUMB_SECTION_LABEL}}",html_lib.escape(bc_label))
+            html = html.replace("{{STAT_ROW_HTML}}",           stat_row) # HTML string (not escaped, tags are safe)
+            html = html.replace("{{META_DESCRIPTION}}",        html_lib.escape(f"{badge_text}: {title} — {org_name}. {category_sub}."))
         
             # Important dates table
             dates_html = "".join([f"<tr><td>{k}</td><td>{v}</td></tr>" for k, v in dates.items() if v and v != "None"])
@@ -300,7 +307,7 @@ def main():
             html = html.replace("{{HOW_TO_APPLY_ROWS}}", hta_html)
 
             # JSON-LD
-            json_ld = build_json_ld(doc_cat, title, org_name, org_url, notice_ref, vacancies, apply_url, org_slug)
+            json_ld = build_json_ld(job, doc_cat, title, org_name, org_url, notice_ref, vacancies, apply_url, org_slug)
             html = html.replace("{{JSON_LD_SCHEMA}}", json_ld)
 
             with open(page_path, "w", encoding="utf-8") as f:

@@ -1,0 +1,742 @@
+scrape	Set up job	﻿2026-07-21T06:20:24.0684967Z Current runner version: '2.335.1'
+scrape	Set up job	2026-07-21T06:20:24.0710367Z ##[group]Runner Image Provisioner
+scrape	Set up job	2026-07-21T06:20:24.0711341Z Hosted Compute Agent
+scrape	Set up job	2026-07-21T06:20:24.0711947Z Version: 20260707.563
+scrape	Set up job	2026-07-21T06:20:24.0712525Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+scrape	Set up job	2026-07-21T06:20:24.0713239Z Build Date: 2026-07-07T19:33:50Z
+scrape	Set up job	2026-07-21T06:20:24.0713941Z Worker ID: {dce1323b-90cf-48db-8095-0b84d86cf83f}
+scrape	Set up job	2026-07-21T06:20:24.0714647Z Azure Region: westus3
+scrape	Set up job	2026-07-21T06:20:24.0715173Z ##[endgroup]
+scrape	Set up job	2026-07-21T06:20:24.0716746Z ##[group]Operating System
+scrape	Set up job	2026-07-21T06:20:24.0717385Z Ubuntu
+scrape	Set up job	2026-07-21T06:20:24.0717923Z 24.04.4
+scrape	Set up job	2026-07-21T06:20:24.0718420Z LTS
+scrape	Set up job	2026-07-21T06:20:24.0718896Z ##[endgroup]
+scrape	Set up job	2026-07-21T06:20:24.0719379Z ##[group]Runner Image
+scrape	Set up job	2026-07-21T06:20:24.0719949Z Image: ubuntu-24.04
+scrape	Set up job	2026-07-21T06:20:24.0720534Z Version: 20260714.240.1
+scrape	Set up job	2026-07-21T06:20:24.0721522Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260714.240/images/ubuntu/Ubuntu2404-Readme.md
+scrape	Set up job	2026-07-21T06:20:24.0723080Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260714.240
+scrape	Set up job	2026-07-21T06:20:24.0723951Z ##[endgroup]
+scrape	Set up job	2026-07-21T06:20:24.0724999Z ##[group]GITHUB_TOKEN Permissions
+scrape	Set up job	2026-07-21T06:20:24.0727108Z Contents: write
+scrape	Set up job	2026-07-21T06:20:24.0727680Z Metadata: read
+scrape	Set up job	2026-07-21T06:20:24.0728676Z ##[endgroup]
+scrape	Set up job	2026-07-21T06:20:24.0731126Z Secret source: Actions
+scrape	Set up job	2026-07-21T06:20:24.0731868Z Prepare workflow directory
+scrape	Set up job	2026-07-21T06:20:24.1050249Z Prepare all required actions
+scrape	Set up job	2026-07-21T06:20:24.1091678Z Getting action download info
+scrape	Set up job	2026-07-21T06:20:24.4390592Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+scrape	Set up job	2026-07-21T06:20:25.0652491Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+scrape	Set up job	2026-07-21T06:20:25.1291096Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+scrape	Set up job	2026-07-21T06:20:25.3092559Z Complete job name: scrape
+scrape	📥 Checkout repository	﻿2026-07-21T06:20:25.3884585Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3893522Z ##[group]Run actions/checkout@v4
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3894197Z with:
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3894652Z   repository: dev-with-ashish/getsarkariresult.net
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3898737Z   token: ***
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3899140Z   ssh-strict: true
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3899537Z   ssh-user: git
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3900001Z   persist-credentials: true
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3900453Z   clean: true
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3900870Z   sparse-checkout-cone-mode: true
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3901325Z   fetch-depth: 1
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3901706Z   fetch-tags: false
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3902091Z   show-progress: true
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3902483Z   lfs: false
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3902876Z   submodules: false
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3903310Z   set-safe-directory: true
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3903772Z   allow-unsafe-pr-checkout: false
+scrape	📥 Checkout repository	2026-07-21T06:20:25.3904486Z ##[endgroup]
+scrape	📥 Checkout repository	2026-07-21T06:20:25.4902934Z Syncing repository: dev-with-ashish/getsarkariresult.net
+scrape	📥 Checkout repository	2026-07-21T06:20:25.4906467Z ##[group]Getting Git version info
+scrape	📥 Checkout repository	2026-07-21T06:20:25.4908035Z Working directory is '/home/runner/work/getsarkariresult.net/getsarkariresult.net'
+scrape	📥 Checkout repository	2026-07-21T06:20:25.4910118Z [command]/usr/bin/git version
+scrape	📥 Checkout repository	2026-07-21T06:20:25.4939775Z git version 2.54.0
+scrape	📥 Checkout repository	2026-07-21T06:20:25.4959320Z ##[endgroup]
+scrape	📥 Checkout repository	2026-07-21T06:20:25.4975865Z Temporarily overriding HOME='/home/runner/work/_temp/455a5d28-bcb4-445f-96bf-c49143fc230d' before making global git config changes
+scrape	📥 Checkout repository	2026-07-21T06:20:25.4978452Z Adding repository directory to the temporary git global config as a safe directory
+scrape	📥 Checkout repository	2026-07-21T06:20:25.4984975Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/getsarkariresult.net/getsarkariresult.net
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5034413Z Deleting the contents of '/home/runner/work/getsarkariresult.net/getsarkariresult.net'
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5040349Z ##[group]Initializing the repository
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5044396Z [command]/usr/bin/git init /home/runner/work/getsarkariresult.net/getsarkariresult.net
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5157766Z hint: Using 'master' as the name for the initial branch. This default branch name
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5159688Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5161533Z hint: to use in all of your new repositories, which will suppress this warning,
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5163327Z hint: call:
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5164471Z hint:
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5165852Z hint: 	git config --global init.defaultBranch <name>
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5167115Z hint:
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5168733Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5170354Z hint: 'development'. The just-created branch can be renamed via this command:
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5171703Z hint:
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5172401Z hint: 	git branch -m <name>
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5173165Z hint:
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5174144Z hint: Disable this message with "git config set advice.defaultBranchName false"
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5176197Z Initialized empty Git repository in /home/runner/work/getsarkariresult.net/getsarkariresult.net/.git/
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5179284Z [command]/usr/bin/git remote add origin https://github.com/dev-with-ashish/getsarkariresult.net
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5220427Z ##[endgroup]
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5221880Z ##[group]Disabling automatic garbage collection
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5224201Z [command]/usr/bin/git config --local gc.auto 0
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5252235Z ##[endgroup]
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5253581Z ##[group]Setting up auth
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5258735Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5288590Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5629557Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5659237Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5871197Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+scrape	📥 Checkout repository	2026-07-21T06:20:25.5901574Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+scrape	📥 Checkout repository	2026-07-21T06:20:25.6080979Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+scrape	📥 Checkout repository	2026-07-21T06:20:25.6112239Z ##[endgroup]
+scrape	📥 Checkout repository	2026-07-21T06:20:25.6113037Z ##[group]Fetching the repository
+scrape	📥 Checkout repository	2026-07-21T06:20:25.6121492Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +17e5acd3bddb064efafcc333fd657442c60e3347:refs/remotes/origin/main
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6019026Z From https://github.com/dev-with-ashish/getsarkariresult.net
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6030002Z  * [new ref]         17e5acd3bddb064efafcc333fd657442c60e3347 -> origin/main
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6061803Z ##[endgroup]
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6063911Z ##[group]Determining the checkout info
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6065842Z ##[endgroup]
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6069544Z [command]/usr/bin/git sparse-checkout disable
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6110569Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6135574Z ##[group]Checking out the ref
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6139820Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6571675Z Switched to a new branch 'main'
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6574644Z branch 'main' set up to track 'origin/main'.
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6584806Z ##[endgroup]
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6629331Z [command]/usr/bin/git log -1 --format=%H
+scrape	📥 Checkout repository	2026-07-21T06:20:26.6652358Z 17e5acd3bddb064efafcc333fd657442c60e3347
+scrape	🐍 Set up Python	﻿2026-07-21T06:20:26.6893598Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6895733Z ##[group]Run actions/setup-python@v5
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6896068Z with:
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6896336Z   python-version: 3.11
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6896613Z   cache: pip
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6896872Z   check-latest: false
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6899564Z   token: ***
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6899843Z   update-environment: true
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6900149Z   allow-prereleases: false
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6900440Z   freethreaded: false
+scrape	🐍 Set up Python	2026-07-21T06:20:26.6900716Z ##[endgroup]
+scrape	🐍 Set up Python	2026-07-21T06:20:26.8234587Z ##[group]Installed versions
+scrape	🐍 Set up Python	2026-07-21T06:20:26.8327770Z (node:2254) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+scrape	🐍 Set up Python	2026-07-21T06:20:26.8329372Z (Use `node --trace-deprecation ...` to show where the warning was created)
+scrape	🐍 Set up Python	2026-07-21T06:20:26.8330204Z Successfully set up CPython (3.11.15)
+scrape	🐍 Set up Python	2026-07-21T06:20:26.8332678Z ##[endgroup]
+scrape	🐍 Set up Python	2026-07-21T06:20:26.9630055Z [command]/opt/hostedtoolcache/Python/3.11.15/x64/bin/pip cache dir
+scrape	🐍 Set up Python	2026-07-21T06:20:27.3072501Z /home/runner/.cache/pip
+scrape	🐍 Set up Python	2026-07-21T06:20:27.5796061Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.15-pip-fe333b28ac986259adff977ca7cc21c4edb8bb44d9e59ed3338c960f568c3ab5
+scrape	🐍 Set up Python	2026-07-21T06:20:27.5909734Z (node:2254) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+scrape	🐍 Set up Python	2026-07-21T06:20:28.8158030Z Received 25165824 of 93284536 (27.0%), 24.0 MBs/sec
+scrape	🐍 Set up Python	2026-07-21T06:20:29.7717261Z Received 93284536 of 93284536 (100.0%), 45.5 MBs/sec
+scrape	🐍 Set up Python	2026-07-21T06:20:29.7718264Z Cache Size: ~89 MB (93284536 B)
+scrape	🐍 Set up Python	2026-07-21T06:20:29.7864847Z [command]/usr/bin/tar -xf /home/runner/work/_temp/24c5f364-84c2-4140-ae9d-ef4b254bb2ce/cache.tzst -P -C /home/runner/work/getsarkariresult.net/getsarkariresult.net --use-compress-program unzstd
+scrape	🐍 Set up Python	2026-07-21T06:20:29.8850239Z Cache restored successfully
+scrape	🐍 Set up Python	2026-07-21T06:20:29.8887537Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.15-pip-fe333b28ac986259adff977ca7cc21c4edb8bb44d9e59ed3338c960f568c3ab5
+scrape	📦 Install dependencies	﻿2026-07-21T06:20:29.9018808Z ##[group]Run pip install -r requirements.txt
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9019327Z ^[[36;1mpip install -r requirements.txt^[[0m
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9019852Z ^[[36;1m# Install playwright browsers needed by the AI PDF downloader fallback^[[0m
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9020426Z ^[[36;1mpython -m playwright install chromium --with-deps^[[0m
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9074177Z shell: /usr/bin/bash -e {0}
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9074525Z env:
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9074826Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9075497Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9075955Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9076384Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9076773Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9077153Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape	📦 Install dependencies	2026-07-21T06:20:29.9077500Z ##[endgroup]
+scrape	📦 Install dependencies	2026-07-21T06:20:30.5132785Z Collecting requests>=2.28.0 (from -r requirements.txt (line 1))
+scrape	📦 Install dependencies	2026-07-21T06:20:30.5148453Z   Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:30.5402238Z Collecting beautifulsoup4>=4.12.0 (from -r requirements.txt (line 2))
+scrape	📦 Install dependencies	2026-07-21T06:20:30.5426377Z   Using cached beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:30.7157717Z Collecting lxml>=4.9.0 (from -r requirements.txt (line 3))
+scrape	📦 Install dependencies	2026-07-21T06:20:30.7175490Z   Using cached lxml-6.1.1-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:30.7496101Z Collecting playwright>=1.40.0 (from -r requirements.txt (line 4))
+scrape	📦 Install dependencies	2026-07-21T06:20:30.7511165Z   Using cached playwright-1.61.0-py3-none-manylinux1_x86_64.whl.metadata (3.3 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:30.7724594Z Collecting pypdf>=4.0.0 (from -r requirements.txt (line 5))
+scrape	📦 Install dependencies	2026-07-21T06:20:30.7737785Z   Using cached pypdf-6.14.2-py3-none-any.whl.metadata (7.2 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:30.8025820Z Collecting google-generativeai>=0.5.0 (from -r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:30.8041307Z   Using cached google_generativeai-0.8.6-py3-none-any.whl.metadata (3.9 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:30.9118097Z Collecting charset_normalizer<4,>=2 (from requests>=2.28.0->-r requirements.txt (line 1))
+scrape	📦 Install dependencies	2026-07-21T06:20:30.9133535Z   Using cached charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.0221017Z Collecting idna<4,>=2.5 (from requests>=2.28.0->-r requirements.txt (line 1))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.0236632Z   Using cached idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.0460466Z Collecting urllib3<3,>=1.26 (from requests>=2.28.0->-r requirements.txt (line 1))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.0475744Z   Using cached urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.0669458Z Collecting certifi>=2023.5.7 (from requests>=2.28.0->-r requirements.txt (line 1))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.0685886Z   Using cached certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.0881672Z Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.12.0->-r requirements.txt (line 2))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.0895700Z   Using cached soupsieve-2.9-py3-none-any.whl.metadata (4.6 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.1081213Z Collecting typing-extensions>=4.0.0 (from beautifulsoup4>=4.12.0->-r requirements.txt (line 2))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.1095944Z   Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.1277753Z Collecting pyee<14,>=13 (from playwright>=1.40.0->-r requirements.txt (line 4))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.1292246Z   Using cached pyee-13.0.1-py3-none-any.whl.metadata (3.0 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.2521813Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright>=1.40.0->-r requirements.txt (line 4))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.2537288Z   Using cached greenlet-3.5.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.3448891Z Collecting google-ai-generativelanguage==0.6.15 (from google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.3462530Z   Using cached google_ai_generativelanguage-0.6.15-py3-none-any.whl.metadata (5.7 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.3750240Z Collecting google-api-core (from google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.3763958Z   Using cached google_api_core-2.32.0-py3-none-any.whl.metadata (3.2 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.4182900Z Collecting google-api-python-client (from google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.4198961Z   Using cached google_api_python_client-2.198.0-py3-none-any.whl.metadata (7.0 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.4481305Z Collecting google-auth>=2.15.0 (from google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.4496488Z   Using cached google_auth-2.56.0-py3-none-any.whl.metadata (6.0 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.5720897Z Collecting protobuf (from google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.5733276Z   Using cached protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.6566242Z Collecting pydantic (from google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.6579943Z   Using cached pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.6895905Z Collecting tqdm (from google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.6909734Z   Using cached tqdm-4.69.0-py3-none-any.whl.metadata (57 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.7254471Z Collecting proto-plus<2.0.0dev,>=1.22.3 (from google-ai-generativelanguage==0.6.15->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.7267400Z   Using cached proto_plus-1.28.1-py3-none-any.whl.metadata (2.2 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.7351071Z Collecting protobuf (from google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.7364328Z   Using cached protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+scrape	📦 Install dependencies	2026-07-21T06:20:31.7547385Z Collecting googleapis-common-protos<2.0.0,>=1.63.2 (from google-api-core->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:31.7560121Z   Using cached googleapis_common_protos-1.75.0-py3-none-any.whl.metadata (8.6 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.1831979Z Collecting grpcio<2.0.0,>=1.41.0 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.1844716Z   Using cached grpcio-1.82.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.2163566Z Collecting grpcio-status<2.0.0,>=1.41.0 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.2176880Z   Using cached grpcio_status-1.82.1-py3-none-any.whl.metadata (1.2 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.2411856Z Collecting pyasn1-modules>=0.2.1 (from google-auth>=2.15.0->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.2424409Z   Using cached pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.3755958Z Collecting cryptography>=38.0.3 (from google-auth>=2.15.0->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.3769521Z   Using cached cryptography-49.0.0-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.3854088Z INFO: pip is looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+scrape	📦 Install dependencies	2026-07-21T06:20:32.3858919Z Collecting grpcio-status<2.0.0,>=1.41.0 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.3871672Z   Using cached grpcio_status-1.81.1-py3-none-any.whl.metadata (1.2 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.3917318Z   Using cached grpcio_status-1.81.0-py3-none-any.whl.metadata (1.2 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.3942165Z   Using cached grpcio_status-1.80.0-py3-none-any.whl.metadata (1.3 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.3991417Z   Using cached grpcio_status-1.78.0-py3-none-any.whl.metadata (1.3 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4021118Z   Using cached grpcio_status-1.76.0-py3-none-any.whl.metadata (1.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4047247Z   Using cached grpcio_status-1.75.1-py3-none-any.whl.metadata (1.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4072711Z   Using cached grpcio_status-1.75.0-py3-none-any.whl.metadata (1.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4086112Z INFO: pip is still looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4100698Z   Using cached grpcio_status-1.74.0-py3-none-any.whl.metadata (1.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4127663Z   Using cached grpcio_status-1.73.1-py3-none-any.whl.metadata (1.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4176825Z   Using cached grpcio_status-1.73.0-py3-none-any.whl.metadata (1.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4201671Z   Using cached grpcio_status-1.72.2-py3-none-any.whl.metadata (1.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4227312Z   Using cached grpcio_status-1.72.1-py3-none-any.whl.metadata (1.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4241053Z INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+scrape	📦 Install dependencies	2026-07-21T06:20:32.4257491Z   Using cached grpcio_status-1.71.2-py3-none-any.whl.metadata (1.1 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5126671Z Collecting cffi>=2.0.0 (from cryptography>=38.0.3->google-auth>=2.15.0->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5142250Z   Using cached cffi-2.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5295554Z Collecting pycparser (from cffi>=2.0.0->cryptography>=38.0.3->google-auth>=2.15.0->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5309493Z   Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5527978Z Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth>=2.15.0->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5541815Z   Using cached pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5718995Z Collecting httplib2<1.0.0,>=0.19.0 (from google-api-python-client->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5733035Z   Using cached httplib2-0.32.0-py3-none-any.whl.metadata (2.2 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5922395Z Collecting google-auth-httplib2<1.0.0,>=0.2.0 (from google-api-python-client->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.5937494Z   Using cached google_auth_httplib2-0.4.0-py3-none-any.whl.metadata (3.0 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.6083432Z Collecting uritemplate<5,>=3.0.1 (from google-api-python-client->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.6097320Z   Using cached uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.6339412Z Collecting pyparsing<4,>=3.1 (from httplib2<1.0.0,>=0.19.0->google-api-python-client->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.6353852Z   Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:32.6510416Z Collecting annotated-types>=0.6.0 (from pydantic->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:32.6524470Z   Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.1900650Z Collecting pydantic-core==2.46.4 (from pydantic->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:33.1914605Z   Using cached pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2071055Z Collecting typing-inspection>=0.4.2 (from pydantic->google-generativeai>=0.5.0->-r requirements.txt (line 6))
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2083391Z   Using cached typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2138414Z Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2151537Z Using cached charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (221 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2163871Z Using cached idna-3.18-py3-none-any.whl (65 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2175784Z Using cached urllib3-2.7.0-py3-none-any.whl (131 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2188103Z Using cached beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2200611Z Using cached lxml-6.1.1-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2233198Z Using cached playwright-1.61.0-py3-none-manylinux1_x86_64.whl (47.4 MB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2428970Z Using cached greenlet-3.5.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (617 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2443982Z Using cached pyee-13.0.1-py3-none-any.whl (15 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2457426Z Using cached pypdf-6.14.2-py3-none-any.whl (349 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2471637Z Using cached google_generativeai-0.8.6-py3-none-any.whl (155 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2485160Z Using cached google_ai_generativelanguage-0.6.15-py3-none-any.whl (1.3 MB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2505464Z Using cached google_api_core-2.32.0-py3-none-any.whl (174 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2518758Z Using cached google_auth-2.56.0-py3-none-any.whl (257 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2532443Z Using cached googleapis_common_protos-1.75.0-py3-none-any.whl (300 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2546213Z Using cached grpcio-1.82.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.9 MB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2586576Z Using cached grpcio_status-1.71.2-py3-none-any.whl (14 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2599453Z Using cached proto_plus-1.28.1-py3-none-any.whl (50 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2612168Z Using cached protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl (320 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2625743Z Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2638733Z Using cached certifi-2026.6.17-py3-none-any.whl (133 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2652311Z Using cached cryptography-49.0.0-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2682932Z Using cached cffi-2.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2696492Z Using cached pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2709801Z Using cached pyasn1-0.6.4-py3-none-any.whl (84 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2724516Z Using cached soupsieve-2.9-py3-none-any.whl (37 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2737246Z Using cached google_api_python_client-2.198.0-py3-none-any.whl (15.6 MB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2810657Z Using cached google_auth_httplib2-0.4.0-py3-none-any.whl (9.5 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2823517Z Using cached httplib2-0.32.0-py3-none-any.whl (93 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2836371Z Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2849507Z Using cached uritemplate-4.2.0-py3-none-any.whl (11 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2862464Z Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2875563Z Using cached pydantic-2.13.4-py3-none-any.whl (472 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2891969Z Using cached pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2912865Z Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2925887Z Using cached typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.2938887Z Using cached tqdm-4.69.0-py3-none-any.whl (676 kB)
+scrape	📦 Install dependencies	2026-07-21T06:20:33.4611940Z Installing collected packages: urllib3, uritemplate, typing-extensions, tqdm, soupsieve, pypdf, pyparsing, pycparser, pyasn1, protobuf, lxml, idna, greenlet, charset_normalizer, certifi, annotated-types, typing-inspection, requests, pyee, pydantic-core, pyasn1-modules, proto-plus, httplib2, grpcio, googleapis-common-protos, cffi, beautifulsoup4, pydantic, playwright, grpcio-status, cryptography, google-auth, google-auth-httplib2, google-api-core, google-api-python-client, google-ai-generativelanguage, google-generativeai
+scrape	📦 Install dependencies	2026-07-21T06:20:37.7721529Z 
+scrape	📦 Install dependencies	2026-07-21T06:20:37.7744082Z Successfully installed annotated-types-0.7.0 beautifulsoup4-4.15.0 certifi-2026.6.17 cffi-2.1.0 charset_normalizer-3.4.9 cryptography-49.0.0 google-ai-generativelanguage-0.6.15 google-api-core-2.32.0 google-api-python-client-2.198.0 google-auth-2.56.0 google-auth-httplib2-0.4.0 google-generativeai-0.8.6 googleapis-common-protos-1.75.0 greenlet-3.5.3 grpcio-1.82.1 grpcio-status-1.71.2 httplib2-0.32.0 idna-3.18 lxml-6.1.1 playwright-1.61.0 proto-plus-1.28.1 protobuf-5.29.6 pyasn1-0.6.4 pyasn1-modules-0.4.2 pycparser-3.0 pydantic-2.13.4 pydantic-core-2.46.4 pyee-13.0.1 pyparsing-3.3.2 pypdf-6.14.2 requests-2.34.2 soupsieve-2.9 tqdm-4.69.0 typing-extensions-4.16.0 typing-inspection-0.4.2 uritemplate-4.2.0 urllib3-2.7.0
+scrape	📦 Install dependencies	2026-07-21T06:20:38.2619296Z Installing dependencies...
+scrape	📦 Install dependencies	2026-07-21T06:20:38.2679189Z Switching to root user to install dependencies...
+scrape	📦 Install dependencies	2026-07-21T06:20:38.3487391Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.3976436Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+scrape	📦 Install dependencies	2026-07-21T06:20:38.3994340Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.4046419Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.4072527Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.4382294Z Hit:6 https://packages.microsoft.com/repos/azure-cli noble InRelease
+scrape	📦 Install dependencies	2026-07-21T06:20:38.4439161Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.4690377Z Get:8 https://dl.google.com/linux/chrome-stable/deb stable InRelease [1825 B]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5068296Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1120 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5199456Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [273 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5210618Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [180 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5219742Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1662 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5296940Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [328 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5313799Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5336004Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1270 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5397370Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [290 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5410046Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.5587050Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5752 B]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6045573Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [10.5 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6059275Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [856 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6107185Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [192 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6124754Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [46.3 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6130320Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1180 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6193932Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [233 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6214204Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.3 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6249477Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1166 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6274090Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [268 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.6891165Z Get:28 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [234 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.7007724Z Get:29 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [200 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.7070301Z Get:30 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [11.7 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:38.7605692Z Get:31 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1414 B]
+scrape	📦 Install dependencies	2026-07-21T06:20:42.8736988Z Fetched 10.4 MB in 1s (8776 kB/s)
+scrape	📦 Install dependencies	2026-07-21T06:20:43.6497844Z Reading package lists...
+scrape	📦 Install dependencies	2026-07-21T06:20:43.6786247Z Reading package lists...
+scrape	📦 Install dependencies	2026-07-21T06:20:43.8498812Z Building dependency tree...
+scrape	📦 Install dependencies	2026-07-21T06:20:43.8504178Z Reading state information...
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0019988Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0020855Z libatk-bridge2.0-0t64 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0021534Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0022138Z libatk1.0-0t64 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0022748Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0023807Z libatspi2.0-0t64 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0024442Z libcairo2 is already the newest version (1.18.0-3build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0025117Z libcairo2 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0025973Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0026410Z libcups2t64 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0026823Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0027235Z libdbus-1-3 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0027640Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0028075Z libdrm2 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0028461Z libgbm1 is already the newest version (25.2.8-0ubuntu0.24.04.2).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0028867Z libgbm1 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0029495Z libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.8).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0030039Z libglib2.0-0t64 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0030456Z libnspr4 is already the newest version (2:4.35-1.1build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0030867Z libnspr4 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0031250Z libnss3 is already the newest version (2:3.98-1ubuntu0.2).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0031641Z libnss3 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0032332Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0032955Z libpango-1.0-0 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0033338Z libx11-6 is already the newest version (2:1.8.7-1build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0033727Z libx11-6 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0034082Z libxcb1 is already the newest version (1.15-1ubuntu2).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0034448Z libxcb1 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0034847Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0035394Z libxcomposite1 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0036171Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0036581Z libxdamage1 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0036956Z libxext6 is already the newest version (2:1.3.4-1build2).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0037343Z libxext6 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0037718Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0038111Z libxfixes3 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0038512Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0038917Z libxkbcommon0 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0039307Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0039972Z libxrandr2 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0040357Z xvfb is already the newest version (2:21.1.12-1ubuntu1.6).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0040879Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0041452Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0041881Z libfontconfig1 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0042325Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.1).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0042776Z libfreetype6 set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0043179Z fonts-liberation is already the newest version (1:2.1.5-3).
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0043595Z fonts-liberation set to manually installed.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0044000Z The following additional packages will be installed:
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0044412Z   libasound2-data xfonts-encodings xfonts-utils
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0044766Z Suggested packages:
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0045040Z   alsa-utils libasound2-plugins
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0045471Z Recommended packages:
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0045876Z   fonts-ipafont-mincho fonts-tlwg-loma alsa-ucm-conf alsa-topology-conf
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0215402Z The following NEW packages will be installed:
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0216203Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0224629Z   fonts-wqy-zenhei xfonts-cyrillic xfonts-encodings xfonts-scalable
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0225588Z   xfonts-utils
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0228890Z The following packages will be upgraded:
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0233918Z   libasound2-data libasound2t64
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0378848Z 2 upgraded, 9 newly installed, 0 to remove and 63 not upgraded.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0379517Z Need to get 21.5 MB of archives.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0379864Z After this operation, 79.5 MB of additional disk space will be used.
+scrape	📦 Install dependencies	2026-07-21T06:20:44.0380268Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.1304625Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-ipafont-gothic all 00303-21ubuntu1 [3513 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.3002588Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2 [5641 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.4239236Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-tlwg-loma-otf all 1:0.7.3-1 [107 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.4786201Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-unifont all 1:15.1.01-1build1 [2993 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.5513150Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7472 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.6476565Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libasound2t64 amd64 1.2.11-1ubuntu0.3 [398 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.7040457Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libasound2-data all 1.2.11-1ubuntu0.3 [21.4 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.7592080Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu2 [578 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.8181531Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-utils amd64 1:7.7+6build3 [94.4 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.8732217Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 xfonts-cyrillic all 1:1.0.5+nmu1 [384 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:44.9296935Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-scalable all 1:1.0.3-1.3 [304 kB]
+scrape	📦 Install dependencies	2026-07-21T06:20:45.1728635Z Fetched 21.5 MB in 1s (23.8 MB/s)
+scrape	📦 Install dependencies	2026-07-21T06:20:45.1966981Z Selecting previously unselected package fonts-ipafont-gothic.
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2171902Z (Reading database ... 
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2172515Z (Reading database ... 5%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2173002Z (Reading database ... 10%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2173335Z (Reading database ... 15%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2173587Z (Reading database ... 20%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2173824Z (Reading database ... 25%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2174044Z (Reading database ... 30%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2174264Z (Reading database ... 35%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2174740Z (Reading database ... 40%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2174961Z (Reading database ... 45%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2175184Z (Reading database ... 50%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.2219879Z (Reading database ... 55%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.3706138Z (Reading database ... 60%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.5352654Z (Reading database ... 65%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.7210618Z (Reading database ... 70%
+scrape	📦 Install dependencies	2026-07-21T06:20:45.8745085Z (Reading database ... 75%
+scrape	📦 Install dependencies	2026-07-21T06:20:46.0648589Z (Reading database ... 80%
+scrape	📦 Install dependencies	2026-07-21T06:20:46.2271245Z (Reading database ... 85%
+scrape	📦 Install dependencies	2026-07-21T06:20:46.4311382Z (Reading database ... 90%
+scrape	📦 Install dependencies	2026-07-21T06:20:46.5842501Z (Reading database ... 95%
+scrape	📦 Install dependencies	2026-07-21T06:20:46.5842915Z (Reading database ... 100%
+scrape	📦 Install dependencies	2026-07-21T06:20:46.5843340Z (Reading database ... 202507 files and directories currently installed.)
+scrape	📦 Install dependencies	2026-07-21T06:20:46.5886285Z Preparing to unpack .../00-fonts-ipafont-gothic_00303-21ubuntu1_all.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:46.5967889Z Unpacking fonts-ipafont-gothic (00303-21ubuntu1) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:46.8204956Z Selecting previously unselected package fonts-freefont-ttf.
+scrape	📦 Install dependencies	2026-07-21T06:20:46.8312678Z Preparing to unpack .../01-fonts-freefont-ttf_20211204+svn4273-2_all.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:46.8319405Z Unpacking fonts-freefont-ttf (20211204+svn4273-2) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:46.9057696Z Selecting previously unselected package fonts-tlwg-loma-otf.
+scrape	📦 Install dependencies	2026-07-21T06:20:46.9171736Z Preparing to unpack .../02-fonts-tlwg-loma-otf_1%3a0.7.3-1_all.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:46.9178481Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:46.9349916Z Selecting previously unselected package fonts-unifont.
+scrape	📦 Install dependencies	2026-07-21T06:20:46.9460260Z Preparing to unpack .../03-fonts-unifont_1%3a15.1.01-1build1_all.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:46.9467547Z Unpacking fonts-unifont (1:15.1.01-1build1) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.0478283Z Selecting previously unselected package fonts-wqy-zenhei.
+scrape	📦 Install dependencies	2026-07-21T06:20:47.0591923Z Preparing to unpack .../04-fonts-wqy-zenhei_0.9.45-8_all.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.0678774Z Unpacking fonts-wqy-zenhei (0.9.45-8) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.5534279Z Preparing to unpack .../05-libasound2t64_1.2.11-1ubuntu0.3_amd64.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.5562533Z Unpacking libasound2t64:amd64 (1.2.11-1ubuntu0.3) over (1.2.11-1ubuntu0.2) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.5900797Z Preparing to unpack .../06-libasound2-data_1.2.11-1ubuntu0.3_all.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.5920682Z Unpacking libasound2-data (1.2.11-1ubuntu0.3) over (1.2.11-1ubuntu0.2) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.6164501Z Selecting previously unselected package xfonts-encodings.
+scrape	📦 Install dependencies	2026-07-21T06:20:47.6275177Z Preparing to unpack .../07-xfonts-encodings_1%3a1.0.5-0ubuntu2_all.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.6281254Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu2) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.6486033Z Selecting previously unselected package xfonts-utils.
+scrape	📦 Install dependencies	2026-07-21T06:20:47.6595515Z Preparing to unpack .../08-xfonts-utils_1%3a7.7+6build3_amd64.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.6604100Z Unpacking xfonts-utils (1:7.7+6build3) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.6933323Z Selecting previously unselected package xfonts-cyrillic.
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7042671Z Preparing to unpack .../09-xfonts-cyrillic_1%3a1.0.5+nmu1_all.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7052340Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7295085Z Selecting previously unselected package xfonts-scalable.
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7410380Z Preparing to unpack .../10-xfonts-scalable_1%3a1.0.3-1.3_all.deb ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7417562Z Unpacking xfonts-scalable (1:1.0.3-1.3) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7752448Z Setting up fonts-wqy-zenhei (0.9.45-8) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7852748Z Setting up fonts-freefont-ttf (20211204+svn4273-2) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7869505Z Setting up libasound2-data (1.2.11-1ubuntu0.3) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7888255Z Setting up libasound2t64:amd64 (1.2.11-1ubuntu0.3) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7905120Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7923504Z Setting up xfonts-encodings (1:1.0.5-0ubuntu2) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7939889Z Setting up fonts-ipafont-gothic (00303-21ubuntu1) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.7998583Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+scrape	📦 Install dependencies	2026-07-21T06:20:47.8013875Z Setting up fonts-unifont (1:15.1.01-1build1) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.8030893Z Setting up xfonts-utils (1:7.7+6build3) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.8070078Z Setting up xfonts-cyrillic (1:1.0.5+nmu1) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.8320321Z Setting up xfonts-scalable (1:1.0.3-1.3) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.8549824Z Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.8824269Z Processing triggers for man-db (2.12.0-4build2) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:47.8849468Z Not building database; man-db/auto-update is not 'true'.
+scrape	📦 Install dependencies	2026-07-21T06:20:47.8864495Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5262531Z 
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5263121Z Running kernel seems to be up-to-date.
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5263513Z 
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5263688Z No services need to be restarted.
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5264030Z 
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5264215Z No containers need to be restarted.
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5264527Z 
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5264726Z No user sessions are running outdated binaries.
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5264997Z 
+scrape	📦 Install dependencies	2026-07-21T06:20:48.5265194Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+scrape	📦 Install dependencies	2026-07-21T06:20:49.3897901Z Downloading Chrome for Testing 149.0.7827.55 (playwright chromium v1228) from https://cdn.playwright.dev/builds/cft/149.0.7827.55/linux64/chrome-linux64.zip
+scrape	📦 Install dependencies	2026-07-21T06:20:50.5092341Z |                                                                                |   0% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:50.7315485Z |■■■■■■■■                                                                        |  10% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:50.8484343Z |■■■■■■■■■■■■■■■■                                                                |  20% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:50.9655916Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:51.0790021Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:51.1601696Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:51.2656311Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:51.3252613Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:51.4095651Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:51.5126918Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:51.6185861Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 177 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:54.5504265Z Chrome for Testing 149.0.7827.55 (playwright chromium v1228) downloaded to /home/runner/.cache/ms-playwright/chromium-1228
+scrape	📦 Install dependencies	2026-07-21T06:20:54.5508582Z Downloading FFmpeg (playwright ffmpeg v1011) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5757545Z |                                                                                |   0% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5796453Z |■■■■■■■■                                                                        |  10% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5815183Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5849210Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5863677Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5876918Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5889119Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5915783Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5916820Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5942063Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.5957420Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.3 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:55.6490248Z FFmpeg (playwright ffmpeg v1011) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1011
+scrape	📦 Install dependencies	2026-07-21T06:20:55.6493520Z Downloading Chrome Headless Shell 149.0.7827.55 (playwright chromium-headless-shell v1228) from https://cdn.playwright.dev/builds/cft/149.0.7827.55/linux64/chrome-headless-shell-linux64.zip
+scrape	📦 Install dependencies	2026-07-21T06:20:56.7240335Z |                                                                                |   0% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:56.8951637Z |■■■■■■■■                                                                        |  10% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:56.9436352Z |■■■■■■■■■■■■■■■■                                                                |  20% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:56.9910276Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:57.0502574Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:57.0983833Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:57.1546828Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:57.1918977Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:57.2349850Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:57.2997038Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:57.3347397Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.2 MiB
+scrape	📦 Install dependencies	2026-07-21T06:20:59.3995175Z Chrome Headless Shell 149.0.7827.55 (playwright chromium-headless-shell v1228) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1228
+scrape	🔍 Run scraper pipeline	﻿2026-07-21T06:20:59.4311407Z ##[group]Run if [ -n "ssc" ]; then
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4311942Z ^[[36;1mif [ -n "ssc" ]; then^[[0m
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4312369Z ^[[36;1m  python3 src/index.py --source "ssc"^[[0m
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4312895Z ^[[36;1melif [ "true" = "true" ]; then^[[0m
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4313399Z ^[[36;1m  python3 src/index.py --fresh^[[0m
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4313909Z ^[[36;1melse^[[0m
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4314310Z ^[[36;1m  python3 src/index.py^[[0m
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4314777Z ^[[36;1mfi^[[0m
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4356368Z shell: /usr/bin/bash -e {0}
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4356656Z env:
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4356930Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4357356Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4357774Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4358143Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4358667Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4359083Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4359728Z   GEMINI_API_KEY: ***
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.4359946Z ##[endgroup]
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.6034066Z 2026-07-21 06:20:59 [pipeline] INFO: ============================================================
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.6035588Z 2026-07-21 06:20:59 [pipeline] INFO: 🚀 Starting Sarkari Job Notification Scraper Pipeline
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.6036499Z 2026-07-21 06:20:59 [pipeline] INFO: ============================================================
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.6037329Z 2026-07-21 06:20:59 [pipeline] INFO: Running 1 scrapers: ssc
+scrape	🔍 Run scraper pipeline	2026-07-21T06:20:59.6037981Z 2026-07-21 06:20:59 [scraper.ssc] INFO: Starting scraper: ssc
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:00.7974748Z /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'ssc.gov.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:00.7976680Z   warnings.warn(
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:01.1221497Z /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'ssc.gov.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:01.1223129Z   warnings.warn(
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:01.5193499Z /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'ssc.gov.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:01.5194997Z   warnings.warn(
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.0981068Z 2026-07-21 06:21:02 [scraper.ssc] INFO: Scraper ssc finished: 0 items in 2.5s
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8162865Z /home/runner/work/getsarkariresult.net/getsarkariresult.net/src/scrapers/../pdf_parser.py:7: FutureWarning: 
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8163625Z 
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8164104Z All support for the `google.generativeai` package has ended. It will no longer be receiving 
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8165052Z updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8165937Z See README for more details:
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8166215Z 
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8166664Z https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8167258Z 
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8167449Z   import google.generativeai as genai
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8168410Z 2026-07-21 06:21:02 [pipeline] INFO: 🤖 Starting AI PDF Extraction Phase...
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8174446Z 2026-07-21 06:21:02 [pipeline] INFO: Total raw items collected: 0
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8175485Z 2026-07-21 06:21:02 [pipeline] INFO: Normalized: 0 items (0 skipped)
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8176352Z 2026-07-21 06:21:02 [pipeline] INFO: Deduplicated: 0 items (0 duplicates removed)
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:02.8208163Z 2026-07-21 06:21:02 [pipeline] INFO: Merging with 420 existing items
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2243326Z 2026-07-21 06:21:10 [pipeline] INFO: Written 420 items to /home/runner/work/getsarkariresult.net/getsarkariresult.net/data/jobs.json
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2248388Z 2026-07-21 06:21:10 [pipeline] INFO: Written metadata to /home/runner/work/getsarkariresult.net/getsarkariresult.net/data/meta.json
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2326631Z 2026-07-21 06:21:10 [pipeline] INFO: Archived to /home/runner/work/getsarkariresult.net/getsarkariresult.net/data/archive/2026-07-21.json
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2328001Z 2026-07-21 06:21:10 [pipeline] INFO: ============================================================
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2329268Z 2026-07-21 06:21:10 [pipeline] INFO: ✅ Pipeline Complete!
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2329840Z 2026-07-21 06:21:10 [pipeline] INFO:    Total jobs: 420
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2330663Z 2026-07-21 06:21:10 [pipeline] INFO:    Active: 420
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2331489Z 2026-07-21 06:21:10 [pipeline] INFO:    Sources: 1
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2332575Z 2026-07-21 06:21:10 [pipeline] INFO: ============================================================
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2334041Z 2026-07-21 06:21:10 [pipeline] INFO:    ✅ ssc: 0 items (2.5s)
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2334785Z 
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2335702Z Output: /home/runner/work/getsarkariresult.net/getsarkariresult.net/data/jobs.json
+scrape	🔍 Run scraper pipeline	2026-07-21T06:21:10.2337329Z Meta:   /home/runner/work/getsarkariresult.net/getsarkariresult.net/data/meta.json
+scrape	📊 Show results summary	﻿2026-07-21T06:21:10.3173792Z ##[group]Run echo "=== Jobs Summary ==="
+scrape	📊 Show results summary	2026-07-21T06:21:10.3174157Z ^[[36;1mecho "=== Jobs Summary ==="^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3174440Z ^[[36;1mif [ -f data/meta.json ]; then^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3174709Z ^[[36;1m  python3 -c "^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3174938Z ^[[36;1mimport json^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3175171Z ^[[36;1mwith open('data/meta.json') as f:^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3175690Z ^[[36;1m    meta = json.load(f)^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3175989Z ^[[36;1mprint(f'Total Jobs: {meta[\"totalJobs\"]}')^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3176315Z ^[[36;1mprint(f'Active: {meta[\"activeJobs\"]}')^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3176651Z ^[[36;1mprint(f'Last Scrape: {meta[\"lastScrapeAt\"]}')^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3176967Z ^[[36;1mprint()^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3177172Z ^[[36;1mprint('Sources:')^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3177465Z ^[[36;1mfor source, info in meta.get('sources', {}).items():^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3177855Z ^[[36;1m    icon = '✅' if info['status'] == 'success' else '❌'^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3178283Z ^[[36;1m    print(f'  {icon} {source}: {info[\"items\"]} items ({info[\"elapsed\"]}s)')^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3178697Z ^[[36;1mprint()^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3178912Z ^[[36;1mprint('By Organization:')^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3179322Z ^[[36;1mfor org, count in sorted(meta.get('organizations', {}).items(), key=lambda x: -x[1]):^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3179752Z ^[[36;1m    print(f'  {org}: {count}')^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3180003Z ^[[36;1m"^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3180198Z ^[[36;1melse^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3180466Z ^[[36;1m  echo "No meta.json found — scraper may have failed"^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3180786Z ^[[36;1mfi^[[0m
+scrape	📊 Show results summary	2026-07-21T06:21:10.3215500Z shell: /usr/bin/bash -e {0}
+scrape	📊 Show results summary	2026-07-21T06:21:10.3215776Z env:
+scrape	📊 Show results summary	2026-07-21T06:21:10.3216045Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📊 Show results summary	2026-07-21T06:21:10.3216475Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape	📊 Show results summary	2026-07-21T06:21:10.3216901Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📊 Show results summary	2026-07-21T06:21:10.3217269Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📊 Show results summary	2026-07-21T06:21:10.3217652Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📊 Show results summary	2026-07-21T06:21:10.3218032Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape	📊 Show results summary	2026-07-21T06:21:10.3218342Z ##[endgroup]
+scrape	📊 Show results summary	2026-07-21T06:21:10.3274685Z === Jobs Summary ===
+scrape	📊 Show results summary	2026-07-21T06:21:10.3447959Z Total Jobs: 420
+scrape	📊 Show results summary	2026-07-21T06:21:10.3448469Z Active: 420
+scrape	📊 Show results summary	2026-07-21T06:21:10.3448858Z Last Scrape: 2026-07-21T06:21:10.224135+00:00
+scrape	📊 Show results summary	2026-07-21T06:21:10.3449234Z 
+scrape	📊 Show results summary	2026-07-21T06:21:10.3449372Z Sources:
+scrape	📊 Show results summary	2026-07-21T06:21:10.3449964Z   ✅ ssc: 0 items (2.5s)
+scrape	📊 Show results summary	2026-07-21T06:21:10.3450209Z 
+scrape	📊 Show results summary	2026-07-21T06:21:10.3450368Z By Organization:
+scrape	📊 Show results summary	2026-07-21T06:21:10.3450734Z   RRB: 295
+scrape	📊 Show results summary	2026-07-21T06:21:10.3451068Z   MPPSC: 46
+scrape	📊 Show results summary	2026-07-21T06:21:10.3451390Z   UPPSC: 37
+scrape	📊 Show results summary	2026-07-21T06:21:10.3451706Z   UPSC: 22
+scrape	📊 Show results summary	2026-07-21T06:21:10.3452016Z   IBPS: 20
+scrape	🏗️ Build HTML Pages (SSG)	﻿2026-07-21T06:21:10.3508393Z ##[group]Run echo "Running HTML Generator..."
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3508769Z ^[[36;1mecho "Running HTML Generator..."^[[0m
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3509066Z ^[[36;1mpython3 src/build_html.py^[[0m
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3543027Z shell: /usr/bin/bash -e {0}
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3543310Z env:
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3543603Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3544040Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3544649Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3545035Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3545509Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3545885Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3546202Z ##[endgroup]
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3600412Z Running HTML Generator...
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3867522Z Generated 0 feed items.
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3868253Z ✅ Generated 420 HTML pages.
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3868726Z ✅ Updated index.html and vacancy.html feeds.
+scrape	🏗️ Build HTML Pages (SSG)	2026-07-21T06:21:10.3869141Z ✅ Updated 0 organization pages.
+scrape	💾 Commit and push data + HTML	﻿2026-07-21T06:21:10.3927504Z ##[group]Run git config user.name "Sarkari Scraper Bot"
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3927936Z ^[[36;1mgit config user.name "Sarkari Scraper Bot"^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3928299Z ^[[36;1mgit config user.email "bot@getsarkariresult.net"^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3928685Z ^[[36;1mgit add data/ *.html **/*.html index.html vacancy.html^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3929022Z ^[[36;1m^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3929238Z ^[[36;1m# Only commit if there are changes^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3929545Z ^[[36;1mif git diff --staged --quiet; then^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3929849Z ^[[36;1m  echo "No changes to commit"^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3930105Z ^[[36;1melse^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3930543Z ^[[36;1m  TOTAL=$(python3 -c "import json; print(json.load(open('data/meta.json'))['totalJobs'])" 2>/dev/null || echo "?")^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3931209Z ^[[36;1m  git commit -m "📋 Update job data + HTML — ${TOTAL} jobs ($(date -u +%Y-%m-%dT%H:%M:%SZ))"^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3931627Z ^[[36;1m  git push^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3931876Z ^[[36;1m  echo "Changes committed and pushed!"^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3932191Z ^[[36;1mfi^[[0m
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3967153Z shell: /usr/bin/bash -e {0}
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3967430Z env:
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3967698Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3968133Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3968560Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3968926Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3969290Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3969666Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.3969983Z ##[endgroup]
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.5016687Z [main 271d23c] 📋 Update job data + HTML — 420 jobs (2026-07-21T06:21:10Z)
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:10.5017332Z  1 file changed, 2 insertions(+), 38 deletions(-)
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:11.6346951Z To https://github.com/dev-with-ashish/getsarkariresult.net
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:11.6347522Z    17e5acd..271d23c  main -> main
+scrape	💾 Commit and push data + HTML	2026-07-21T06:21:11.6380596Z Changes committed and pushed!
+scrape	🚀 Deploy to Cloudflare Pages	﻿2026-07-21T06:21:11.6411427Z ##[group]Run npm install -g wrangler
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6411817Z ^[[36;1mnpm install -g wrangler^[[0m
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6412393Z ^[[36;1mwrangler pages deploy . --project-name getsarkariresult-net --branch main --commit-dirty=true^[[0m
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6450646Z shell: /usr/bin/bash -e {0}
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6450936Z env:
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6451207Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6451635Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6452051Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6452424Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6452807Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6453184Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6453772Z   CLOUDFLARE_API_TOKEN: ***
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6454092Z   CLOUDFLARE_ACCOUNT_ID: ***
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:11.6454342Z ##[endgroup]
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:17.2207780Z 
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:17.2208348Z added 35 packages in 5s
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:17.2208675Z 
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:17.2209153Z 7 packages are looking for funding
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:17.2209630Z   run `npm fund` for details
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:18.4604185Z 
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:18.4605480Z  ⛅️ wrangler 4.112.0
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:18.4605916Z ────────────────────
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:20.6975616Z Uploading... (1201/1218)
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:21.3138258Z Uploading... (1207/1218)
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:21.3531264Z Uploading... (1213/1218)
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:21.4968602Z Uploading... (1218/1218)
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:21.4971397Z ✨ Success! Uploaded 17 files (1201 already uploaded) (1.21 sec)
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:21.4972030Z 
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:24.0396851Z 🌎 Deploying...
+scrape	🚀 Deploy to Cloudflare Pages	2026-07-21T06:21:26.3437299Z ✨ Deployment complete! Take a peek over at https://ee04f633.getsarkariresult-net.pages.dev
+scrape	📁 Upload data as artifact (backup)	﻿2026-07-21T06:21:26.4462561Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4463765Z ##[group]Run actions/upload-artifact@v4
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4464035Z with:
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4464239Z   name: scraper-data-15
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4464458Z   path: data/
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4464655Z   retention-days: 7
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4464886Z   if-no-files-found: warn
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4465128Z   compression-level: 6
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4465587Z   overwrite: false
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4465825Z   include-hidden-files: false
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4466066Z env:
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4466327Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4466757Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4467206Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4467575Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4467943Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4468316Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.4468627Z ##[endgroup]
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.6037108Z (node:3136) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.6038110Z (Use `node --trace-deprecation ...` to show where the warning was created)
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.6099143Z With the provided path, there will be 5 files uploaded
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.6105005Z Artifact name is valid!
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.6105868Z Root directory input is valid!
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.9174058Z Beginning upload of artifact content to blob storage
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:26.9540867Z (node:3136) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:27.2658713Z Uploaded bytes 93851
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:27.3304935Z Finished uploading artifact content to blob storage!
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:27.3305908Z SHA256 digest of uploaded artifact zip is de0b4c79bad854c4cf7be05f861ea57d779b4ff850f1638233c5beba65c58cb3
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:27.3309206Z Finalizing artifact upload
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:27.5309704Z Artifact scraper-data-15.zip successfully finalized. Artifact ID 8485768678
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:27.5311074Z Artifact scraper-data-15 has been successfully uploaded! Final size is 93851 bytes. Artifact ID is 8485768678
+scrape	📁 Upload data as artifact (backup)	2026-07-21T06:21:27.5320034Z Artifact download URL: https://github.com/dev-with-ashish/getsarkariresult.net/actions/runs/29806710213/artifacts/8485768678
+scrape	Post 🐍 Set up Python	﻿2026-07-21T06:21:27.5468751Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+scrape	Post 🐍 Set up Python	2026-07-21T06:21:27.5469914Z Post job cleanup.
+scrape	Post 🐍 Set up Python	2026-07-21T06:21:27.6623401Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.11.15-pip-fe333b28ac986259adff977ca7cc21c4edb8bb44d9e59ed3338c960f568c3ab5, not saving cache.
+scrape	Post 🐍 Set up Python	2026-07-21T06:21:27.6624928Z (node:3148) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+scrape	Post 🐍 Set up Python	2026-07-21T06:21:27.6626170Z (Use `node --trace-deprecation ...` to show where the warning was created)
+scrape	Post 📥 Checkout repository	﻿2026-07-21T06:21:27.6735940Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.6737126Z Post job cleanup.
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.7596187Z [command]/usr/bin/git version
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.7656291Z git version 2.54.0
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.7714199Z Temporarily overriding HOME='/home/runner/work/_temp/a3369d8f-aa31-40b5-8641-b390ca073272' before making global git config changes
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.7715814Z Adding repository directory to the temporary git global config as a safe directory
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.7717101Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/getsarkariresult.net/getsarkariresult.net
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.7767555Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.7827009Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.8080619Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.8108774Z http.https://github.com/.extraheader
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.8130170Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.8166403Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.8426973Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+scrape	Post 📥 Checkout repository	2026-07-21T06:21:27.8468293Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+scrape	Complete job	﻿2026-07-21T06:21:27.8903233Z Cleaning up orphan processes
+scrape	Complete job	2026-07-21T06:21:27.9156731Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
