@@ -29,7 +29,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-29T20:45:23.084427+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230743+00:00"
   },
   {
     "id": "d1ce3e89bc0e",
@@ -61,7 +61,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-29T20:45:23.084454+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230780+00:00"
   },
   {
     "id": "99af541b1f21",
@@ -93,7 +93,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-29T20:45:23.084477+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.230815+00:00",
     "mergedSources": [
       "ssc.gov.in"
     ]
@@ -128,7 +128,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-29T20:45:23.084498+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230845+00:00"
   },
   {
     "id": "069f121c9a3e",
@@ -160,7 +160,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-29T20:45:23.084518+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230875+00:00"
   },
   {
     "id": "2b895fdeceaa",
@@ -320,7 +320,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-29T20:45:23.084409+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230714+00:00"
   },
   {
     "id": "645430af9caf",
@@ -352,7 +352,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-29T20:45:23.084393+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230688+00:00"
   },
   {
     "id": "74b14c137b5f",
@@ -384,7 +384,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-29T20:45:23.084376+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230662+00:00"
   },
   {
     "id": "7f2fcee020d3",
@@ -448,7 +448,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-07-29T20:45:23.084334+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230610+00:00"
   },
   {
     "id": "24bf506f4b54",
@@ -1224,7 +1224,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084553+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230928+00:00"
   },
   {
     "id": "e6b71e705c5c",
@@ -1250,7 +1250,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084564+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230945+00:00"
   },
   {
     "id": "03030f934a8e",
@@ -1276,7 +1276,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084573+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230960+00:00"
   },
   {
     "id": "37f89388c092",
@@ -1302,7 +1302,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084583+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230975+00:00"
   },
   {
     "id": "d855c2ffa0da",
@@ -1328,7 +1328,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084593+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.230991+00:00"
   },
   {
     "id": "2218a164c4e5",
@@ -1354,7 +1354,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084602+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231007+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -1383,7 +1383,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084611+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231021+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -1525,7 +1525,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084713+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231186+00:00"
   },
   {
     "id": "d7fbfdea8490",
@@ -1551,7 +1551,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084724+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231204+00:00"
   },
   {
     "id": "92d9b994dc2d",
@@ -1577,7 +1577,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084736+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231221+00:00"
   },
   {
     "id": "bda5f3ab57a2",
@@ -1632,7 +1632,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084755+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231247+00:00"
   },
   {
     "id": "153ccdfbe48b",
@@ -1658,7 +1658,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084764+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231259+00:00"
   },
   {
     "id": "f61a1ee39d6b",
@@ -1684,7 +1684,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084773+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231274+00:00"
   },
   {
     "id": "47c37e92c3b7",
@@ -1710,7 +1710,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084825+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231312+00:00"
   },
   {
     "id": "a34e62f77a70",
@@ -1736,7 +1736,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084837+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231323+00:00"
   },
   {
     "id": "0f413959992d",
@@ -1820,7 +1820,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084690+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231130+00:00"
   },
   {
     "id": "05918d1afc59",
@@ -1846,7 +1846,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084747+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231236+00:00"
   },
   {
     "id": "b81313c41f99",
@@ -1924,7 +1924,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084663+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231095+00:00"
   },
   {
     "id": "2c02c8644b2d",
@@ -2004,7 +2004,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084867+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231358+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -2032,7 +2032,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084883+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231377+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -2060,7 +2060,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084921+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231423+00:00"
   },
   {
     "id": "ff38a4201f97",
@@ -2085,7 +2085,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084964+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231481+00:00"
   },
   {
     "id": "388cee784e3d",
@@ -2110,7 +2110,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084976+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231496+00:00"
   },
   {
     "id": "5db38500b73c",
@@ -2135,7 +2135,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084987+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231510+00:00"
   },
   {
     "id": "2194cde42715",
@@ -2160,7 +2160,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.084998+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231525+00:00"
   },
   {
     "id": "d1d29cb06c12",
@@ -2213,7 +2213,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085093+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231652+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -2241,7 +2241,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085106+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231671+00:00"
   },
   {
     "id": "4bfaa4806271",
@@ -2266,7 +2266,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085134+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231708+00:00"
   },
   {
     "id": "e65ce53c230d",
@@ -2291,7 +2291,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085147+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231725+00:00"
   },
   {
     "id": "57b6bf57a67d",
@@ -2369,7 +2369,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085173+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231757+00:00"
   },
   {
     "id": "cc16cec74e56",
@@ -2394,7 +2394,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085190+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231772+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -2422,7 +2422,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085199+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231787+00:00"
   },
   {
     "id": "a3c65a49d9c0",
@@ -2522,7 +2522,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085225+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231837+00:00"
   },
   {
     "id": "4f958708a41e",
@@ -2547,7 +2547,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085233+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231848+00:00"
   },
   {
     "id": "bdbc70528682",
@@ -2572,7 +2572,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085241+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231857+00:00"
   },
   {
     "id": "f5cd5fdc84f7",
@@ -2597,7 +2597,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085249+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231866+00:00"
   },
   {
     "id": "fb940e3ca1ac",
@@ -2622,7 +2622,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085256+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231874+00:00"
   },
   {
     "id": "4db44cb7d84a",
@@ -2647,7 +2647,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085286+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231907+00:00"
   },
   {
     "id": "6cb65adc4926",
@@ -2697,7 +2697,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085303+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231924+00:00"
   },
   {
     "id": "4f09fa687c4b",
@@ -2722,7 +2722,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085322+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.231946+00:00"
   },
   {
     "id": "00a5b1368cd2",
@@ -2747,7 +2747,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085332+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231956+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -2928,7 +2928,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085430+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232063+00:00"
   },
   {
     "id": "eaa941196bec",
@@ -3006,7 +3006,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085066+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231616+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -3034,7 +3034,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085025+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231560+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -3062,7 +3062,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085265+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.231884+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -3090,7 +3090,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085437+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232070+00:00"
   },
   {
     "id": "a3bb0bab80c5",
@@ -3115,7 +3115,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085443+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232077+00:00"
   },
   {
     "id": "993e4a34a0dc",
@@ -3140,7 +3140,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085450+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232085+00:00"
   },
   {
     "id": "cff4eb5855a2",
@@ -3165,7 +3165,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085456+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232092+00:00"
   },
   {
     "id": "0bf064ef34d7",
@@ -3246,7 +3246,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085655+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232340+00:00"
   },
   {
     "id": "d4f965c6c479",
@@ -3271,7 +3271,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085664+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232348+00:00",
     "mergedSources": [
       "www.mppsc.mp.gov.in"
     ]
@@ -3299,7 +3299,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085672+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232356+00:00"
   },
   {
     "id": "652ed7c0a0ae",
@@ -3324,7 +3324,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085690+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232374+00:00",
     "mergedSources": [
       "www.mppsc.mp.gov.in"
     ]
@@ -3352,7 +3352,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085699+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232384+00:00"
   },
   {
     "id": "ecf7565f2da7",
@@ -3377,7 +3377,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085712+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232396+00:00"
   },
   {
     "id": "422a60a14812",
@@ -3402,7 +3402,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085733+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232417+00:00"
   },
   {
     "id": "bb1c1b39f754",
@@ -3783,7 +3783,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085885+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232582+00:00",
     "mergedSources": [
       "www.mppsc.mp.gov.in"
     ]
@@ -3839,7 +3839,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085967+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232668+00:00"
   },
   {
     "id": "42ddcfb641e6",
@@ -3892,7 +3892,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085868+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232563+00:00"
   },
   {
     "id": "fc063fa5108c",
@@ -3917,7 +3917,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085875+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232571+00:00"
   },
   {
     "id": "fc0b87559ced",
@@ -3942,7 +3942,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085906+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232603+00:00"
   },
   {
     "id": "21dfba70a7ed",
@@ -3967,7 +3967,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085917+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232614+00:00",
     "mergedSources": [
       "www.mppsc.mp.gov.in"
     ]
@@ -4023,7 +4023,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085943+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232642+00:00",
     "mergedSources": [
       "www.mppsc.mp.gov.in"
     ]
@@ -4051,7 +4051,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085977+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232677+00:00"
   },
   {
     "id": "88bb71f692bc",
@@ -4076,7 +4076,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085987+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232688+00:00"
   },
   {
     "id": "64fb29059679",
@@ -4101,7 +4101,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085998+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232698+00:00"
   },
   {
     "id": "fbc268f6953c",
@@ -4126,7 +4126,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086007+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232707+00:00",
     "mergedSources": [
       "www.mppsc.mp.gov.in"
     ]
@@ -4179,7 +4179,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086020+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232723+00:00"
   },
   {
     "id": "3764f009d2a4",
@@ -4204,7 +4204,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086026+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232730+00:00"
   },
   {
     "id": "6648b079b108",
@@ -4229,7 +4229,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086040+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232744+00:00"
   },
   {
     "id": "71f7b606eb3e",
@@ -4254,7 +4254,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086046+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232751+00:00"
   },
   {
     "id": "0e2c29c06aad",
@@ -4279,7 +4279,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085578+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232260+00:00"
   },
   {
     "id": "6b9e774dd98f",
@@ -4304,7 +4304,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085567+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232247+00:00"
   },
   {
     "id": "1cf61eb482ab",
@@ -4329,7 +4329,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085556+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232236+00:00"
   },
   {
     "id": "901b890db44f",
@@ -4454,7 +4454,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085534+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232211+00:00"
   },
   {
     "id": "9fb2f8ccb87e",
@@ -4504,7 +4504,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085507+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232146+00:00"
   },
   {
     "id": "6007399f32ed",
@@ -4529,7 +4529,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085520+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232193+00:00"
   },
   {
     "id": "2bf96b4cad4f",
@@ -4554,7 +4554,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085828+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232524+00:00",
     "mergedSources": [
       "www.mppsc.mp.gov.in"
     ]
@@ -4582,7 +4582,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085820+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232515+00:00"
   },
   {
     "id": "ca2411c71a91",
@@ -4607,7 +4607,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086032+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232737+00:00"
   },
   {
     "id": "dfe6ba22ad28",
@@ -4632,7 +4632,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.085485+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232121+00:00"
   },
   {
     "id": "871345dc8208",
@@ -4656,7 +4656,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086052+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232758+00:00"
   },
   {
     "id": "58e198d21213",
@@ -4680,7 +4680,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086058+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232764+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in",
       "www.rrbbbs.gov.in"
@@ -4708,7 +4708,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086062+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232770+00:00"
   },
   {
     "id": "5f7f10cc5d32",
@@ -4732,7 +4732,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086174+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232888+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in",
       "www.rrbbbs.gov.in"
@@ -4760,7 +4760,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086181+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232895+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -4841,7 +4841,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086205+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.232921+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -4868,7 +4868,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086221+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.232938+00:00"
   },
   {
     "id": "9f6ed198ce8d",
@@ -4973,7 +4973,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086277+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233000+00:00"
   },
   {
     "id": "193065842d73",
@@ -4997,7 +4997,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086313+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233038+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -5024,7 +5024,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086329+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233055+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -5051,7 +5051,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086336+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233062+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -5078,7 +5078,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086343+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233070+00:00"
   },
   {
     "id": "3c51f28141e7",
@@ -5102,7 +5102,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086350+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233077+00:00"
   },
   {
     "id": "410bfe8d91ef",
@@ -5126,7 +5126,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086362+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233091+00:00"
   },
   {
     "id": "c351559ffe7d",
@@ -5204,7 +5204,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086392+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233124+00:00"
   },
   {
     "id": "f092cdfd4c5a",
@@ -5228,7 +5228,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086400+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233132+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -5255,7 +5255,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086431+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233182+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -5282,7 +5282,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086462+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233216+00:00"
   },
   {
     "id": "4503755afcf2",
@@ -5306,7 +5306,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086469+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233224+00:00"
   },
   {
     "id": "7945f536ca83",
@@ -5330,7 +5330,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086520+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233280+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -5357,7 +5357,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086537+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233297+00:00"
   },
   {
     "id": "a0ab35fe40ae",
@@ -5381,7 +5381,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086590+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233359+00:00"
   },
   {
     "id": "041a401419b7",
@@ -5405,7 +5405,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086611+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233381+00:00"
   },
   {
     "id": "bfa08ffb6f81",
@@ -5429,7 +5429,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086620+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233391+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -5579,7 +5579,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086643+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233416+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in",
       "rrbajmer.gov.in",
@@ -5609,7 +5609,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086677+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233454+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in"
     ]
@@ -5636,7 +5636,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086743+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233543+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in",
       "www.rrbbbs.gov.in"
@@ -5664,7 +5664,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086747+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233556+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in",
       "www.rrbbbs.gov.in",
@@ -5693,7 +5693,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086752+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233567+00:00"
   },
   {
     "id": "aa0540eabe19",
@@ -5717,7 +5717,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086758+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233581+00:00"
   },
   {
     "id": "d4fa2a9516c9",
@@ -5741,7 +5741,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086762+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233591+00:00",
     "mergedSources": [
       "www.rrbahmedabad.gov.in",
       "www.rrbranchi.gov.in"
@@ -5769,7 +5769,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086768+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233598+00:00"
   },
   {
     "id": "6f175f288759",
@@ -5793,7 +5793,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086851+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233682+00:00",
     "mergedSources": [
       "rrbajmer.gov.in",
       "www.rrbranchi.gov.in"
@@ -5821,7 +5821,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086891+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233732+00:00"
   },
   {
     "id": "754d0d80707e",
@@ -5845,7 +5845,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086896+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233738+00:00"
   },
   {
     "id": "7184653abb66",
@@ -5869,7 +5869,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086901+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233744+00:00"
   },
   {
     "id": "4a7bbf00f619",
@@ -5893,7 +5893,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086907+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233753+00:00"
   },
   {
     "id": "23a8b7fce325",
@@ -5917,7 +5917,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086912+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233758+00:00"
   },
   {
     "id": "90202ba8ce41",
@@ -5941,7 +5941,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086916+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233764+00:00"
   },
   {
     "id": "db7a86012cd5",
@@ -5965,7 +5965,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086922+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233770+00:00"
   },
   {
     "id": "a1161346ef02",
@@ -5989,7 +5989,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086928+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233777+00:00"
   },
   {
     "id": "9d34523bc9be",
@@ -6013,7 +6013,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086934+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233784+00:00"
   },
   {
     "id": "f8d1318d5e55",
@@ -6037,7 +6037,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086943+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233793+00:00"
   },
   {
     "id": "1accdf436604",
@@ -6061,7 +6061,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086956+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233806+00:00"
   },
   {
     "id": "a3e97053696c",
@@ -6085,7 +6085,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086961+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233811+00:00"
   },
   {
     "id": "daa3bb1ed5af",
@@ -6109,7 +6109,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086965+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233817+00:00"
   },
   {
     "id": "01309e43ec27",
@@ -6133,7 +6133,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086970+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233822+00:00"
   },
   {
     "id": "8d5aa6ae52db",
@@ -11488,7 +11488,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087009+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233863+00:00"
   },
   {
     "id": "48fd06b05530",
@@ -11512,7 +11512,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087014+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233869+00:00"
   },
   {
     "id": "9c47a481f239",
@@ -11563,7 +11563,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087115+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233980+00:00"
   },
   {
     "id": "3b7483bb5ca3",
@@ -11587,7 +11587,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087216+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234089+00:00"
   },
   {
     "id": "28b8060092cf",
@@ -11611,7 +11611,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087136+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234004+00:00"
   },
   {
     "id": "05c98077d31a",
@@ -11635,7 +11635,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087144+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234012+00:00"
   },
   {
     "id": "58610ffa9c1b",
@@ -11659,7 +11659,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087154+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.234022+00:00",
     "mergedSources": [
       "www.rrbbbs.gov.in"
     ]
@@ -11686,7 +11686,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087180+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234050+00:00"
   },
   {
     "id": "c546c9641f84",
@@ -11710,7 +11710,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087187+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.234058+00:00",
     "mergedSources": [
       "www.rrbbbs.gov.in"
     ]
@@ -11737,7 +11737,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087222+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234095+00:00"
   },
   {
     "id": "5d1e47386b5b",
@@ -11761,7 +11761,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087231+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234106+00:00"
   },
   {
     "id": "e6a2f8e327d3",
@@ -11929,7 +11929,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087280+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.234177+00:00",
     "mergedSources": [
       "www.rrbranchi.gov.in"
     ]
@@ -11956,7 +11956,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087290+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234190+00:00"
   },
   {
     "id": "2fe1c44ded50",
@@ -11980,7 +11980,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087341+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234246+00:00"
   },
   {
     "id": "5ba4fec73ac7",
@@ -12124,7 +12124,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087004+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233857+00:00",
     "mergedSources": [
       "www.rrbbbs.gov.in"
     ]
@@ -12151,7 +12151,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086986+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233839+00:00",
     "mergedSources": [
       "www.rrbbbs.gov.in"
     ]
@@ -12178,7 +12178,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086996+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.233849+00:00"
   },
   {
     "id": "3fccd1bbff7c",
@@ -12202,7 +12202,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087201+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234073+00:00"
   },
   {
     "id": "187c2222590c",
@@ -12226,7 +12226,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087209+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234082+00:00"
   },
   {
     "id": "ff92803dec83",
@@ -12250,7 +12250,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087269+00:00"
+    "lastUpdated": "2026-07-29T22:22:36.234149+00:00"
   },
   {
     "id": "9cc1e37db933",
@@ -12274,7 +12274,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.087249+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.234126+00:00",
     "mergedSources": [
       "www.rrbranchi.gov.in"
     ]
@@ -12301,7 +12301,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-07-29T20:45:23.086978+00:00",
+    "lastUpdated": "2026-07-29T22:22:36.233830+00:00",
     "mergedSources": [
       "www.rrbbbs.gov.in"
     ]
