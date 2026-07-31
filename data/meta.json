@@ -1,59 +1,59 @@
 {
-  "lastScrapeAt": "2026-07-31T14:05:38.436736+00:00",
+  "lastScrapeAt": "2026-07-31T16:33:05.698571+00:00",
   "lastScrapeDate": "2026-07-31",
-  "totalJobs": 493,
-  "activeJobs": 493,
+  "totalJobs": 494,
+  "activeJobs": 494,
   "expiredJobs": 0,
   "sources": {
     "ssc": {
       "status": "success",
       "items": 10,
-      "elapsed": 2.2,
+      "elapsed": 1.7,
       "error": null
     },
     "upsc": {
       "status": "success",
       "items": 0,
-      "elapsed": 190.7,
+      "elapsed": 188.8,
       "error": null
     },
     "ibps": {
       "status": "success",
       "items": 27,
-      "elapsed": 2.3,
+      "elapsed": 2.1,
       "error": null
     },
     "state_psc": {
       "status": "success",
-      "items": 124,
-      "elapsed": 104.2,
+      "items": 125,
+      "elapsed": 102.0,
       "error": null
     },
     "railway": {
       "status": "success",
       "items": 181,
-      "elapsed": 403.2,
+      "elapsed": 402.3,
       "error": null
     },
     "defence": {
       "status": "success",
       "items": 0,
-      "elapsed": 146.3,
+      "elapsed": 145.9,
       "error": null
     },
     "employment_news": {
       "status": "success",
       "items": 0,
-      "elapsed": 12.3,
+      "elapsed": 12.0,
       "error": null
     }
   },
   "categories": {
     "central": 387,
-    "state": 106
+    "state": 107
   },
   "notificationTypes": {
-    "notification": 129,
+    "notification": 130,
     "result": 66,
     "recruitment": 260,
     "corrigendum": 3,
@@ -66,7 +66,7 @@
     "UPSC": 27,
     "IBPS": 29,
     "UPPSC": 44,
-    "MPPSC": 62,
+    "MPPSC": 63,
     "RRB": 316
   }
 }
