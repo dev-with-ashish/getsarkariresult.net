@@ -1,5 +1,5 @@
 {
-  "lastScrapeAt": "2026-08-13T21:02:12.168081+00:00",
+  "lastScrapeAt": "2026-08-13T22:05:18.053674+00:00",
   "lastScrapeDate": "2026-08-13",
   "totalJobs": 544,
   "activeJobs": 544,
@@ -13,38 +13,38 @@
     },
     "upsc": {
       "status": "success",
-      "items": 0,
-      "elapsed": 189.2,
+      "items": 34,
+      "elapsed": 6.1,
       "error": null
     },
     "ibps": {
       "status": "success",
       "items": 33,
-      "elapsed": 2.0,
+      "elapsed": 1.9,
       "error": null
     },
     "state_psc": {
       "status": "success",
-      "items": 122,
-      "elapsed": 105.3,
+      "items": 126,
+      "elapsed": 102.1,
       "error": null
     },
     "railway": {
       "status": "success",
       "items": 127,
-      "elapsed": 406.7,
+      "elapsed": 408.0,
       "error": null
     },
     "defence": {
       "status": "success",
       "items": 0,
-      "elapsed": 146.5,
+      "elapsed": 146.7,
       "error": null
     },
     "employment_news": {
       "status": "success",
       "items": 0,
-      "elapsed": 12.2,
+      "elapsed": 13.4,
       "error": null
     }
   },
