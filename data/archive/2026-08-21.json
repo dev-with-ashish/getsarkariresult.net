@@ -582,7 +582,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-08-21T12:47:20.668484+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319067+00:00"
   },
   {
     "id": "fb73377e5590",
@@ -614,7 +614,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-08-21T12:47:20.668460+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319031+00:00"
   },
   {
     "id": "e981068d7b80",
@@ -646,7 +646,10 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-08-21T12:47:20.668426+00:00"
+    "lastUpdated": "2026-08-21T12:47:20.668426+00:00",
+    "mergedSources": [
+      "ssc.gov.in"
+    ]
   },
   {
     "id": "26a8d6e4418c",
@@ -678,7 +681,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-08-21T12:47:20.668389+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.318926+00:00"
   },
   {
     "id": "b1c9aa1d02e9",
@@ -710,7 +713,39 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-08-21T12:47:20.668416+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.318945+00:00"
+  },
+  {
+    "id": "f663fd6aeeda",
+    "title": "Junior Engineer (Civil, Mechanical and Electrical) Examination, 2025: Uploading of Final Answer Keys along with Question Paper(s) cum Response Sheet(s) and Marks of Paper-II",
+    "organization": "Staff Selection Commission (SSC)",
+    "organizationShort": "SSC",
+    "category": "central",
+    "subcategory": "ssc",
+    "examCode": "g21irqg6pmtxbag",
+    "examYear": "2026",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {
+      "published": "2026-08-21"
+    },
+    "applicationFee": null,
+    "links": {
+      "officialWebsite": "https://ssc.gov.in",
+      "notifications": [
+        {
+          "title": "Junior Engineer (Civil, Mechanical and Electrical) Examination, 2025: Uploading of Final Answer Keys along with Question Paper(s) cum Response Sheet(s) and Marks of Paper-II",
+          "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Final_Answer_Key_21082026.pdf"
+        }
+      ]
+    },
+    "source": "ssc.gov.in",
+    "sourceType": "api",
+    "confidence": 0.95,
+    "status": "active",
+    "notificationType": "notification",
+    "lastUpdated": "2026-08-21T14:04:46.318877+00:00"
   },
   {
     "id": "24bf506f4b54",
@@ -854,7 +889,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668786+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319422+00:00"
   },
   {
     "id": "d56d58f15623",
@@ -1274,7 +1309,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668764+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319399+00:00"
   },
   {
     "id": "491f021bda0e",
@@ -1301,7 +1336,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668772+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319408+00:00"
   },
   {
     "id": "e4343ce5afc3",
@@ -1328,7 +1363,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668780+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319415+00:00"
   },
   {
     "id": "38779a5ddc5b",
@@ -1412,7 +1447,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668814+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319450+00:00"
   },
   {
     "id": "a67b0bd21a06",
@@ -1431,7 +1466,7 @@
     "applicationFee": null,
     "links": {
       "applyOnline": null,
-      "notification": "https://www.upsc.gov.in/sites/default/files/NameList-WR-ESEM-26-Engl-240726.pdf",
+      "notification": null,
       "detailPage": "https://www.upsc.gov.in/whats-new/Engineering%20Services%20%28Main%29%20Examination%2C%202026/Written%20Result%20%28with%20name%29",
       "officialWebsite": "https://www.upsc.gov.in"
     },
@@ -1439,7 +1474,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-07T04:50:29.138277+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319437+00:00",
     "mergedSources": [
       "upsc.gov.in"
     ]
@@ -1553,7 +1588,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668711+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319352+00:00"
   },
   {
     "id": "fd05550f6518",
@@ -1580,7 +1615,10 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668645+00:00"
+    "lastUpdated": "2026-08-21T12:47:20.668645+00:00",
+    "mergedSources": [
+      "upsc.gov.in"
+    ]
   },
   {
     "id": "de4b54cf1cfb",
@@ -1607,7 +1645,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668653+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319313+00:00"
   },
   {
     "id": "dd4654d5663c",
@@ -1634,7 +1672,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668638+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319298+00:00"
   },
   {
     "id": "f87a49f32493",
@@ -1661,7 +1699,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668631+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319291+00:00"
   },
   {
     "id": "7c308406d188",
@@ -1688,7 +1726,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668615+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319274+00:00"
   },
   {
     "id": "cfa6142a58d4",
@@ -1715,7 +1753,40 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668526+00:00"
+    "lastUpdated": "2026-08-21T12:47:20.668526+00:00",
+    "mergedSources": [
+      "upsc.gov.in"
+    ]
+  },
+  {
+    "id": "c79dac51d54c",
+    "title": "Addendum Notice: 09 posts of Scientist-B (Instrumentation) in Ministry of Earth Sciences",
+    "organization": "Union Public Service Commission (UPSC)",
+    "organizationShort": "UPSC",
+    "category": "central",
+    "subcategory": "upsc",
+    "notificationType": "corrigendum",
+    "totalVacancies": 9,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {
+      "notificationDate": null
+    },
+    "applicationFee": null,
+    "links": {
+      "applyOnline": null,
+      "notification": null,
+      "detailPage": "https://www.upsc.gov.in/whats-new/09 posts of Scientist-B (Instrumentation) in Ministry of Earth Sciences/Addendum Notice",
+      "officialWebsite": "https://www.upsc.gov.in"
+    },
+    "source": "upsc.gov.in",
+    "sourceType": "html",
+    "confidence": 0.85,
+    "status": "active",
+    "lastUpdated": "2026-08-21T14:04:46.319122+00:00",
+    "mergedSources": [
+      "upsc.gov.in"
+    ]
   },
   {
     "id": "158d23dffa54",
@@ -1741,7 +1812,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668842+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319464+00:00"
   },
   {
     "id": "e6b71e705c5c",
@@ -1767,7 +1838,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668849+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319470+00:00"
   },
   {
     "id": "03030f934a8e",
@@ -1793,7 +1864,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668855+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319476+00:00"
   },
   {
     "id": "37f89388c092",
@@ -1819,7 +1890,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668861+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319483+00:00"
   },
   {
     "id": "d855c2ffa0da",
@@ -1845,7 +1916,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668867+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319489+00:00"
   },
   {
     "id": "2218a164c4e5",
@@ -1871,7 +1942,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668873+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319495+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -1900,7 +1971,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668879+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319501+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -2016,7 +2087,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668884+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319507+00:00"
   },
   {
     "id": "763a25b57168",
@@ -2152,7 +2223,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669013+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319640+00:00"
   },
   {
     "id": "153ccdfbe48b",
@@ -2178,7 +2249,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669019+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319646+00:00"
   },
   {
     "id": "f61a1ee39d6b",
@@ -2204,7 +2275,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669024+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319651+00:00"
   },
   {
     "id": "47c37e92c3b7",
@@ -2230,7 +2301,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669044+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319670+00:00"
   },
   {
     "id": "a34e62f77a70",
@@ -2256,7 +2327,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669050+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319675+00:00"
   },
   {
     "id": "0f413959992d",
@@ -2583,7 +2654,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669008+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319635+00:00"
   },
   {
     "id": "d99ae67753c7",
@@ -2696,7 +2767,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668969+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319595+00:00"
   },
   {
     "id": "b82dbc64fe5c",
@@ -2722,7 +2793,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668976+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319603+00:00"
   },
   {
     "id": "646685519419",
@@ -2748,7 +2819,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668991+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319618+00:00"
   },
   {
     "id": "3b768274e9e5",
@@ -2855,7 +2926,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668916+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319538+00:00"
   },
   {
     "id": "dd3686556bc6",
@@ -2910,7 +2981,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668941+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319568+00:00"
   },
   {
     "id": "9957e39575e9",
@@ -2936,7 +3007,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668891+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319514+00:00"
   },
   {
     "id": "c5c3a56704ed",
@@ -2962,7 +3033,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.668926+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319553+00:00"
   },
   {
     "id": "bf58000597ae",
@@ -2987,7 +3058,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669070+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319698+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -3015,7 +3086,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669082+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319709+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -3043,7 +3114,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669107+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319734+00:00"
   },
   {
     "id": "ff38a4201f97",
@@ -3068,7 +3139,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669138+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319763+00:00"
   },
   {
     "id": "388cee784e3d",
@@ -3093,7 +3164,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669145+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319770+00:00"
   },
   {
     "id": "5db38500b73c",
@@ -3118,7 +3189,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669153+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319777+00:00"
   },
   {
     "id": "2194cde42715",
@@ -3143,7 +3214,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669160+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319784+00:00"
   },
   {
     "id": "d1d29cb06c12",
@@ -3299,7 +3370,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669292+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319911+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -3380,7 +3451,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669300+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319919+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -3408,7 +3479,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669309+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319927+00:00"
   },
   {
     "id": "a3c65a49d9c0",
@@ -3511,7 +3582,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669334+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319977+00:00"
   },
   {
     "id": "4f958708a41e",
@@ -3536,7 +3607,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669342+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319987+00:00"
   },
   {
     "id": "bdbc70528682",
@@ -3561,7 +3632,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669351+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319995+00:00"
   },
   {
     "id": "f5cd5fdc84f7",
@@ -3614,7 +3685,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669366+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.320010+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -3667,7 +3738,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669447+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320092+00:00"
   },
   {
     "id": "2f25878b7a29",
@@ -3692,7 +3763,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669455+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320098+00:00"
   },
   {
     "id": "4f09fa687c4b",
@@ -3717,7 +3788,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669465+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320109+00:00"
   },
   {
     "id": "00a5b1368cd2",
@@ -3742,7 +3813,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669475+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.320118+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -3923,7 +3994,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669607+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320247+00:00"
   },
   {
     "id": "eaa941196bec",
@@ -4001,7 +4072,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669284+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319902+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -4163,7 +4234,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669267+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319886+00:00"
   },
   {
     "id": "2f68362810ca",
@@ -4188,7 +4259,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669258+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319878+00:00"
   },
   {
     "id": "da1dbaee5543",
@@ -4241,7 +4312,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669241+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319862+00:00"
   },
   {
     "id": "b7dfa4ccec4c",
@@ -4266,7 +4337,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669249+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319870+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -4400,7 +4471,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669535+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320177+00:00"
   },
   {
     "id": "dfb24108855d",
@@ -4475,7 +4546,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669526+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320168+00:00"
   },
   {
     "id": "70094176b166",
@@ -4528,7 +4599,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669418+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320064+00:00"
   },
   {
     "id": "d7b508ff2b2c",
@@ -4553,7 +4624,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669428+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320073+00:00"
   },
   {
     "id": "53067b80498b",
@@ -4578,7 +4649,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669179+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.319802+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -4606,7 +4677,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669546+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320188+00:00"
   },
   {
     "id": "2c7c6d11198e",
@@ -4631,7 +4702,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669386+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320031+00:00"
   },
   {
     "id": "d1b265fb4e8e",
@@ -4656,7 +4727,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669169+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.319794+00:00"
   },
   {
     "id": "bea9bde45a01",
@@ -4681,7 +4752,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669615+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320255+00:00"
   },
   {
     "id": "a3bb0bab80c5",
@@ -4706,7 +4777,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669621+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320262+00:00"
   },
   {
     "id": "993e4a34a0dc",
@@ -4731,7 +4802,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669628+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320269+00:00"
   },
   {
     "id": "cff4eb5855a2",
@@ -4756,7 +4827,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669635+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320276+00:00"
   },
   {
     "id": "0bf064ef34d7",
@@ -5392,7 +5463,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670094+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.320705+00:00",
     "mergedSources": [
       "www.mppsc.mp.gov.in"
     ]
@@ -5448,7 +5519,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670180+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320788+00:00"
   },
   {
     "id": "42ddcfb641e6",
@@ -5501,7 +5572,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670012+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320628+00:00"
   },
   {
     "id": "fc063fa5108c",
@@ -5526,7 +5597,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670019+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320635+00:00"
   },
   {
     "id": "fc0b87559ced",
@@ -5551,7 +5622,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670114+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320726+00:00"
   },
   {
     "id": "21dfba70a7ed",
@@ -5632,7 +5703,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670153+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.320763+00:00",
     "mergedSources": [
       "www.mppsc.mp.gov.in"
     ]
@@ -5660,7 +5731,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670190+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320797+00:00"
   },
   {
     "id": "88bb71f692bc",
@@ -5685,7 +5756,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670200+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320807+00:00"
   },
   {
     "id": "64fb29059679",
@@ -5710,7 +5781,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670211+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320818+00:00"
   },
   {
     "id": "fbc268f6953c",
@@ -5735,7 +5806,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670220+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320827+00:00"
   },
   {
     "id": "9c417a0fb36f",
@@ -5785,7 +5856,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670227+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320833+00:00"
   },
   {
     "id": "3764f009d2a4",
@@ -5810,7 +5881,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670234+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320839+00:00"
   },
   {
     "id": "6648b079b108",
@@ -5835,7 +5906,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670248+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320853+00:00"
   },
   {
     "id": "71f7b606eb3e",
@@ -5860,7 +5931,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670255+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320859+00:00"
   },
   {
     "id": "0e2c29c06aad",
@@ -6094,7 +6165,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669998+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320615+00:00"
   },
   {
     "id": "727d281d2e69",
@@ -6219,7 +6290,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670241+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320846+00:00"
   },
   {
     "id": "dfe6ba22ad28",
@@ -6397,7 +6468,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669965+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320583+00:00"
   },
   {
     "id": "03035045bec4",
@@ -6422,7 +6493,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669943+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320562+00:00"
   },
   {
     "id": "af775f0b3cfa",
@@ -6497,7 +6568,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669880+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320504+00:00"
   },
   {
     "id": "3f5e88783279",
@@ -6522,7 +6593,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669820+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320448+00:00"
   },
   {
     "id": "f826f77fb368",
@@ -6547,7 +6618,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.669982+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320600+00:00"
   },
   {
     "id": "871345dc8208",
@@ -6595,7 +6666,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670331+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320935+00:00"
   },
   {
     "id": "f96f3e15edf0",
@@ -7572,7 +7643,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670497+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321124+00:00"
   },
   {
     "id": "df2e26455e0d",
@@ -7644,7 +7715,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670534+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321162+00:00"
   },
   {
     "id": "b629ebbe8f38",
@@ -13403,7 +13474,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670279+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320883+00:00"
   },
   {
     "id": "48fd06b05530",
@@ -13427,7 +13498,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670285+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.320888+00:00",
     "mergedSources": [
       "www.rrbbbs.gov.in",
       "rrbsecunderabad.gov.in"
@@ -13455,7 +13526,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670343+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.320964+00:00",
     "mergedSources": [
       "www.rrbbbs.gov.in"
     ]
@@ -13530,7 +13601,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670422+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321048+00:00"
   },
   {
     "id": "05c98077d31a",
@@ -13554,7 +13625,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670432+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321057+00:00"
   },
   {
     "id": "58610ffa9c1b",
@@ -13578,7 +13649,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670442+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321068+00:00",
     "mergedSources": [
       "www.rrbbbs.gov.in"
     ]
@@ -13605,7 +13676,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670470+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321096+00:00"
   },
   {
     "id": "c546c9641f84",
@@ -13653,7 +13724,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670492+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321118+00:00"
   },
   {
     "id": "5d1e47386b5b",
@@ -13677,7 +13748,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670503+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321129+00:00"
   },
   {
     "id": "e6a2f8e327d3",
@@ -14397,7 +14468,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670509+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321136+00:00"
   },
   {
     "id": "693f25904e2e",
@@ -14628,7 +14699,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670478+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321104+00:00"
   },
   {
     "id": "846ccd714597",
@@ -14652,7 +14723,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670486+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321112+00:00"
   },
   {
     "id": "6329865a20fe",
@@ -14676,7 +14747,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670274+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320877+00:00"
   },
   {
     "id": "cfa9d94304bf",
@@ -14700,7 +14771,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670263+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.320867+00:00"
   },
   {
     "id": "fb916f3a99b0",
@@ -15323,7 +15394,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670516+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321143+00:00"
   },
   {
     "id": "0808b1969aec",
@@ -15347,7 +15418,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670523+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321150+00:00"
   },
   {
     "id": "010ef5ce0988",
@@ -15371,7 +15442,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670540+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321168+00:00"
   },
   {
     "id": "cdb556b53b29",
@@ -15395,7 +15466,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670547+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321175+00:00"
   },
   {
     "id": "4820f66b5b60",
@@ -15419,7 +15490,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670558+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321187+00:00",
     "mergedSources": [
       "rrbsecunderabad.gov.in"
     ]
@@ -15446,7 +15517,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670564+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321193+00:00",
     "mergedSources": [
       "rrbsecunderabad.gov.in"
     ]
@@ -15473,7 +15544,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670569+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321198+00:00",
     "mergedSources": [
       "rrbsecunderabad.gov.in"
     ]
@@ -15500,7 +15571,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670575+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321204+00:00",
     "mergedSources": [
       "rrbsecunderabad.gov.in"
     ]
@@ -15527,7 +15598,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670587+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321216+00:00"
   },
   {
     "id": "4fb7d0669806",
@@ -15551,7 +15622,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670598+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321227+00:00"
   },
   {
     "id": "d8b0c22db855",
@@ -15575,7 +15646,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670604+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321233+00:00"
   },
   {
     "id": "a0afef6e9890",
@@ -15599,7 +15670,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670609+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321238+00:00"
   },
   {
     "id": "8330d5dd1594",
@@ -15623,7 +15694,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670636+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321265+00:00"
   },
   {
     "id": "6d3e626996e4",
@@ -15647,7 +15718,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670643+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321271+00:00"
   },
   {
     "id": "925ef60838e6",
@@ -15671,7 +15742,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670648+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321276+00:00",
     "mergedSources": [
       "rrbsecunderabad.gov.in"
     ]
@@ -15698,7 +15769,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670654+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321282+00:00",
     "mergedSources": [
       "rrbsecunderabad.gov.in"
     ]
@@ -15725,7 +15796,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670665+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321294+00:00"
   },
   {
     "id": "aed60b1ff019",
@@ -15749,7 +15820,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670670+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321299+00:00"
   },
   {
     "id": "505d7d8fc0c4",
@@ -15773,7 +15844,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670707+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321321+00:00"
   },
   {
     "id": "54cebf63a4b6",
@@ -15797,7 +15868,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670713+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321327+00:00"
   },
   {
     "id": "6168bcf8ac4c",
@@ -15821,7 +15892,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670718+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321332+00:00"
   },
   {
     "id": "aa195dcdf72f",
@@ -15845,7 +15916,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670729+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321343+00:00"
   },
   {
     "id": "503f926831aa",
@@ -15869,7 +15940,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670734+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321348+00:00"
   },
   {
     "id": "6a65deda1d54",
@@ -15893,7 +15964,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670745+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321358+00:00"
   },
   {
     "id": "98dfa36d7531",
@@ -15917,7 +15988,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670751+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321364+00:00",
     "mergedSources": [
       "rrbsecunderabad.gov.in"
     ]
@@ -15944,7 +16015,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670779+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321392+00:00"
   },
   {
     "id": "3e441633ce36",
@@ -15968,7 +16039,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670785+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321397+00:00"
   },
   {
     "id": "50331fdec786",
@@ -15992,7 +16063,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670790+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321403+00:00"
   },
   {
     "id": "75d989a65095",
@@ -16016,7 +16087,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670796+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321409+00:00"
   },
   {
     "id": "907c396327da",
@@ -16040,7 +16111,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670847+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321458+00:00",
     "mergedSources": [
       "rrbsecunderabad.gov.in"
     ]
@@ -16067,7 +16138,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670893+00:00",
+    "lastUpdated": "2026-08-21T14:04:46.321504+00:00",
     "mergedSources": [
       "rrbsecunderabad.gov.in"
     ]
@@ -16361,6 +16432,6 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-08-21T12:47:20.670553+00:00"
+    "lastUpdated": "2026-08-21T14:04:46.321181+00:00"
   }
 ]
