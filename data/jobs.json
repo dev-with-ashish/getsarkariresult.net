@@ -1090,7 +1090,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-09-27T14:38:05.265248+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819438+00:00"
   },
   {
     "id": "f93974b4b69b",
@@ -1325,7 +1325,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-09-27T14:38:05.265218+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819407+00:00"
   },
   {
     "id": "7e7a976c9180",
@@ -1456,7 +1456,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-09-27T14:38:05.265377+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819571+00:00"
   },
   {
     "id": "10323b69aa80",
@@ -1488,7 +1488,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-09-27T14:38:05.265365+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819559+00:00"
   },
   {
     "id": "bb03753c3ffe",
@@ -1520,7 +1520,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-09-27T14:38:05.265335+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819526+00:00"
   },
   {
     "id": "532cad06d6f0",
@@ -1552,7 +1552,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-09-27T14:38:05.265292+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819482+00:00"
   },
   {
     "id": "a99e3de4a461",
@@ -1584,7 +1584,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-09-27T14:38:05.265307+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819498+00:00"
   },
   {
     "id": "2c695bcbd371",
@@ -1616,7 +1616,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-09-27T14:38:05.265273+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819463+00:00"
   },
   {
     "id": "24bf506f4b54",
@@ -2183,10 +2183,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-09-27T08:55:33.496839+00:00",
-    "mergedSources": [
-      "upsc.gov.in"
-    ]
+    "lastUpdated": "2026-09-27T19:05:39.819878+00:00"
   },
   {
     "id": "491f021bda0e",
@@ -2213,10 +2210,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-09-27T08:55:33.496844+00:00",
-    "mergedSources": [
-      "upsc.gov.in"
-    ]
+    "lastUpdated": "2026-09-27T19:05:39.819886+00:00"
   },
   {
     "id": "e4343ce5afc3",
@@ -2243,10 +2237,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-09-27T08:55:33.496849+00:00",
-    "mergedSources": [
-      "upsc.gov.in"
-    ]
+    "lastUpdated": "2026-09-27T19:05:39.819893+00:00"
   },
   {
     "id": "38779a5ddc5b",
@@ -2591,7 +2582,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-09-27T08:55:33.496815+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819841+00:00"
   },
   {
     "id": "7c308406d188",
@@ -2675,7 +2666,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265545+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.819737+00:00",
     "mergedSources": [
       "upsc.gov.in"
     ]
@@ -2735,7 +2726,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265707+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819661+00:00"
   },
   {
     "id": "325dbb1ae398",
@@ -2762,7 +2753,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-09-27T08:55:33.496707+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819668+00:00"
   },
   {
     "id": "6dbd63b03ae0",
@@ -2789,7 +2780,7 @@
     "sourceType": "html",
     "confidence": 0.85,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265701+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819622+00:00"
   },
   {
     "id": "d6634f0f4f4b",
@@ -2950,7 +2941,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265745+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819901+00:00"
   },
   {
     "id": "e6b71e705c5c",
@@ -2976,7 +2967,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265752+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819907+00:00"
   },
   {
     "id": "03030f934a8e",
@@ -3002,7 +2993,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265758+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819913+00:00"
   },
   {
     "id": "37f89388c092",
@@ -3028,7 +3019,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265764+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819919+00:00"
   },
   {
     "id": "d855c2ffa0da",
@@ -3054,7 +3045,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265770+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819926+00:00"
   },
   {
     "id": "2218a164c4e5",
@@ -3080,7 +3071,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265776+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.819931+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -3109,7 +3100,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265782+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.819937+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -3361,7 +3352,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265850+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820004+00:00"
   },
   {
     "id": "153ccdfbe48b",
@@ -3387,7 +3378,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265855+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820010+00:00"
   },
   {
     "id": "f61a1ee39d6b",
@@ -3413,7 +3404,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265861+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820015+00:00"
   },
   {
     "id": "47c37e92c3b7",
@@ -3439,7 +3430,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265879+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820033+00:00"
   },
   {
     "id": "a34e62f77a70",
@@ -3465,7 +3456,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265885+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820039+00:00"
   },
   {
     "id": "0f413959992d",
@@ -4414,7 +4405,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265844+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819999+00:00"
   },
   {
     "id": "f3dbab6fd8ad",
@@ -4550,7 +4541,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265837+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819991+00:00"
   },
   {
     "id": "e95e347f5fde",
@@ -4628,7 +4619,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265822+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819978+00:00"
   },
   {
     "id": "5943634ae6e8",
@@ -4654,7 +4645,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265829+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.819984+00:00"
   },
   {
     "id": "bf58000597ae",
@@ -4679,7 +4670,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265904+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820060+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -4707,7 +4698,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265916+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820071+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -4735,7 +4726,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265943+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820094+00:00"
   },
   {
     "id": "ff38a4201f97",
@@ -4760,7 +4751,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265972+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820124+00:00"
   },
   {
     "id": "388cee784e3d",
@@ -4785,7 +4776,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265979+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820131+00:00"
   },
   {
     "id": "5db38500b73c",
@@ -4810,7 +4801,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265987+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820138+00:00"
   },
   {
     "id": "2194cde42715",
@@ -4835,7 +4826,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.265994+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820169+00:00"
   },
   {
     "id": "d1d29cb06c12",
@@ -4991,7 +4982,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266197+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820364+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -5075,7 +5066,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266205+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820372+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -5103,7 +5094,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266214+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820380+00:00"
   },
   {
     "id": "a3c65a49d9c0",
@@ -5231,7 +5222,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266247+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820415+00:00"
   },
   {
     "id": "bdbc70528682",
@@ -5284,7 +5275,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266263+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820431+00:00"
   },
   {
     "id": "fb940e3ca1ac",
@@ -5309,7 +5300,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266270+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820438+00:00"
   },
   {
     "id": "4db44cb7d84a",
@@ -5362,7 +5353,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266327+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820496+00:00"
   },
   {
     "id": "2f25878b7a29",
@@ -5387,7 +5378,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266334+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820504+00:00"
   },
   {
     "id": "4f09fa687c4b",
@@ -5412,7 +5403,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266366+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820537+00:00"
   },
   {
     "id": "00a5b1368cd2",
@@ -5437,7 +5428,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266377+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820547+00:00"
   },
   {
     "id": "5cee92404cc0",
@@ -5615,7 +5606,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266467+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820638+00:00"
   },
   {
     "id": "eaa941196bec",
@@ -6657,7 +6648,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266162+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820331+00:00"
   },
   {
     "id": "d1dbb1c637d7",
@@ -6682,7 +6673,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266171+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820339+00:00"
   },
   {
     "id": "87623b504962",
@@ -6760,7 +6751,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266145+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820315+00:00"
   },
   {
     "id": "482c1d38bce4",
@@ -6810,7 +6801,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266318+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820487+00:00"
   },
   {
     "id": "b17771e4c845",
@@ -6888,7 +6879,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266128+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820298+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -6941,7 +6932,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266299+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820468+00:00"
   },
   {
     "id": "e61764a40be9",
@@ -6991,7 +6982,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266085+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820256+00:00"
   },
   {
     "id": "bb1920915329",
@@ -7016,7 +7007,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266102+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820273+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -7044,7 +7035,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266346+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820516+00:00"
   },
   {
     "id": "35754c414854",
@@ -7069,7 +7060,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266406+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820577+00:00"
   },
   {
     "id": "d1d71d8d4856",
@@ -7094,7 +7085,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266417+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820587+00:00"
   },
   {
     "id": "5183bef1b042",
@@ -7144,7 +7135,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266076+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820248+00:00"
   },
   {
     "id": "6a560af137fd",
@@ -7169,7 +7160,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266049+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820222+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -7247,7 +7238,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266290+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820459+00:00"
   },
   {
     "id": "941408d9d2b0",
@@ -7272,7 +7263,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266031+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820204+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -7300,7 +7291,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266040+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820213+00:00"
   },
   {
     "id": "ca6174c6755f",
@@ -7350,7 +7341,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266003+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820179+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -7378,7 +7369,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266012+00:00",
+    "lastUpdated": "2026-09-27T19:05:39.820187+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -17474,7 +17465,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-09-27T14:38:05.266473+00:00"
+    "lastUpdated": "2026-09-27T19:05:39.820646+00:00"
   },
   {
     "id": "693f25904e2e",
@@ -19435,5 +19426,489 @@
     "confidence": 0.75,
     "status": "active",
     "lastUpdated": "2026-09-01T11:07:25.886007+00:00"
+  },
+  {
+    "id": "7a4f971fba7f",
+    "title": "[NAVY] Become an Officer",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/#",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820653+00:00"
+  },
+  {
+    "id": "2c7fee6d65b1",
+    "title": "[NAVY] Become an Agniveer",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/#",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820661+00:00"
+  },
+  {
+    "id": "f52521752a1d",
+    "title": "[NAVY] Agniveer SSR",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/page/agniveer-ssr.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820667+00:00",
+    "mergedSources": [
+      "www.joinindiannavy.gov.in"
+    ]
+  },
+  {
+    "id": "852a15b61387",
+    "title": "[NAVY] Agniveer Apprentice",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/page/agniveer-apprentice.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820681+00:00"
+  },
+  {
+    "id": "7b983858d851",
+    "title": "[NAVY] Medical / Physical standards",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/page/medical-physical-standards.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820688+00:00"
+  },
+  {
+    "id": "ba5ae96a7ce5",
+    "title": "[NAVY] AVR (SSR/ MR) - INET 2025",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": null,
+      "detailPage": "http://agniveernavy.cdac.in/sailorscycle4/login",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820696+00:00",
+    "mergedSources": [
+      "www.joinindiannavy.gov.in"
+    ]
+  },
+  {
+    "id": "cd272502a827",
+    "title": "[NAVY] SSR (Apprentice) - INET 2/26",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": null,
+      "detailPage": "https://sailors.navydmpr.in/ssrmedcycle2/login",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820724+00:00"
+  },
+  {
+    "id": "99b873b52f63",
+    "title": "[NAVY] IN Calendar - 2026",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": null,
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820731+00:00"
+  },
+  {
+    "id": "c62f43379c20",
+    "title": "[NAVY] Online application window for SSC (various entries) Jun 27 Course is extended upto 03 Aug 26. Login to apply. (Closed)",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-ssc-various-entries-jun-27-course-is-extended-upto-03-aug-26-login-to-apply-closed.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820742+00:00",
+    "mergedSources": [
+      "www.joinindiannavy.gov.in"
+    ]
+  },
+  {
+    "id": "3536d034593c",
+    "title": "[NAVY] Application window for AVR MR (Musician) 02/26 batch extended till 30 Apr 26. (Closed)",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/event/application-window-for-avr-mr-musician-02-26-batch-extended-till-30-apr-26-closed.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820761+00:00"
+  },
+  {
+    "id": "31c952905467",
+    "title": "[NAVY] Online application for AVR (SSR), AVR (MR) and SSR (Med) for INET 26 is live from 14 Mar 26. Download advertisements. (Closed)",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/event/online-application-for-avr-ssr-avr-mr-and-ssr-med-for-inet-26-is-live-from-14-mar-26-download-advertisements-closed.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820772+00:00"
+  },
+  {
+    "id": "51114bfe64dd",
+    "title": "[NAVY] Online application window for SSC (various entries) Jan 27 Course is live. Download Advertisement. Login to apply. (Closed)",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/event/online-application-window-for-ssc-various-entries-jan-27-course-is-live-download-advertisement-login-to-apply-closed.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820782+00:00"
+  },
+  {
+    "id": "dd223f7c6ad9",
+    "title": "[NAVY] Agniveers of 02/2022 Batch to RESET their password and login.",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/event/agniveers-of-02-2022-batch-to-reset-their-password-and-login.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820791+00:00"
+  },
+  {
+    "id": "913ce8074775",
+    "title": "[NAVY] Agniveer SSR, MR & Apprentice - 1/27 Batch - Callup for Stage-II at NREs issued. Login to download.",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/event/agniveer-ssr-mr-apprentice-1-27-batch-callup-for-stage-ii-at-nres-issued-login-to-download.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820800+00:00"
+  },
+  {
+    "id": "3fe960856ca5",
+    "title": "[NAVY] 10+2 B.Tech Cadet Entry Jan 27 - Callups for SSBs scheduled in Sep 26 issued. Login to download.",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "recruitment",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/event/10-2-b-tech-cadet-entry-jan-27-callups-for-ssbs-scheduled-in-sep-26-issued-login-to-download.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820810+00:00"
+  },
+  {
+    "id": "04dddaf987e9",
+    "title": "[NAVY] Officer Entry",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "recruitment",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": null,
+      "detailPage": "https://www.joinindiannavy.gov.in/javascript:;",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820817+00:00"
+  },
+  {
+    "id": "f6e2f6363ef8",
+    "title": "[NAVY] Agniveer Entry",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "recruitment",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": null,
+      "detailPage": "https://www.joinindiannavy.gov.in/javascript:;",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820823+00:00"
+  },
+  {
+    "id": "3f3d11afd6b9",
+    "title": "[NAVY] Join As Agniveer",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/page/agniveer-ways-to-join.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820830+00:00"
+  },
+  {
+    "id": "5cb15bac5aec",
+    "title": "[NAVY] Join As Officer",
+    "organization": "Indian Navy",
+    "organizationShort": "NAVY",
+    "category": "central",
+    "subcategory": "defence",
+    "branch": "navy",
+    "notificationType": "notification",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": "https://www.joinindiannavy.gov.in/images/OFFICIAL_IN_CALENDAR_2026_DMPR.pdf",
+      "detailPage": "https://www.joinindiannavy.gov.in/en/page/officers-ways-to-join.html",
+      "officialWebsite": "https://www.joinindiannavy.gov.in"
+    },
+    "source": "www.joinindiannavy.gov.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-09-27T19:05:39.820836+00:00"
   }
 ]
