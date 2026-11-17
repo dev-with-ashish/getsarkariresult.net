@@ -2234,7 +2234,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-16T17:58:09.212961+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009469+00:00"
   },
   {
     "id": "19bb8470af34",
@@ -2266,7 +2266,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-16T17:58:09.212939+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009454+00:00"
   },
   {
     "id": "6a7dfe554328",
@@ -2298,7 +2298,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-16T17:58:09.212919+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009441+00:00"
   },
   {
     "id": "8349738f8d3a",
@@ -2330,7 +2330,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-16T17:58:09.212886+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009416+00:00"
   },
   {
     "id": "849987a3085d",
@@ -2362,7 +2362,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-16T17:58:09.212813+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009370+00:00"
   },
   {
     "id": "b542589d8c97",
@@ -2394,7 +2394,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-16T17:58:09.212726+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009339+00:00"
   },
   {
     "id": "439ee7f296ab",
@@ -2426,7 +2426,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-16T17:58:09.212679+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009299+00:00"
   },
   {
     "id": "24bf506f4b54",
@@ -4058,7 +4058,7 @@
     "importantDates": {},
     "applicationFee": null,
     "links": {
-      "notification": null,
+      "notification": "https://www.ibps.in/wp-content/uploads/IBPS-Notification-Fraud-Websites-27April26.pdf",
       "detailPage": "https://www.ibps.in/index.php/policies-rules-guidelines/",
       "officialWebsite": "https://www.ibps.in"
     },
@@ -4066,7 +4066,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.212975+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009480+00:00"
   },
   {
     "id": "e6b71e705c5c",
@@ -4092,7 +4092,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.212987+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009489+00:00"
   },
   {
     "id": "03030f934a8e",
@@ -4118,7 +4118,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213001+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009497+00:00"
   },
   {
     "id": "37f89388c092",
@@ -4144,7 +4144,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213018+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009505+00:00"
   },
   {
     "id": "d855c2ffa0da",
@@ -4170,7 +4170,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213029+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009515+00:00"
   },
   {
     "id": "2218a164c4e5",
@@ -4196,7 +4196,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213040+00:00",
+    "lastUpdated": "2026-11-17T01:34:27.009522+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -4225,7 +4225,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213050+00:00",
+    "lastUpdated": "2026-11-17T01:34:27.009527+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -4480,7 +4480,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213183+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009618+00:00"
   },
   {
     "id": "153ccdfbe48b",
@@ -4498,7 +4498,7 @@
     "importantDates": {},
     "applicationFee": null,
     "links": {
-      "notification": "https://www.ibps.in/wp-content/uploads/Corrigendum-CRP-RRBs-XV_25.09.2026.pdf",
+      "notification": null,
       "detailPage": "https://www.ibps.in/index.php/regional-rural-bank",
       "officialWebsite": "https://www.ibps.in"
     },
@@ -4506,10 +4506,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-11T01:53:16.168578+00:00",
-    "mergedSources": [
-      "ibps.in"
-    ]
+    "lastUpdated": "2026-11-17T01:34:27.009623+00:00"
   },
   {
     "id": "f61a1ee39d6b",
@@ -4535,7 +4532,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213195+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009628+00:00"
   },
   {
     "id": "47c37e92c3b7",
@@ -4561,7 +4558,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213214+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009655+00:00"
   },
   {
     "id": "a34e62f77a70",
@@ -4587,7 +4584,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213220+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009663+00:00"
   },
   {
     "id": "0f413959992d",
@@ -4836,7 +4833,10 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213131+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009562+00:00",
+    "mergedSources": [
+      "ibps.in"
+    ]
   },
   {
     "id": "0329567b1ed2",
@@ -5160,7 +5160,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213072+00:00",
+    "lastUpdated": "2026-11-17T01:34:27.009539+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -6268,7 +6268,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213168+00:00",
+    "lastUpdated": "2026-11-17T01:34:27.009605+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -6349,7 +6349,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213152+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009592+00:00"
   },
   {
     "id": "c90c62e56418",
@@ -6375,7 +6375,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213142+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009583+00:00"
   },
   {
     "id": "bf58000597ae",
@@ -6400,7 +6400,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213242+00:00",
+    "lastUpdated": "2026-11-17T01:34:27.009691+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -6428,7 +6428,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213254+00:00",
+    "lastUpdated": "2026-11-17T01:34:27.009701+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -6456,7 +6456,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213281+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009723+00:00"
   },
   {
     "id": "ff38a4201f97",
@@ -6481,7 +6481,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213311+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009748+00:00"
   },
   {
     "id": "388cee784e3d",
@@ -6506,7 +6506,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213318+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009753+00:00"
   },
   {
     "id": "5db38500b73c",
@@ -6531,7 +6531,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213326+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009760+00:00"
   },
   {
     "id": "2194cde42715",
@@ -6556,7 +6556,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213333+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009766+00:00"
   },
   {
     "id": "d1d29cb06c12",
@@ -6952,7 +6952,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213451+00:00",
+    "lastUpdated": "2026-11-17T01:34:27.009865+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -6980,7 +6980,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213459+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009872+00:00"
   },
   {
     "id": "f5cd5fdc84f7",
@@ -7030,7 +7030,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213467+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009878+00:00"
   },
   {
     "id": "4db44cb7d84a",
@@ -7342,7 +7342,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213637+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.010021+00:00"
   },
   {
     "id": "eaa941196bec",
@@ -8752,7 +8752,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213434+00:00",
+    "lastUpdated": "2026-11-17T01:34:27.009832+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -8780,7 +8780,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213535+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009937+00:00"
   },
   {
     "id": "35754c414854",
@@ -9348,7 +9348,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213523+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009926+00:00"
   },
   {
     "id": "450710ddd012",
@@ -9688,7 +9688,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213498+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009905+00:00"
   },
   {
     "id": "8a1dd1613645",
@@ -9738,7 +9738,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213387+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009810+00:00"
   },
   {
     "id": "9f9e550ea3f8",
@@ -9841,7 +9841,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213488+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.009897+00:00"
   },
   {
     "id": "28a806feaf72",
@@ -19966,7 +19966,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-16T17:58:09.213644+00:00"
+    "lastUpdated": "2026-11-17T01:34:27.010027+00:00"
   },
   {
     "id": "693f25904e2e",
