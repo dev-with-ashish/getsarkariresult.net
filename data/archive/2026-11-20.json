@@ -2362,7 +2362,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-20T04:54:58.036038+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287386+00:00"
   },
   {
     "id": "b542589d8c97",
@@ -2429,7 +2429,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-20T04:54:58.036012+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287356+00:00"
   },
   {
     "id": "7006a09c64d6",
@@ -2461,7 +2461,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-20T04:54:58.035965+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287302+00:00"
   },
   {
     "id": "73f9c52ed2d0",
@@ -2493,7 +2493,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-20T04:54:58.035974+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287313+00:00"
   },
   {
     "id": "a0d909285614",
@@ -2525,7 +2525,7 @@
     "confidence": 0.95,
     "status": "active",
     "notificationType": "notification",
-    "lastUpdated": "2026-11-20T04:54:58.036000+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287343+00:00"
   },
   {
     "id": "24bf506f4b54",
@@ -4217,7 +4217,7 @@
     "importantDates": {},
     "applicationFee": null,
     "links": {
-      "notification": null,
+      "notification": "https://www.ibps.in/wp-content/uploads/IBPS-Notification-Fraud-Websites-27April26.pdf",
       "detailPage": "https://www.ibps.in/index.php/policies-rules-guidelines/",
       "officialWebsite": "https://www.ibps.in"
     },
@@ -4225,7 +4225,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036045+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287393+00:00"
   },
   {
     "id": "e6b71e705c5c",
@@ -4251,7 +4251,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036054+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287400+00:00"
   },
   {
     "id": "03030f934a8e",
@@ -4277,7 +4277,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036061+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287406+00:00"
   },
   {
     "id": "37f89388c092",
@@ -4303,7 +4303,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036066+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287412+00:00"
   },
   {
     "id": "d855c2ffa0da",
@@ -4329,7 +4329,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036072+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287418+00:00"
   },
   {
     "id": "2218a164c4e5",
@@ -4355,7 +4355,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036076+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287423+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -4384,7 +4384,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036081+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287428+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -4405,15 +4405,15 @@
     "importantDates": {},
     "applicationFee": null,
     "links": {
-      "notification": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf",
-      "detailPage": "https://www.ibps.in/index.php/management-trainees-xv/",
+      "notification": "https://www.ibps.in/wp-content/uploads/NOTICE-FOR-PERSONALITY-TEST_CRP-PO-XV.pdf",
+      "detailPage": "http://ibpsreg.ibps.in/crppoxvijun26/fresta_nov26/login.php?appid=faa539a0e8fbd226743a6f2df8768c59",
       "officialWebsite": "https://www.ibps.in"
     },
     "source": "ibps.in",
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-16T07:46:12.721455+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287434+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -4639,7 +4639,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036195+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287515+00:00"
   },
   {
     "id": "153ccdfbe48b",
@@ -4665,7 +4665,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036202+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287520+00:00"
   },
   {
     "id": "f61a1ee39d6b",
@@ -4691,7 +4691,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036234+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287525+00:00"
   },
   {
     "id": "47c37e92c3b7",
@@ -4717,7 +4717,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036253+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287540+00:00"
   },
   {
     "id": "a34e62f77a70",
@@ -4743,7 +4743,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036258+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287545+00:00"
   },
   {
     "id": "0f413959992d",
@@ -4992,10 +4992,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036123+00:00",
-    "mergedSources": [
-      "ibps.in"
-    ]
+    "lastUpdated": "2026-11-20T14:01:52.287466+00:00"
   },
   {
     "id": "0329567b1ed2",
@@ -5311,7 +5308,7 @@
     "importantDates": {},
     "applicationFee": null,
     "links": {
-      "notification": "https://www.ibps.in/wp-content/uploads/Detailed-Notification-CRP-SPL-XV_15.7.25.pdf",
+      "notification": "https://www.ibps.in/wp-content/uploads/NOTICE-FOR-PERSONALITY-TEST_CRP-PO-XV.pdf",
       "detailPage": "https://www.ibps.in/index.php/management-trainees-xv/",
       "officialWebsite": "https://www.ibps.in"
     },
@@ -5319,7 +5316,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036098+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287450+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -6430,7 +6427,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036178+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287502+00:00",
     "mergedSources": [
       "ibps.in"
     ]
@@ -6511,7 +6508,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036155+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287483+00:00"
   },
   {
     "id": "c90c62e56418",
@@ -6537,7 +6534,7 @@
     "sourceType": "html",
     "confidence": 0.8,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036146+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287476+00:00"
   },
   {
     "id": "bf58000597ae",
@@ -6562,7 +6559,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036293+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287563+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -6590,7 +6587,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036306+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287572+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -6618,7 +6615,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036331+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287593+00:00"
   },
   {
     "id": "ff38a4201f97",
@@ -6643,7 +6640,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036359+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287617+00:00"
   },
   {
     "id": "388cee784e3d",
@@ -6668,7 +6665,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036367+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287623+00:00"
   },
   {
     "id": "5db38500b73c",
@@ -6693,7 +6690,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036374+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287628+00:00"
   },
   {
     "id": "2194cde42715",
@@ -6718,7 +6715,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036381+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287634+00:00"
   },
   {
     "id": "d1d29cb06c12",
@@ -7114,7 +7111,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036513+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287729+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -7142,7 +7139,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036523+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287735+00:00"
   },
   {
     "id": "f5cd5fdc84f7",
@@ -7192,7 +7189,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036530+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287741+00:00"
   },
   {
     "id": "4db44cb7d84a",
@@ -7504,7 +7501,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036693+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287895+00:00"
   },
   {
     "id": "eaa941196bec",
@@ -8496,7 +8493,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036392+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287650+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -8914,7 +8911,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036494+00:00",
+    "lastUpdated": "2026-11-20T14:01:52.287716+00:00",
     "mergedSources": [
       "uppsc.up.nic.in"
     ]
@@ -8942,7 +8939,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036605+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287809+00:00"
   },
   {
     "id": "35754c414854",
@@ -9510,7 +9507,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036593+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287800+00:00"
   },
   {
     "id": "450710ddd012",
@@ -9850,7 +9847,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036567+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287780+00:00"
   },
   {
     "id": "8a1dd1613645",
@@ -9900,7 +9897,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036466+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287696+00:00"
   },
   {
     "id": "9f9e550ea3f8",
@@ -10003,7 +10000,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036557+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287772+00:00"
   },
   {
     "id": "28a806feaf72",
@@ -10056,7 +10053,32 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036644+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287841+00:00"
+  },
+  {
+    "id": "3206a05ebcee",
+    "title": "CLICK HERE TO APPLY FOR ADVT.NO. A-6/E-1/2026, U.P. JUDICIAL SERVICE CIVIL JUDGE (JUNIOR DIVISION) EXAM.-2026.",
+    "organization": "Uttar Pradesh Public Service Commission",
+    "organizationShort": "UPPSC",
+    "category": "state",
+    "subcategory": "uppsc",
+    "state": "Uttar Pradesh",
+    "notificationType": "recruitment",
+    "totalVacancies": null,
+    "qualifications": [],
+    "ageLimit": null,
+    "importantDates": {},
+    "applicationFee": null,
+    "links": {
+      "notification": null,
+      "detailPage": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+      "officialWebsite": "https://uppsc.up.nic.in"
+    },
+    "source": "uppsc.up.nic.in",
+    "sourceType": "html",
+    "confidence": 0.75,
+    "status": "active",
+    "lastUpdated": "2026-11-20T14:01:52.287748+00:00"
   },
   {
     "id": "bea9bde45a01",
@@ -20153,7 +20175,7 @@
     "sourceType": "html",
     "confidence": 0.75,
     "status": "active",
-    "lastUpdated": "2026-11-20T04:54:58.036699+00:00"
+    "lastUpdated": "2026-11-20T14:01:52.287901+00:00"
   },
   {
     "id": "693f25904e2e",
